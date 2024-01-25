@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>html-3</title>
+  </head>
+  <!--
+    img
+        how to add images in img
+            1. sibling image
+            2. image from folder
+            3. online image
+    figure & figCaption
+        To add image with caption
+    div vs span
+        div has display block property
+        It covers entire width of parent
+        The next sibling starts from next line
+
+        span
+        span has display inline property
+        It covers only required space and do not cover entire width of parent.
+        It gives space to adjacent sibling which has inline property 
+    anchor tag
+        a tag: use to add external link or website or page
+               target="_blank" Redirects/Opens to new tab 
+
+    Styling == CSS == Cascading Style sheet
+        Types of styling
+        1. Inline styling
+        2. Internal Styling
+        3. External Styling
+
+    inline-styling
+        style attribute
+        style=""
+        style="color:red"
+        style="color:red; background-color:blue;"
+    listing in HTML
+        we have 3 types of list
+            1. unordered List
+            2. ordered List
+            3. Description list
+    unordered List
+
+
+  -->
+  <body>
+    <div style="background-color: aqua; color: blue">
+      <a href="./about.html">
+        <img src="./assets/icons/about.png" alt="home-icon" width="20" />
+      </a>
+      <a href="./contact.html">
+        <img src="./assets/icons/phone.png" alt="home-icon" width="20" />
+      </a>
+    </div>
+    <p>Hello chahat taran ankit</p>
+    <img src="./doreamon.jpg" alt="doreamon-image" width="200" height="500" />
+
+    <img src="./assets/dora.jpg" alt="dora" width="200" />
+    <div>
+      <img src="./assets/doreamon-1.jpg" alt="dora" width="200" />
+    </div>
+    <img src="./assets/dora-1.gif" alt="animation" width="200" />
+    <div>
+      <img
+        src="https://giffiles.alphacoders.com/193/193226.gif"
+        alt="animation dora-1"
+        width=""
+      />
+    </div>
+
+    <div>
+      <!-- adding image with caption-->
+      <figure>
+        <img
+          src="https://assets.americanliterature.com/images/story/the-cats-of-ulthar.avif"
+          alt="jumping cat"
+        />
+        <figcaption>
+          Byeon Sang-byeok, Painting of Cats and Sparrows, 1730
+        </figcaption>
+      </figure>
+    </div>
+
+    <p style="background-color: red">Painting</p>
+    <a href="www.google.com" style="background-color: yellow">Click me</a>
+
+    <div style="background-color: green">
+      Cats and sparrow-- div
+      <br />
+      <span>spann---=</span>
+    </div>
+    <div style="background-color: brown">Cats and sparrow-- div</div>
+
+    <span style="background-color: pink">Cats and sparrow-- span</span>
+    <span style="background-color: lightcoral">Cats and sparrow-- span</span>
+    <div style="background-color: brown">Cats and sparrow-- div</div>
+
+    <!--Anchor tag uses to redirect to external link or internal page-->
+    <a href="https://www.google.com/" target="_blank">Google</a>
+    <a href="https://www.youtube.com/watch?v=IxWPqzPpMH4&t=862s" target="_blank"
+      >Youtube</a
+    >
+
+    <a href="https://www.google.com/" target="_blank">
+      <img src="./assets/dora-1.gif" alt="jumping cat" />
+    </a>
+
+    <a
+      href="https://www.google.com/"
+      target="_blank"
+      style="text-decoration: none"
+    >
+      <p
+        style="
+          background-color: #fcfddc;
+          color: rgb(45, 45, 188);
+          border: 5px solid #202429;
+          border-radius: 10px;
+        "
+      >
+        Doraemon is a Japanese manga series written and illustrated by Fujiko F.
+        Fujio. The manga was first serialized in December 1969. Its chapters
+        were collected in 45 tankōbon volumes published by Shogakukan from 1974
+      </p>
+    </a>
+
+    <p>Doreamon Characters</p>
+    <ul>
+      <li>Dorami</li>
+      <li>Doreamon</li>
+      <li>Nobita</li>
+    </ul>
+    <ul type="circle">
+      <li>Digisuki</li>
+      <li>Giyan</li>
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Meachan</li>
+    </ul>
+    <ul type="disc">
+      <li>Giyan</li>
+      <li>Meachan</li>
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Digisuki</li>
+    </ul>
+    <ul type="square">
+      <li>Digisuki</li>
+      <li>Giyan</li>
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Meachan</li>
+    </ul>
+    <ul type="none">
+      <li>Dorami</li>
+      <li>Doreamon</li>
+      <li>Nobita</li>
+    </ul>
+
+    <ol>
+      <li>Dorami</li>
+      <li>Doreamon</li>
+      <li>Nobita</li>
+      <li>Sizuka</li>
+      <li>Digisuki</li>
+      <li>Giyan</li>
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Meachan</li>
+    </ol>
+
+    <ol type="A">
+      <li>Dorami</li>
+      <li>Doreamon</li>
+      <li>Nobita</li>
+    </ol>
+
+    <ol type="a">
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Meachan</li>
+    </ol>
+
+    <ol type="I">
+      <li>Sizuka</li>
+      <li>Digisuki</li>
+      <li>Giyan</li>
+    </ol>
+
+    <ol type="i">
+      <li>Giyan</li>
+      <li>Sunio</li>
+      <li>Teacher</li>
+      <li>Giyan</li>
+    </ol>
+    <ol type="1">
+      <li>Sunio</li>
+      <li>Giyan</li>
+      <li>Teacher</li>
+    </ol>
+
+    <ul>
+      <li>
+        Punjab
+        <ol>
+          <li>
+            Ludhiana
+            <ul type="circle">
+              <li>Shimlapuri</li>
+              <li style="color: red">Isher Nagar</li>
+              <li>Lohara</li>
+              <li>Haibowal</li>
+              <li>Pakhowal</li>
+            </ul>
+          </li>
+          <li style="color: rgb(110, 110, 12)">Bathinda</li>
+          <li>Amritsar</li>
+        </ol>
+      </li>
+      <li>
+        U.P
+        <ol type="a">
+          <li style="color: red">Ayodhya</li>
+          <li>Mathura</li>
+          <li>Kashi</li>
+          <li style="color: aqua">Prayagraj</li>
+        </ol>
+      </li>
+      <li>
+        Bihar
+        <ol type="i">
+          <li>Patna</li>
+          <li>Chhapra</li>
+          <li>Ara</li>
+          <li>Gaya</li>
+        </ol>
+      </li>
+      <li>
+        Rajasthan
+        <ol type="A">
+          <li>Ajmer</li>
+          <li>Jaipur</li>
+          <li>Jodhpur</li>
+          <li>Udaipur</li>
+          <li>Jaiselmer</li>
+        </ol>
+      </li>
+      <li>
+        Maharashtra
+        <ul type="square">
+          <li>Pune</li>
+          <li>Mumbai</li>
+          <li>Aurangabad</li>
+          <li>Nasik</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

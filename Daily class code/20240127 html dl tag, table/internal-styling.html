@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>internal styling</title>
+    <!--
+      1. How to add style in HTML file?
+          We can add CSS with 3 methods
+            a. Inline style
+            b. Internal Styling
+            c. External Styling
+      2. Internal Styling
+          We add a <style> tag inside <head> tag with help of selectors
+            a. tag Selector -- h1, p, a, div
+            b. class selector -- .className, .second, .card
+            c. id selector.  -- #className, #second, #card
+                  ID has more priority as compare to others selector
+            d. attribute selector
+            e. group selector
+            f. combinator selector
+
+    -->
+    <style>
+      .h1 {
+        color: red;
+        background-color: yellow;
+        width: 150px;
+        border: 1px solid red;
+        border-radius: 10px;
+      }
+      .p {
+        color: wheat;
+        background-color: brown;
+        border: 5px double black;
+        border-radius: 10px;
+      }
+
+      .second {
+        color: yellow;
+        background-color: black;
+      }
+
+      .second-para {
+        background-color: red;
+        color: aqua;
+      }
+      .third-para {
+        color: white;
+        background-color: blue;
+        border: 1px solid tan;
+        border-radius: 5px;
+      }
+
+      .main-div {
+        border: 1px solid gray;
+        border-radius: 10px;
+        width: 50%;
+      }
+      .final {
+        color: brown;
+        width: 50%;
+        border: 2px solid red;
+      }
+      #p-id {
+        color: whitesmoke;
+        background-color: black;
+        border-radius: 0;
+      }
+
+      h1 {
+        background-color: yellow;
+      }
+      #h1-id {
+        background-color: antiquewhite;
+      }
+      .h1-1 {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="third-para">Hello class</h1>
+    <p class="p">
+      In Ulthar, before ever the burgesses forbade the killing of cats, there
+      dwelt an old cotter and his wife who delighted to trap and slay the cats
+      of their neighbors. Why they did this I know not; save that many hate the
+      voice of the cat in the night, and take it ill that cats should run
+      stealthily about yards and gardens at twilight. But whatever the reason,
+      this old man and woman took pleasure in trapping and slaying every cat
+      which came near to their hovel; and from some of the sounds heard after
+      dark, many villagers fancied that the manner of slaying was exceedingly
+      peculiar.
+    </p>
+    <h1 class="second">hi!!! i'm second h1 tag</h1>
+    <p class="third-para">
+      villagers fancied that the manner of slaying was exceedingly peculiar.
+    </p>
+    <p class="third-para" id="p-id">
+      voice of the cat in the night, and take it ill that cats should run
+    </p>
+    <p class="second-para">
+      fancied that the manner of slaying was exceedingly
+    </p>
+    <p class="third-para">
+      the burgesses forbade the killing of cats, there dwelt an old cotter and
+      his wife who delighted to trap and slay the cats of their neighbors.
+    </p>
+
+    <div class="main-div">
+      <p class="third-para">
+        This image automatically updates to reflect the current state of your
+        latest production deploy.
+      </p>
+      <p class="final">
+        To create a status badge for a deployed branch, add the ?branch= query
+        parameter to the badge URL. You can use the markdown snippet below to
+        add it to your project README.
+      </p>
+
+      <h1 class="h1-1">Hello class-1</h1>
+
+      <h1>Hello class-2</h1>
+
+      <h1 class="h1-1" id="h1-id" style="background-color: violet">
+        Hello class-3
+      </h1>
+    </div>
+  </body>
+</html>

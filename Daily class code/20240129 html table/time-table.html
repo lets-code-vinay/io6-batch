@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      td,
+      th {
+        width: 80px;
+        height: 20px;
+      }
+      .period {
+        color: aqua;
+        background-color: darkblue;
+        border: 2px solid aqua;
+      }
+      strong {
+        color: red;
+      }
+      .lunch {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr class="period">
+          <th rowspan="2">Day/Period</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th rowspan="2">12.00-12.40</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+        </tr>
+        <tr class="period">
+          <th>9.30-10.20</th>
+          <th>10.20-11.10</th>
+          <th>11.10-12.00</th>
+          <th>12.40-1.30</th>
+          <th>1.30-2.20</th>
+          <th>2.20-3.10</th>
+          <th>3.10-4.00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Monday</strong></td>
+          <td>English</td>
+          <td>Math</td>
+          <td>Chemistry</td>
+          <td rowspan="6" class="lunch">Lunch</td>
+          <td colspan="3">Lab</td>
+          <td>Physics</td>
+        </tr>
+        <tr>
+          <td><strong>Tuesday</strong></td>
+          <td colspan="3">Lab</td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td>Math</td>
+          <td>Sports</td>
+        </tr>
+        <tr>
+          <td><strong>Wednesday</strong></td>
+          <td>Math</td>
+          <td>Physics</td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td colspan="3">Library</td>
+        </tr>
+        <tr>
+          <td><strong>Thursday</strong></td>
+          <td>Physics</td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td colspan="3">Lab</td>
+          <td>Math</td>
+        </tr>
+        <tr>
+          <td><strong>Friday</strong></td>
+          <td colspan="3">Lab</td>
+          <td>Math</td>
+          <td>Chemistry</td>
+          <td>English</td>
+          <td>Physics</td>
+        </tr>
+        <tr>
+          <td><strong>Saturday</strong></td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td>Math</td>
+          <td colspan="3">Seminar</td>
+          <td>Sports</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

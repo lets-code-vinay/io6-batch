@@ -1,0 +1,15 @@
+body {
+  background-color: yellow;
+}
+
+.login-form {
+  background-color: azure;
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.login-title {
+  width: fit-content;
+  margin: auto;
+}

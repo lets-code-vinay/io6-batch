@@ -1,0 +1,40 @@
+body {
+  background-color: yellow;
+}
+
+.login-form {
+  background-color: azure;
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.login-title {
+  width: fit-content;
+  margin: auto;
+}
+
+.login-form {
+  padding: 10px;
+}
+
+.first-name,
+.last-name {
+  margin-right: 50px;
+}
+
+.create-pw {
+  margin-right: 15px;
+}
+
+.male-selection {
+  margin-right: 50px;
+}
+
+.female-selection {
+  margin-right: 36px;
+}
+
+.trans-selection {
+  margin-right: 47px;
+}

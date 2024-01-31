@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Describe the character standard -->
+    <meta charset="UTF-8" />
+
+    <!-- Describe viewport to adjust our web-application -->
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+
+    <!-- Describe the Author or developer of this web-application -->
+    <meta name="author" description="Vinay Maurya" />
+
+    <!-- Describe the name of web application -->
+    <meta name="application-name" content="let Learn together" />
+
+    <!--It show short description of website in google search -->
+    <meta
+      name="description"
+      content="This is used to develop tutorials for Future enthusiastic coders"
+    />
+
+    <!--SEO friendly-->
+    <meta name="keywords" content="html, css, javascript, react" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="login-form">
+      <h1 class="login-title">Login</h1>
+      <hr />
+      <form>
+        <label for="first-name">First Name:</label>
+        <input
+          type="text"
+          placeholder="Enter first name"
+          id="first-name"
+          minlength="3"
+          maxlength="10"
+        />
+
+        <br />
+        <br />
+
+        <label for="last-name">Last Name:</label>
+        <input
+          id="last-name"
+          type="text"
+          placeholder="Enter last name"
+          minlength="3"
+          maxlength="10"
+        />
+        <br />
+        <br />
+        <label for="create-password">Create Password:</label>
+        <input
+          id="create-password"
+          type="password"
+          placeholder="Enter password"
+          minlength="6"
+          maxlength="15"
+        />
+        <br />
+        <br />
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          id="confirm-password"
+          type="password"
+          placeholder="Confirm password"
+          minlength="6"
+          maxlength="15"
+        />
+
+        <br />
+        <br />
+        <label for="contact">Contact Number:</label>
+        <input
+          id="contact"
+          type="number"
+          placeholder="Enter phone number"
+          minlength="10"
+          maxlength="10"
+        />
+        <br />
+        <br />
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email" minlength="6" />
+        <br />
+        <br />
+
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          value="2024-01-30"
+          min="2024-01-15"
+          max="2024-02-15"
+        />
+        <br />
+        <br />
+
+        <label for="birth-time">Birth Time:</label>
+        <input type="time" id="birth-time" value="20:15" />
+        <br />
+        <br />
+
+        <label for="date-time">Meeting Time:</label>
+        <input type="datetime-local" id="date-time" value="2014-01-29T20:15" />
+
+        <br />
+        <br />
+
+        <label for="website">Website:</label>
+        <input
+          type="url"
+          id="website"
+          placeholder="https://example.com"
+          required
+        />
+
+        <input
+          type="hidden"
+          id="hidden"
+          placeholder="this is hidden input"
+          required
+        />
+
+        <br />
+        <br />
+        <!-- <button type="submit">Sign Up</button> -->
+        <input type="submit" value="Sign up" />
+        <br />
+        <br />
+      </form>
+    </div>
+  </body>
+</html>

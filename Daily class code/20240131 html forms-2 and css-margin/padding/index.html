@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Describe the character standard -->
+    <meta charset="UTF-8" />
+
+    <!-- Describe viewport to adjust our web-application -->
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+
+    <!-- Describe the Author or developer of this web-application -->
+    <meta name="author" description="Vinay Maurya" />
+
+    <!-- Describe the name of web application -->
+    <meta name="application-name" content="let Learn together" />
+
+    <!--It show short description of website in google search -->
+    <meta
+      name="description"
+      content="This is used to develop tutorials for Future enthusiastic coders"
+    />
+
+    <!--SEO friendly-->
+    <meta name="keywords" content="html, css, javascript, react" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="login-form">
+      <h1 class="login-title">Login</h1>
+      <hr />
+      <form class="login-form">
+        <fieldset>
+          <legend>Personal Data</legend>
+
+          <label for="first-name" class="first-name">First Name:</label>
+          <input
+            type="text"
+            placeholder="Enter first name"
+            id="first-name"
+            minlength="3"
+            maxlength="10"
+          />
+
+          <br />
+          <br />
+
+          <label for="last-name" class="last-name">Last Name:</label>
+          <input
+            id="last-name"
+            type="text"
+            placeholder="Enter last name"
+            minlength="3"
+            maxlength="10"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Password</legend>
+          <label for="create-password" class="create-pw"
+            >Create Password:</label
+          >
+          <input
+            id="create-password"
+            type="password"
+            placeholder="Enter password"
+            minlength="6"
+            maxlength="15"
+          />
+          <br />
+          <br />
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input
+            id="confirm-password"
+            type="password"
+            placeholder="Confirm password"
+            minlength="6"
+            maxlength="15"
+          />
+        </fieldset>
+
+        <fieldset>
+          <label>Address:</label>
+          <textarea placeholder="Enter Address" rows="5" cols="30"></textarea>
+
+          <br />
+          <br />
+          <legend>Contact data:</legend>
+          <label for="contact">Contact Number:</label>
+          <input
+            id="contact"
+            type="number"
+            placeholder="Enter phone number"
+            minlength="10"
+            maxlength="10"
+          />
+          <br />
+          <br />
+
+          <label>Email:</label>
+          <input type="email" placeholder="Enter email" minlength="6" />
+          <br />
+          <br />
+
+          <label for="website">Website:</label>
+          <input
+            type="url"
+            id="website"
+            placeholder="https://example.com"
+            required
+            disabled
+          />
+        </fieldset>
+
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          value="2024-01-30"
+          min="2024-01-15"
+          max="2024-02-15"
+        />
+        <br />
+        <br />
+
+        <label for="birth-time">Birth Time:</label>
+        <input type="time" id="birth-time" value="20:15" />
+        <br />
+        <br />
+
+        <label for="date-time">Meeting Time:</label>
+        <input type="datetime-local" id="date-time" value="2014-01-29T20:15" />
+
+        <br />
+        <br />
+
+        <input
+          type="hidden"
+          id="hidden"
+          placeholder="this is hidden input"
+          required
+        />
+
+        <br />
+        <br />
+        <p>Gender:</p>
+        <label for="male" class="male-selection">Male</label>
+        <input type="radio" id="male" value="Male" name="gender_selection" />
+        <br />
+        <label class="female-selection" for="female">Female</label>
+        <input
+          type="radio"
+          id="female"
+          value="Female"
+          name="gender_selection"
+        />
+        <br />
+
+        <label class="trans-selection" for="trans">Trans</label>
+        <input
+          disabled
+          type="radio"
+          id="trans"
+          value="Trans"
+          name="gender_selection"
+        />
+        <br />
+        <br />
+
+        <p>Hobbies</p>
+        <input id="cricket" type="checkbox" />
+        <label for="cricket">Cricket</label>
+        <br />
+        <input id="chess" type="checkbox" checked />
+        <label for="chess">Chess</label>
+        <br />
+
+        <input id="swimming" type="checkbox" />
+        <label for="swimming">Swimming</label>
+        <br />
+
+        <input id="singling" type="checkbox" />
+        <label for="singling">Singing</label>
+        <br />
+
+        <input id="drawing" type="checkbox" disabled />
+        <label for="drawing">Drawing</label>
+        <br />
+
+        <input id="coding" type="checkbox" checked disabled />
+        <label for="coding">Coding</label>
+
+        <br />
+        <br />
+
+        <label for="color">Select Fav color:</label>
+        <input id="color" type="color" value="#0000ff" disabled />
+
+        <br />
+        <br />
+
+        <label for="pic">Upload Profile Pic:</label>
+        <input type="file" id="pic" disabled />
+        <br />
+        <br />
+
+        <label for="range">Price Range:</label>
+        <input type="range" id="range" value="70" min="20" max="80" disabled />
+        <br />
+        <br />
+
+        <label for="image">image:</label>
+        <input
+          type="image"
+          id="image"
+          src="https://rukminim2.flixcart.com/image/416/416/xif0q/dslr-camera/e/h/v/dmc-g85kgw-k-16-dmc-g85kgw-k-panasonic-original-imagzknqpwukucj8.jpeg?q=70&crop=false"
+          width="50"
+        />
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <!-- <button type="submit">Sign Up</button> -->
+        <input type="submit" value="Sign up" />
+        <br />
+        <br />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color</title>
+    <style>
+      body {
+        background-color: yellow;
+        background-image: url("../fox.jpg");
+        background-size: cover;
+      }
+      .by-name {
+        background-color: red;
+        color: yellow;
+      }
+      #by-Selection {
+        background-color: rgb(78, 151, 215);
+        color: rgb(50, 28, 28);
+      }
+      .hex {
+        height: 100px;
+        width: 100px;
+        border: 1px solid brown;
+        background-color: #ffeeff;
+      }
+      .hex-2 {
+        height: 100px;
+        width: 100px;
+        border: 1px solid brown;
+        background-color: rgb(255, 120, 250);
+      }
+      .c-2 {
+        height: 100px;
+        width: 100%;
+        border: 1px solid brown;
+        background-color: rgba(0, 0, 255, 0.497);
+      }
+      .c-3 {
+        height: 100px;
+        width: 100%;
+        border: 1px solid brown;
+        background-color: rgba(50, 28, 28, 0.8);
+      }
+      .c-4 {
+        height: 100px;
+        width: 100%;
+        border: 1px solid brown;
+        background-color: #ffeeffab;
+      }
+    </style>
+  </head>
+  <!--
+    Number system
+        Binary system
+            0-1
+        Octal System - 8bit
+            0-7 (0,1,2,3,4,5,6,7)
+        Decimal System 
+            0-9 (0,1,2,3,4,5,6,7,8,9)
+        Hexadecimal (hex)
+            0-F (0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f)
+  -->
+  <!--
+    Colors : available colors : 1,65,81,375
+        1. By name
+        2. By selection 
+        3. By Hex code
+            Hex - #000000 -- #ffffff 
+                   #11cc34 -- 11(RED), cc(Green), 34(Blue) 
+        4. By RGB
+            Red Green Blue
+            rgb() -- 0-255, 0-255, 0-255
+            rgb(123, 111, 90)
+  -->
+
+  <body>
+    <h1 class="by-name">Colors by name</h1>
+    <h1 id="by-Selection">Colors by Selection</h1>
+    <h1 id="by-hex-code">Colors by Hex-code</h1>
+
+    <div class="hex"></div>
+    <div class="hex-2"></div>
+    <div class="c-2"></div>
+    <div class="c-3"></div>
+    <div class="c-4"></div>
+  </body>
+</html>

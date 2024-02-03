@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display-properties</title>
+    <style>
+      .main {
+        background-color: red;
+        border: 1px solid green;
+        height: 100vh;
+      }
+      .display {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+      #display-1 {
+        background-color: green;
+        display: inline;
+        margin: 5px;
+        padding: 5px;
+      }
+      #display-2 {
+        background-color: blue;
+        display: inline;
+        margin: 10px;
+        padding: 5px;
+      }
+      #display-3 {
+        background-color: yellow;
+        display: inline;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #display-4 {
+        background-color: honeydew;
+        display: inline;
+      }
+      #display-5 {
+        background-color: tan;
+        display: inline-block;
+      }
+      #display-6 {
+        background-color: goldenrod;
+        display: inline-block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <!--
+    Display Block
+            Those tags which have block properties 
+                will cover entire width of its parent 
+            It won't give space to next sibling
+            div, hr, heading, p, 
+
+    Display Inline
+            1. Those tags with inline display property will cover
+                only required space according to content
+            2. It gives space to its next sibling
+            3. img, a, span, input, button, formatting tabs
+            4. Element with inline properties 
+                widht, height, margin-top and margin-bottom
+                will not work
+    Display: inline-block
+            1. Inline-block contains both properties of block and inline
+            2. It will cover only required space and height, width and margin will work here 
+  -->
+
+  <body>
+    <div class="main">
+      <div class="display" id="display-1">display-1</div>
+      <div class="display" id="display-2">display-2</div>
+      <div class="display" id="display-3">display-3</div>
+      <div class="display" id="display-4">display-4</div>
+      <div class="display" id="display-5">display-5</div>
+      <div class="display" id="display-6">display-6</div>
+      <div class="display" id="" style="width: 80%">display-6</div>
+    </div>
+  </body>
+</html>

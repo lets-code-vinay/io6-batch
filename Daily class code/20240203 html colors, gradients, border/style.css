@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(235, 235, 210);
+}
+
+.main-navbar {
+  background-color: #4a9eff;
+  width: 100%;
+  height: 60px;
+}
+
+.menu-icon {
+  width: 30px;
+  margin-left: 5px;
+}
+.logo {
+  width: 50px;
+  margin-left: 5px;
+}
+
+.title {
+  display: inline-block;
+  color: white;
+  margin: -5px 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.search {
+  margin: -5px 10px;
+
+  width: 40%;
+  height: 30px;
+}
+
+.margin-top {
+  margin-top: 15px;
+}

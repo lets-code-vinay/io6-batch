@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors -revision</title>
+    <!--
+        1. By name
+            red, blue, green
+        2. By selection
+        3. By Hex code
+            is a color code represented by #
+            # 00 00 00  
+              R  G  B ==> Red Green Blue
+            Example : #56ff89  56-Red, ff-Green, 89-Blue
+
+            #000000 -- Black
+            #ffffff -- White
+        4. By RGB
+            Red Green Blue
+            rgb(0-255, 0-255, 0-255)
+            rbg(0,0,0) --- Black
+            rgb(255, 255, 255) White
+            Example: rgb(45,200,45)
+    -->
+    <!--
+         Number System
+        Binary System (2 bit))
+            0-1 
+        Octal (8bit)
+            0-7 (0,1,2,3,4,5,6,7)
+        Decimal (10bit)
+            0-9 (0,1,2,3,4,5,6,7,8,9)
+        Hexadecimal (16bit)
+            0-F  (0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f)
+
+       -->
+    <style>
+      body {
+        background-image: url("../fox.jpg");
+      }
+      .div-1 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: yellow;
+        color: red;
+      }
+
+      .by-selection {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: rgb(48, 135, 210);
+        color: rgb(166, 166, 231);
+      }
+
+      .by-hex {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: #384b86;
+      }
+
+      .by-rgb {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: rgb(61, 74, 147);
+      }
+
+      .by-rgb-trans {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: rgba(61, 74, 147, 0.5);
+      }
+
+      .by-hex-trans {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: #67abcd88;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-1"><h1>this is Div 1: By name</h1></div>
+    <div class="by-selection"><h1>this is Div 2:-- By Selection</h1></div>
+    <div class="by-hex"><h1>this is Div 3:-- By Hex-code</h1></div>
+    <div class="by-rgb"><h1>this is Div 4:-- By RGB</h1></div>
+    <div class="by-rgb-trans">
+      <h1>this is Div 5:-- By RGB- Transparent</h1>
+    </div>
+    <div class="by-hex-trans">
+      <h1>this is Div 6:-- By Hex- Transparent</h1>
+    </div>
+  </body>
+</html>

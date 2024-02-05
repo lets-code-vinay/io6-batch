@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(226, 238, 234);
+      }
+      .header {
+        background-color: rgb(215, 178, 178);
+        border: 1px solid blue;
+        height: 30px;
+      }
+
+      .logos {
+        width: 20px;
+        height: 20px;
+        margin: 0px 50px;
+      }
+      h3 {
+        display: inline;
+        margin: 5px 50px;
+      }
+      .parent {
+        width: 70%;
+        border: 1px solid green;
+        margin: 5% auto;
+      }
+      .child {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: inline-block;
+        margin: 2%;
+      }
+
+      /* Problems in inline property
+        1. height and width are not working
+        2. Margin top and bottom are not working 
+      */
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logos" src="./assets/menu.png" />
+      <img class="logos" src="./assets/ea-logo.png" />
+      <h3>EA Sports</h3>
+      <input type="text" placeholder="Search Your Game" />
+      <img class="logos" src="./assets/slack.png" />
+      <img class="logos" src="./assets/user.png" />
+      <h3>Kumar, Vinay- Contractor</h3>
+    </header>
+
+    <div class="parent">
+      <div class="child child-1">child-1</div>
+      <div class="child child-2">child-2</div>
+      <div class="child child-3">child-3</div>
+      <div class="child child-4">child-4</div>
+      <div class="child child-5">child-5</div>
+    </div>
+  </body>
+</html>

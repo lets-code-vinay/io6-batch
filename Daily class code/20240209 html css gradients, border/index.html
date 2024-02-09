@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .testing {
+        border: 1px solid #ffa392;
+        width: 120px;
+        padding: 2px;
+        text-align: center;
+        margin: 2px;
+        height: 20px;
+      }
+      .p2,
+      .p3,
+      .p4,
+      .p5 {
+        display: inline-block;
+      }
+
+      .p3,
+      .p5 {
+        margin-left: -2px;
+      }
+
+      .p1,
+      .p3,
+      .p4 {
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .p2,
+      .p5 {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .container {
+        width: 50%;
+        margin: 10% auto;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .top-right {
+        border-top-right-radius: 100px;
+      }
+      .top-left {
+        border-top-left-radius: 100px;
+      }
+      .bottom-right {
+        border-bottom-right-radius: 100px;
+      }
+      .bottom-left {
+        border-bottom-left-radius: 100px;
+      }
+
+      .posters {
+        height: 300px;
+        width: 300px;
+        display: inline-block;
+        text-align: center;
+      }
+      .amir {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-amir-glogau.jpg);
+        background-size: cover;
+      }
+
+      .vee {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-vee-padva.jpg);
+        background-size: cover;
+      }
+
+      .shannon {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-shannon-woodruff.jpg);
+        background-size: cover;
+      }
+      .nate {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-nate-cooper.jpg);
+        background-size: cover;
+      }
+      .will {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-will-miller.jpg);
+        background-size: cover;
+      }
+      .gaya {
+        background-image: url(https://guidely.com/wp-content/uploads/2023/12/team-gaya-glogau.jpg);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="testing p1">Share your store</p>
+    <p class="testing p2">Informational</p>
+    <p class="testing p3">Testimonials</p>
+    <br />
+    <p class="testing p4">Call to Action</p>
+    <p class="testing p5">Personal Post</p>
+
+    <div class="container">
+      <img class="top-left" src="../fox.jpg" alt="fox" />
+      <img src="../sinchan.png" alt="sinchan" />
+      <img
+        class="bottom-right"
+        src="https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-58384.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1707436800&semt=ais"
+        alt="sinchan"
+      />
+      <img
+        class="bottom-left"
+        src="https://i.pinimg.com/originals/8d/2f/41/8d2f41dbb4b1b988a01b093bb8672fb7.jpg"
+        alt="sinchan"
+      />
+      <img src="../../char.jpg" alt="char" />
+      <img
+        class="top-right"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfIMsveDO8YTh-EdVYc5oSgGLlp7DG8QvDFA"
+        alt="sinchan"
+      />
+    </div>
+
+    <div class="container">
+      <div class="posters amir top-left">
+        <h1>Amir Glagau</h1>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="posters vee">
+        <h1>Vee Padva</h1>
+        <p>COO & Head of Products</p>
+      </div>
+      <div class="posters shannon bottom-right">
+        <h1>Shannon</h1>
+        <p>Client Experience Manager</p>
+      </div>
+      <div class="posters nate bottom-left">
+        <h1>Nate Cooper</h1>
+        <p>Lifecycle Marketting</p>
+      </div>
+      <div class="posters will">
+        <h1>Will Miller</h1>
+        <p>Associate Product</p>
+      </div>
+      <div class="posters gaya top-right">
+        <h1>Gaya Glagau</h1>
+        <p>Content Coordinator</p>
+      </div>
+    </div>
+  </body>
+</html>

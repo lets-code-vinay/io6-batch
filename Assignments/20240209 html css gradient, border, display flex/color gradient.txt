@@ -1,0 +1,8 @@
+1. Use dipslay property flex;
+2. All children must be inside main div.
+3. Use flex wrap to make it responsive
+4. you free to make your own designs.
+5. use gradient (Linear, Conical, Radial) and style it as beautiful as you can.
+6. you can place images where you want to. for that you can download png images from
+7. https://www.freeiconspng.com/images/pokemon-png  
+8. Please note the black area are also div.

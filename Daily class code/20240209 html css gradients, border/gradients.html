@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <!--
+        1. Gradients:
+            Mixing of two or more  colors
+        2. Types of gradients
+            a. Linear Gradient
+            b. Radial Gradient
+            c. Conical Gradient
+        3. linear-gradient
+            background-image
+            background-image: linear-gradient()
+            background-image: linear-gradient(direction, color1, color2, color3)
+            direction: 
+                to left
+                to right
+                to bottom
+                to top
+            background-image: linear-gradient(direction, color1 %, color2 %)
+            background-image: linear-gradient(direction, red 40%, yellow 60%)
+        4. Radial Gradient:
+                background-image
+                background-image: radial-gradient()
+                background-image: radial-gradient(red, pink, gold)
+                background-image: radial-gradient(red 60%, pink 40%)
+                Shape:
+                    circle
+                    ellipses
+                Center point
+                    0%          : on top left
+                    100%        : on right bottom
+                    20% 50%     : x: 20% from left
+                                : y: 50% from top
+
+        5. conic-gradient
+            It just like any cone from top view
+                background-image
+                background-image: conic-gradient()
+                background-image: conic-gradient(red, pink, gold)
+              to change starting angle
+                background-image: conic-gradient(from 90deg, red, pink, gold)
+              To provide angle in conic
+                background-image: conic-gradient(from 90deg, red 90deg, pink 45deg, gold 270deg)
+              To create sharp edge just like pie chart
+                background-image: conic-gradient(from 90deg, red 0deg, red 45deg, pink 45deg, pink 60deg, gold 60deg, gold 360deg)
+
+
+    -->
+
+    <!--
+        Border
+            border: 1px solid red;
+
+            1. border-style
+                solid
+                dashed
+                dotted
+                double
+                inset
+                outset
+                ridge
+                groove
+                hidden
+                none
+                shorthand (solid, ridge, dotted, double)
+
+            2. border-width : To increase or decrease thickness of border
+                border-width: 1px, medium, thick
+
+            3. shorthand()
+                border-width
+                border-style
+                border-color
+                 We can use all above properties in a single property like border: 2px double blue; it calls shorthand
+            
+            4. border-color:
+                border-color: red;
+            
+            5. border side styling
+                border-top-style: double
+                border-left-style: dotted
+                border-dashed-style: dashed
+                border-bottom-style: double
+                    :: shorthand ::
+                border-top: 1px double red;
+                border-left: 1px dotted green;
+                border-right: 1px double red;
+
+            6. border-radius
+                border-radius: 10px; or 10%  (suitable is px)
+
+                    :: how to make round element ::
+                a. element must be equal in height and width
+                b. border-radius: (half of width/height) or 50%  (suitable is %age only when height == width)
+                c. border-radius: 50%;
+
+                    :: how to make capsule in element ::
+                a. Height and width size doesn't matter
+                b. give half value of height/width in percentage
+                c. border-radius: 150px;  (suitable only in px)-
+
+                    :: how to make oval, egg, ellipse in element ::
+                a. Height and width size doesn't matter
+                b. give 50% border-radius
+                c. border-radius: 50%;  (suitable only in percentage)-
+
+            7. border-image
+                use this image for reference
+                        https://www.w3schools.com/cssref/border.png
+                border: 10px solid transparent
+                border-image: url(local image path/ online link)
+                border-image: url(https://www.w3schools.com/cssref/border.png)
+                border-image: url(https://www.w3schools.com/cssref/border.png) 30
+                border-image: url(https://www.w3schools.com/cssref/border.png) 30 round/stretch
+
+
+    -->
+    <style>
+      body {
+        background-image: url("https://c.ndtvimg.com/2022-05/a24l3l68_momos_625x300_01_May_22.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886");
+        background-size: cover;
+      }
+      .parent {
+        /* background-color: red; */
+      }
+
+      .child {
+        margin-top: 2px;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+      }
+      .child-1 {
+        border: 1px solid black;
+        background-color: aqua;
+      }
+      .child-2 {
+        border: 1px solid black;
+        background-image: url(../fox.jpg);
+        background-size: cover;
+      }
+      .child-3 {
+        border: 1px solid black;
+        background-image: linear-gradient(red, blue, yellow);
+      }
+      .child-4 {
+        border: 1px solid black;
+        background-image: linear-gradient(to right, red, blue);
+      }
+      .child-5 {
+        border: 1px solid black;
+        background-image: linear-gradient(to bottom, teal, pink, black);
+      }
+      .child-6 {
+        border: 1px solid black;
+        background-image: linear-gradient(to bottom, brown, black 50%, red);
+      }
+      .child-7 {
+        border: 1px solid black;
+        background-image: linear-gradient(
+          to right,
+          rgba(165, 42, 42, 0) 50%,
+          black 50%
+        );
+      }
+      .child-8 {
+        border: 1px solid black;
+        background-image: radial-gradient(circle, green, yellow);
+        width: 500px;
+      }
+      .child-9 {
+        border: 1px solid black;
+        background-image: radial-gradient(ellipse, green, yellow);
+        width: 500px;
+      }
+      .child-10 {
+        border: 1px solid black;
+        background: radial-gradient(
+          circle at 70% 60%,
+          #040000 5%,
+          #eeeeee00 80%
+        );
+        width: 500px;
+        color: white;
+      }
+
+      .std {
+        width: fit-content;
+        margin: 16% auto;
+      }
+
+      .child-11 {
+        /* border-style: solid; */
+        /* border-style: dotted; */
+        /* border-style: dashed; */
+        /* border-style: double; */
+        border: 10px ridge black;
+      }
+
+      .child-12 {
+        border: 10px groove black;
+      }
+
+      .child-13 {
+        border: 5px inset;
+      }
+      .child-14 {
+        border: 5px outset;
+      }
+
+      .child-15 {
+        border: 1px solid red;
+        border-style: none;
+      }
+      .child-16 {
+        border: 1px solid red;
+        border-style: hidden;
+      }
+      .child-17 {
+        border-style: inset solid dotted double;
+      }
+      .child-18 {
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      .child-19 {
+        border-style: dotted;
+        border-width: 10px;
+      }
+
+      .child-20 {
+        border-style: dashed;
+        border-width: thick;
+        border-color: red;
+      }
+
+      .child-20 {
+        /* border-style: double;
+        border-width: 2px;
+        border-color: blue; */
+        border: 2px double blue;
+      }
+
+      .child-21 {
+        border-width: 5px;
+        border-color: rgb(67, 7, 7);
+        border-top-style: double;
+        border-bottom-style: dashed;
+        border-right: 5px dotted black;
+        border-left: 2px solid yellow;
+      }
+      .child-22 {
+        border: 5px solid navy;
+        border-radius: 30px;
+      }
+      .child-23 {
+        border: 5px solid navy;
+        border-radius: 50%;
+      }
+      .child-24 {
+        border: 5px solid rgb(25, 85, 42);
+        border-radius: 150px;
+        width: 400px;
+        height: 200px;
+      }
+      .child-25 {
+        border: 5px solid rgb(25, 85, 42);
+        border-radius: 50%;
+        width: 400px;
+        height: 200px;
+      }
+
+      .child-26 {
+        border: 10px solid transparent;
+        border-image: url(https://www.w3schools.com/cssref/border.png) 30
+          stretch;
+      }
+
+      .child-27 {
+        background-image: conic-gradient(red, black, yellow, red);
+      }
+
+      .child-28 {
+        background-image: conic-gradient(red 45deg, black 90deg, yellow 210deg);
+        border-radius: 50%;
+      }
+      .child-29 {
+        background-image: conic-gradient(from 90deg, red, black, yellow);
+        border-radius: 50%;
+      }
+      .child-30 {
+        background-image: conic-gradient(
+          from 90deg,
+          red 0deg,
+          red 45deg,
+          black 45deg,
+          black 90deg,
+          yellow 90deg,
+          yellow 180deg,
+          green 180deg,
+          green 270deg,
+          hotpink 270deg
+        );
+        border-radius: 50%;
+      }
+
+      .child-31 {
+        background-image: conic-gradient(at 60% 60%, red, green, gold, red);
+        border-radius: 50%;
+      }
+
+      .child-32 {
+        border: 3px solid black;
+        border-radius: 50%;
+        height: 300px;
+      }
+      .child-33 {
+        border: 3px solid black;
+        border-radius: 150px;
+        height: 300px;
+        background-image: conic-gradient(at 60% 60%, red, green, gold, red);
+        background-size: cover;
+      }
+
+      .child-34 {
+        border: 3px solid black;
+        border-radius: 50%;
+        background-image: url("https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-58384.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1707436800&semt=ais");
+        background-size: cover;
+      }
+
+      .child-35 {
+        background-image: url("https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-58384.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1707436800&semt=ais");
+        background-size: cover;
+        border: 2px solid black;
+        width: 300px;
+
+        border-top-left-radius: 50px;
+        border-top-right-radius: 150px;
+      }
+
+      .child-36 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        border: 3px solid blue;
+        border-bottom-left-radius: 150px;
+        border-top-right-radius: 150px;
+      }
+      .child-37 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        border: 3px solid blue;
+        border-bottom-left-radius: 150px;
+        border-bottom-right-radius: 150px;
+      }
+      .child-38 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        border: 3px solid blue;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 150px;
+      }
+
+      .child-39 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        border: 3px solid black;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 50%;
+        width: 300px;
+      }
+      .child-40 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        border: 3px solid black;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 50%;
+        width: 300px;
+        border-top: none;
+      }
+      .child-41 {
+        background-image: url(../sinchan.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 20px solid rgba(0, 0, 0, 0.458);
+        width: 300px;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-right: none;
+        border-left: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child child-1"><h1 class="std">child-1</h1></div>
+      <div class="child child-2"><h1 class="std">child-2</h1></div>
+      <div class="child child-3"><h1 class="std">child-3</h1></div>
+      <div class="child child-4"><h1 class="std">child-4</h1></div>
+      <div class="child child-5"><h1 class="std">child-5</h1></div>
+      <div class="child child-6"><h1 class="std">child-6</h1></div>
+      <div class="child child-7"><h1 class="std">child-7</h1></div>
+      <div class="child child-8"><h1 class="std">child-8</h1></div>
+      <div class="child child-9"><h1 class="std">child-9</h1></div>
+      <div class="child child-10"><h1 class="std">Hello Pooja</h1></div>
+
+      <div class="child child-11"><h1 class="std">child-11</h1></div>
+      <div class="child child-12"><h1 class="std">child-12</h1></div>
+      <div class="child child-13"><h1 class="std">child-13</h1></div>
+      <div class="child child-14"><h1 class="std">child-14</h1></div>
+      <div class="child child-15"><h1 class="std">child-15</h1></div>
+      <div class="child child-16"><h1 class="std">child-16</h1></div>
+      <div class="child child-17"><h1 class="std">child-17</h1></div>
+      <div class="child child-18"><h1 class="std">child-18</h1></div>
+      <div class="child child-19"><h1 class="std">child-19</h1></div>
+      <div class="child child-20"><h1 class="std">child-20</h1></div>
+      <div class="child child-21"><h1 class="std">child-21</h1></div>
+      <div class="child child-22"><h1 class="std">child-22</h1></div>
+      <div class="child child-23"><h1 class="std">child-23</h1></div>
+      <div class="child child-24"><h1 class="std">child-24</h1></div>
+      <div class="child child-25"><h1 class="std">child-25</h1></div>
+      <div class="child child-26"><h1 class="std">child-26</h1></div>
+
+      <div class="child child-27"><h1 class="std">child-27</h1></div>
+      <div class="child child-28"><h1 class="std">child-28</h1></div>
+      <div class="child child-29"><h1 class="std">child-29</h1></div>
+      <div class="child child-30"><h1 class="std">child-30</h1></div>
+      <div class="child child-31"><h1 class="std">child-31</h1></div>
+      <div class="child child-32"><h1 class="std">child-32</h1></div>
+      <div class="child child-33">
+        <img src="../sinchan.png" alt="sinchan" width="200" />
+      </div>
+      <div class="child child-34">
+        <img src="../sinchan.png" alt="sinchan" width="200" />
+      </div>
+      <div class="child child-35"><h1 class="std">child-35</h1></div>
+      <div class="child child-36"></div>
+      <div class="child child-37"><h1 class="std">child-37</h1></div>
+      <div class="child child-38"><h1 class="std">child-38</h1></div>
+      <div class="child child-39"><h1 class="std">child-39</h1></div>
+      <div class="child child-40"></div>
+      <div class="child child-41"></div>
+    </div>
+  </body>
+</html>

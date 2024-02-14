@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../fox.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  margin: 0% 1%;
+}
+.nav-container {
+  width: 100%;
+  margin: auto;
+  height: 60px;
+  display: flex;
+  background-color: #d2d2d244;
+}
+
+.title-container {
+  flex-grow: 1;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.super {
+  margin-left: 1%;
+}
+
+.menu {
+  margin-right: 3%;
+}
+
+.search-container {
+  height: 50px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.search-field {
+  height: 40px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 5px;
+  border: 1px solid #d2d2d2;
+  width: 400px;
+}
+
+.search-icon {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #d2d2d2;
+  background-color: #f9f8f9;
+}
+
+.mic-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  border-radius: 50%;
+  background-color: #f9f8f9;
+  padding: 5px;
+}
+.action-container {
+  height: 50px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.avatar {
+  display: inline-block;
+  width: 36px;
+  /* border: 1px solid black; */
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  margin-left: 7px;
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.jungle-title {
+  color: #140b53;
+  font-size: 50px;
+  
+}

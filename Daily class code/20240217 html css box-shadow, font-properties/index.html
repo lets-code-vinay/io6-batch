@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Google fonts : start-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Anta&family=Jacquarda+Bastarda+9&family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!--Google fonts : ends-->
+
+    <!--Font awesome CDN: start-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+      integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Font awesome CDN: end-->
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>box-shadow</title>
+
+    <!--
+        1. Box-shadow
+            box-shadow: x y blur spread color;
+            box-shadow: 2px 2px 5px 2px black
+        2. text-shadow
+            text-shadow: x y blur color 
+            text-shadow: 1px 1px 5px red 
+        
+        3. Font-properties
+            font-size : to increase or decrease the size of font
+                small
+                smaller
+                x-small
+                xx-small
+                large
+                larger
+                x-large
+                xx-large
+                px : 10px , 20px 200px
+            font-weight: To make fonts bold
+                bold
+                bolder
+                100-900
+                    <600
+            
+            font-family: to change fon style
+                font-family: cursive;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, serif;
+                    multiple fonts can be used if in anycase font-A doesn't work 
+                    Then it will pick font-B 
+                google fonts
+                    1. go to google fonts website
+                        https://fonts.google.com/?sort=alpha
+                    2. select any font
+                    3. Get font
+                    4. Click Get Embed Code or Go to Cart Icon
+                    5. Copy Code and paste to head tag
+                    6. use font-family in your element
+
+        -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Aclonica&family=Anta&family=Jacquarda+Bastarda+9&family=Protest+Riot&display=swap");
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: brown;
+      }
+      .avengers {
+        border: 1px solid red;
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        box-shadow: 20px 20px 20px 1px black;
+        margin: 10% auto;
+      }
+      .iron {
+        border: 1px solid red;
+        width: fit-content;
+        margin: auto;
+        box-shadow: 2px 3px 2px 1px blue;
+        text-shadow: 10px 10px 10px green;
+        font-size: 50px;
+      }
+
+      #spider {
+        text-shadow: 0px 0px 50px rgb(0, 0, 0);
+        font-size: 50px;
+        width: fit-content;
+        margin: auto;
+        color: white;
+      }
+
+      .avengers-list {
+        margin: 10%;
+        list-style-type: circle;
+      }
+      .i-man {
+        font-size: large;
+        font-family: "Protest Riot", sans-serif;
+      }
+      .s-man {
+        /* font-size: small; */
+        font-size: xx-large;
+        font-family: "Aclonica", sans-serif;
+      }
+      .b-p {
+        font-size: xx-large;
+        font-family: "Anta", sans-serif;
+      }
+
+      .hulk {
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .Thor {
+        font-size: 36px;
+        font-weight: 900;
+        font-family: "Jacquarda Bastarda 9", serif;
+      }
+      .Black-Widow {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, serif;
+      }
+
+      i {
+        color: rgb(82, 18, 29);
+      }
+      #home {
+        color: indianred;
+      }
+
+      .icons {
+        color: indigo;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="avengers"></div>
+    <h1 class="iron">Iron-man</h1>
+    <h1 id="spider">spider-man</h1>
+    <ol type="a" class="avengers-list">
+      <li class="i-man">Iron-man</li>
+      <li class="s-man">Spider-man</li>
+      <li class="b-p">Black Panther</li>
+      <li class="hulk">Hulk</li>
+      <li class="Thor">Thor</li>
+      <li class="Black-Widow">Black Widow</li>
+    </ol>
+
+    <h1>
+      <i class="fa-solid fa-house icons" id="home"></i>
+      Hello Ankit
+    </h1>
+    <h2>
+      <i class="fa-brands fa-whatsapp icons"></i>
+      +91-7307805030
+    </h2>
+  </body>
+</html>

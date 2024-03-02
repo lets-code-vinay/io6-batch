@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <link rel="icon" type="" href="../../rabbit-icon.png" />
+    <!--
+        1. line-height
+            to provide space between to lines
+                line-height: 10px;
+                line-height: 1;
+                line-height: 0;
+                line-height: 10;
+                line-height: 50%;
+        2. word-spacing
+            To provide space in between 2 words
+                % and counting won't work
+                word-spacing: 10px;
+                word-spacing: 0px;
+                word-spacing: -10px;
+        3. Quotation
+            a. blockquote + cite
+                To use any external data
+                cite: refers the source  
+            b. q
+                To use any external data
+        4. abbr + title
+            abbr means Abbreviation or acronym
+            It is used to provide the full form of any acronym or short form 
+              like ATM, WHO, SSP, PM,
+               I withdrawn some cash from 
+               <abbr title="Automatic Taler Machine">ATM</abbr> today morning
+        5. Address
+            address tag used to provide address to make website more SEO friendly
+             <address>#:10, St.No. 5, Keshav Nagar, Pune<</address>
+        6. cite + title
+            To mention any art work, creativity
+        7. letter-spacing            
+            provide gap in between letters
+        8. bdo + direction
+            Use to give text direction like LEFT-TO-RIGHT or RIGHT-TO-LEFT
+            By default ltr
+            direction: rtl (right-to-left)
+                All word got reversed
+        9. kbd
+            To mention any keyboard button in website use <kbd> tag
+        10. code
+            If you are adding any code then use inside <code> tags
+        11. meter
+              Is used to show some specific value in a progress bar
+        12. picture : responsiveness
+              picture + source + media
+              <picture>
+                <source media="(min-width: 350px)" srcset="../image-path" />
+                <img src="" alt="" />
+        13. Favicon
+                The icon which are used on the tab along with Title; known as favicon
+                <link  rel="icon" href="path.png"/>
+        14. vertical-align
+                To adjust any image according to text use vertical align
+                it must be used with img tag only
+                vertical-align: baseline;
+                vertical-align: super;
+                vertical-align: sub;
+                vertical-align: bottom;
+                vertical-align: top;
+                vertical-align: middle;
+
+
+    -->
+    <style>
+      .line-height {
+        color: red;
+        line-height: 50%;
+      }
+      .word-space {
+        word-spacing: 10px;
+      }
+      .letter-space {
+        color: blue;
+        letter-spacing: 5px;
+      }
+      .bdo {
+        direction: rtl;
+      }
+      .code {
+        background-color: grey;
+        border-radius: 5px;
+      }
+
+      .vertical img {
+        vertical-align: sub;
+      }
+
+      .dire {
+        direction: rtl;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p class="line-height">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
+        ullam incidunt, commodi corporis nesciunt quaerat voluptatibus maiores
+        quasi beatae culpa eos odio sint! Fuga distinctio nihil maxime omnis
+        doloribus dicta.
+      </p>
+      <p class="word-space">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
+        voluptatem quam in eum nostrum, tempore natus sit fuga similique ad
+        corporis ea laborum veniam iusto adipisci vero nam placeat reprehenderit
+        temporibus debitis ullam cum laboriosam. Ratione est deserunt maiores,
+        accusamus voluptas libero ullam eaque velit voluptates, corporis
+        accusantium vitae nisi.
+      </p>
+
+      <p class="letter-space">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
+        distinctio animi ab dicta, ad tempore repudiandae nulla obcaecati quos
+        cum perspiciatis ducimus, non debitis nemo nesciunt repellendus ex
+      </p>
+
+      <h1>---Quotation---</h1>
+      1. Blockquote 2. q
+      <br />
+      <br />
+
+      <q>
+        <strong
+          >To live is the rarest thing in the world. Most people exist, that is
+          all. –</strong
+        >
+        Oscar Wilde</q
+      >
+      <br />
+      <br />
+      <blockquote cite="www.google.com">
+        <strong
+          >To live is the rarest thing in the world. Most people exist, that is
+          all. –</strong
+        >
+        Oscar Wilde
+      </blockquote>
+
+      <p>Bhagwant Maan is <abbr title="Chief Minister">CM</abbr> of Punjab</p>
+      <p>To see footer please <abbr title="Go Down">GD</abbr></p>
+      <p>To redirect new page please <abbr title="Click Here">CH</abbr></p>
+      <p>
+        I withdrawn some cash from
+        <abbr title="Automatic Taler Machine">ATM</abbr> today morning
+      </p>
+
+      <address>
+        <p>#:10, St.No. 5, Keshav Nagar, Pune</p>
+      </address>
+
+      <p><cite>The Hidden Hindu</cite> is written by Akshat Gupta</p>
+      <p>
+        Among all the painting <cite title="www.google.com">Monalisa</cite> full
+        of mysteries
+      </p>
+
+      <bdo class="bdo">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
+        aspernatur autem quia quis impedit nihil laborum? Voluptate harum
+        molestiae recusandae placeat autem, laborum quasi sunt eum repellat
+        rerum voluptas minima architecto fugit laboriosam commodi cumque
+        veritatis animi facere, a earum.
+      </bdo>
+
+      <p>To copy paste use <kbd>ctrl + C</kbd> and <kbd>ctrl + V</kbd></p>
+      <p>let a = b + c;</p>
+
+      <code>let a = b + c;</code>
+
+      <div class="code">
+        <code
+          >const num1 = 5; <br />
+          const num2 = 3; // add two numbers <br />const sum = num1 + num2; //
+          display the sum <br />console.log('The sum of ' + num1 + ' and ' +
+          num2 + ' is: ' + sum);</code
+        >
+      </div>
+
+      <hr />
+
+      <form>
+        <fieldset>
+          <legend>Language Knowledge</legend>
+          <label for="js">JavaScript</label>
+          <meter id="js" value="0.9" min="0.2"></meter>
+          <br />
+          <label for="react">React</label>
+          <meter id="react" value="0.8" min="0.2"></meter>
+
+          <br />
+          <button type="button">Submit</button>
+        </fieldset>
+      </form>
+
+      <picture>
+        <source media="(max-width: 650px)" srcset="../fox.jpg" width="100%" />
+        <source media="(min-width: 950px)" srcset="../sinchan.png" />
+        <img
+          src="data:image/jpeg;base64,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"
+          style="width: auto"
+          width="100%"
+        />
+      </picture>
+
+      <p class="vertical">
+        The
+        <img src="../../rabbit-icon.png" alt="rabbit-icon" width="20" />Rabbit
+        is one of my fav animal
+      </p>
+
+      <p class="dire">
+        The
+        <img src="../../rabbit-icon.png" alt="rabbit-icon" width="20" />Rabbit
+        is one of my fav animal
+      </p>
+    </div>
+  </body>
+</html>

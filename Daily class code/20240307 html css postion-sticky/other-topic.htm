@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Other-topics</title>
+  </head>
+  <!--
+    1. direction:
+            This is just writing direction on webpage
+            1. direction:ltr
+                text will start from left corner and go to right
+            2. direction:rtl
+                text will start from right corder and go to left. Not in reverse order
+    2. unicode-bidi: It reverses the text, work only with direction:rtl
+            1.  unicode-bidi: bidi-override;
+                    it will reverse all the words like:
+                        atiboN
+  
+    3. pre
+        allow us to add word as per our requirement, it won't be formatted
+    4. white-space
+            white-space:nowrap
+                It will increase the length of line horizontally
+                and will cross the width of parent
+            white-space: break-spaces
+                It will check the last word, if it is not fitting then white-space shift to 
+                next line
+    5. overflow:
+        if any element or word exceeding from the height/width limit of parent
+            it will overflow
+            overflow-x
+                    it will handle horizontal scroll and limit
+                overflow-x: hidden;
+                    it will hide the exceeding content
+                overflow-x: scroll
+                    It will show the horizontal scroll bar, whether the content exceeding or not
+                overflow-x: auto
+                    It will check itself the width of content. If it finds the content is exceeding
+                        then it will show scroll bar, otherwise it will hide scroll bar
+            overflow-y
+                       it will handle vertical scroll and limit
+                overflow-y: hidden;
+                    it will hide the exceeding content
+                overflow-y: scroll
+                    It will show the vertical scroll bar, whether the content exceeding or not
+                overflow-y: auto
+                    It will check itself the height of content. If it finds the content is exceeding
+                        then it will show scroll bar, otherwise it will hide scroll bar
+            overflow
+                       it will handle vertical and horizontal scroll and limit
+                overflow: hidden;
+                    it will hide the exceeding content
+                overflow: scroll
+                    It will show the vertical/horizontal scroll bar, whether the content exceeding or not
+                overflow: auto
+                    It will check itself the height/width of content. If it finds the content is exceeding
+                        then it will show scroll bar, otherwise it will hide scroll bar
+                
+            
+    6. text-overflow:
+            text-overflow: hidden
+                it will hide the extra words from parent width
+                It will work only with overflow property
+            text-overflow:ellipsis
+                It will provide ... indication that content is still there
+                
+                    --single line ellipsis--
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+                    --multiline line ellipsis--
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 6;  // ELLIPSIS REQUIRED ON WHICH LINE
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+
+                    -->
+  <style>
+    .direction-ltr {
+      direction: ltr;
+    }
+    .direction-rtl {
+      direction: rtl;
+    }
+    .bidi {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+    }
+
+    .embed {
+      direction: rtl;
+      unicode-bidi: embed;
+    }
+    .html-history {
+      width: 30%;
+      margin: auto;
+      border: 1px solid black;
+      padding: 5px;
+      height: 100px;
+
+      text-overflow: ellipsis;
+      /* overflow: scroll; */
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6;
+    }
+    .physicist {
+      border: 1px solid black;
+      padding: 2px;
+      margin: auto;
+      width: 20%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+  <body>
+    <h3>1. unicode-bidi</h3>
+    <p class="direction-ltr">
+      direction- left-to-right ---:: This is a new para tag. Inspired from
+      Nobita and Doreamon
+    </p>
+
+    <p class="direction-rtl">
+      direction- right to left ---:: This is a new para tag. Inspired from
+      Nobita and Doreamon
+    </p>
+
+    <p class="bidi">
+      unicode-bidi -- bidi-override::: This is a new para tag. Inspired from
+      Nobita and Doreamon
+    </p>
+
+    <p class="embed">
+      unicode-bidi -- embed::: This is a new para tag. Inspired from Nobita and
+      Doreamon
+    </p>
+
+    <p>vinay vinay vinay vinay vinay vinay vinay vinay vinay</p>
+
+    <pre>
+        vinay              vinay
+          vinay          vinay
+            vinay      vinay
+              vinay vinay
+                 vinay
+    </pre>
+
+    <pre>
+        0
+votes
+                            0
+answers
+<br />
+5
+                        views
+Highcharts 
+        Linechart drawing
+     lines in
+      wrong order
+The project Frontend is in angularjs and we are.
+ using the highcharts lib for charts. I have line charts that stopped working correctly after updating from highcharts 5 to highcharts 7. I don't think ...
+javascriptangularjschartshighcharts
+    </pre>
+
+    <hr />
+
+    <p class="html-history">
+      In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and
+      prototyped ENQUIRE, a system for CERN researchers to use and share
+      documents. In 1989, wrote the browser and server software in late 1990.
+      That year, Berners-Lee and CERN data systems engineer Robert Cailliau
+      collaborated on a joint request for funding, but the project was not
+      formally adopted by CERN. In his personal notes of 1990, Berners-Lee
+      listed "some of the many areas in which hypertext is used"; an
+      encyclopedia is the first entry.[4] The first publicly available
+    </p>
+
+    <p class="physicist">
+      In 1980, physicist Tim Berners-Lee, a contractor at CERN,
+    </p>
+  </body>
+</html>

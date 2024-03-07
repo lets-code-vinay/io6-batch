@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+      integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!--
+  ----Position--
+    1. Static : default
+    2. Relative
+    3. Absolute
+    4. Fixed
+    5. Sticky
+
+
+    1. Static:  This is a default position property of every element existed on DOM
+    2. Relative:  It independent respective element. 
+                  If you give direction (top, bottom, left,    right)
+                  It will move from it's original position/location.
+    3. Absolute:  Absolute is dependent on its parent. with property of position: relative;
+                  If it doesn't find parent with position:relative then go upward(parent to parent).
+                  If it doesn't find any parent with position:relative then it makes body as its parent
+    4. Fixed:     To fixed any element over the website we use position:fixed and direction
+                  .chat-icon{
+                    position:fixed;
+                    top: 10px;
+                      bottom : 10px;
+                    left: 10px;
+                      right: 10px;
+                    z-index
+                  }
+    5. Sticky:    It has both value of position:Static and position:fixed
+                  Initially it behaves like normal element
+                  when user scrolls it sticks at given position
+                   .chat-icon{
+                    position:sticky;
+                    top: 10px;
+                    z-index
+                  }
+                  Note: Sticky will work only when there is scroll bar/scroll
+
+        Z-index:
+                  When we give position property to elements. It makes layers and moved upwards 
+                  at z-axis.
+                  lower z-index will be at bottom
+                  higher z-index will be on top level
+-->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      width: 100%;
+      height: 50px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background-color: aqua;
+
+      padding: 0 10px;
+    }
+    .icon-container {
+      width: 100px;
+      background-color: red;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 50px;
+    }
+    .count {
+      background-color: white;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      padding: 2px;
+      font-size: 10px;
+    }
+    .notification {
+      position: relative;
+    }
+    .msg-count,
+    .noti-count {
+      position: absolute;
+      top: -10px;
+      left: 8px;
+    }
+
+    .second-header {
+      width: 100%;
+      height: 50px;
+      border: 1px solid black;
+      background-color: lightgreen;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .section-tag {
+      background-color: antiquewhite;
+    }
+    .html-history {
+      width: 60%;
+      border: 1px solid black;
+      margin: 0% auto 0;
+      padding: 5px;
+      font-size: 30px;
+    }
+    .nobita {
+      position: sticky;
+      top: 10%;
+      z-index: 1;
+      float: right;
+    }
+
+    .html-img {
+      position: sticky;
+      top: -3%;
+      z-index: 3;
+    }
+
+    .nature {
+      position: sticky;
+      top: 10%;
+    }
+  </style>
+  <body>
+    <main>
+      <header class="header">
+        <h1>Facebook</h1>
+
+        <div class="icon-container">
+          <div class="notification">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="count msg-count">10</span>
+          </div>
+
+          <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+            <span class="count noti-count">10</span>
+          </div>
+        </div>
+      </header>
+      <nav class="second-header">this is second header</nav>
+
+      <section class="section-tag">
+        <p class="html-history">
+          In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and
+          prototyped ENQUIRE, a system for CERN researchers to use and share
+          documents. In 1989, Berners-Lee wrote a memo proposing an
+          Internet-based hypertext system.[3] Berners-Lee specified HTML and
+          wrote the browser and server software in late 1990. That year,
+          Berners-Lee and CERN data systems engineer Robert Cailliau
+          collaborated on a joint request for funding, but the project was not
+          formally adopted by CERN. In his personal notes of 1990, Berners-Lee
+          listed "some of the many areas in which hypertext is used"; an
+          encyclopedia is the first entry.[4] The first publicly available
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/3/3f/NobitaNobi.png"
+            alt="nobita"
+            width="200px"
+            height="400px"
+            class="nobita"
+          />
+          <!-- <img
+            src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+            alt="landscape"
+            width="600px"
+            height="400px"
+            class="nature"
+          /> -->
+          description of HTML was a document called "HTML Tags",[5] first
+          mentioned on the Internet by Tim Berners-Lee in late 1991.[6][7] It
+          describes 18 elements comprising the initial, relatively simple design
+          of HTML. Except for the hyperlink tag, these were strongly influenced
+          by SGMLguid, an in-house Standard Generalized Markup Language
+          (SGML)-based documentation format at CERN. Eleven of these elements
+          still exist in HTML 4.[8] HTML is a markup language that web browsers
+          use to interpret and compose text, images, and other material into
+          visible or audible web pages. Default characteristics for every item
+          of HTML markup are defined in the browser, and these characteristics
+          can be altered or enhanced by the web page designer's additional use
+          of CSS. Many of the text elements are mentioned in the 1988 ISO
+          technical report TR 9537 Techniques for using SGML, which describes
+          the features of early text formatting languages such as that used by
+          the RUNOFF command developed in the early 1960s for the CTSS
+          (Compatible Time-Sharing System) operating system. These formatting
+          commands were derived from the commands used by typesetters to
+          manually format documents. However, the SGML concept of generalized
+          markup is based on elements (nested annotated ranges with attributes)
+          rather than merely print effects, with separate structure and markup.
+          HTML has been progressively moved in this direction with CSS.
+          <br />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png"
+            alt="html"
+            height="500px"
+            width="500px"
+            class="html-img"
+          />
+          In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and
+          prototyped ENQUIRE, a system for CERN researchers to use and share
+          documents. In 1989, Berners-Lee wrote a memo proposing an
+          Internet-based hypertext system.[3] Berners-Lee specified HTML and
+          wrote the browser and server software in late 1990. That year,
+          Berners-Lee and CERN data systems engineer Robert Cailliau
+          collaborated on a joint request for funding, but the project was not
+          formally adopted by CERN. In his personal notes of 1990, Berners-Lee
+          listed "some of the many areas in which hypertext is used"; an
+          encyclopedia is the first entry.[4] The first publicly available
+          description of HTML was a document called "HTML Tags",[5] first
+          mentioned on the Internet by Tim Berners-Lee in late 1991.[6][7] It
+          describes 18 elements comprising the initial, relatively simple design
+          of HTML. Except for the hyperlink tag, these were strongly influenced
+          by SGMLguid, an in-house Standard Generalized Markup Language
+          (SGML)-based documentation format at CERN. Eleven of these elements
+          still exist in HTML 4.[8] HTML is a markup language that web browsers
+          use to interpret and compose text, images, and other material into
+          visible or audible web pages. Default characteristics for every item
+          of HTML markup are defined in the browser, and these characteristics
+          can be altered or enhanced by the web page designer's additional use
+          of CSS. Many of the text elements are mentioned in the 1988 ISO
+          technical report TR 9537 Techniques for using SGML, which describes
+          the features of early text formatting languages such as that used by
+          the RUNOFF command developed in the early 1960s for the CTSS
+          (Compatible Time-Sharing System) operating system. These formatting
+          commands were derived from the commands used by typesetters to
+          manually format documents. However, the SGML concept of generalized
+          markup is based on elements (nested annotated ranges with attributes)
+          rather than merely print effects, with separate structure and markup.
+          HTML has been progressively moved in this direction with CSS.
+          <br />
+          <br />
+          In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and
+          prototyped ENQUIRE, a system for CERN researchers to use and share
+          documents. In 1989, Berners-Lee wrote a memo proposing an
+          Internet-based hypertext system.[3] Berners-Lee specified HTML and
+          wrote the browser and server software in late 1990. That year,
+          Berners-Lee and CERN data systems engineer Robert Cailliau
+          collaborated on a joint request for funding, but the project was not
+          formally adopted by CERN. In his personal notes of 1990, Berners-Lee
+          listed "some of the many areas in which hypertext is used"; an
+          encyclopedia is the first entry.[4] The first publicly available
+          description of HTML was a document called "HTML Tags",[5] first
+          mentioned on the Internet by Tim Berners-Lee in late 1991.[6][7] It
+          describes 18 elements comprising the initial, relatively simple design
+          of HTML. Except for the hyperlink tag, these were strongly influenced
+          by SGMLguid, an in-house Standard Generalized Markup Language
+          (SGML)-based documentation format at CERN. Eleven of these elements
+          still exist in HTML 4.[8] HTML is a markup language that web browsers
+          use to interpret and compose text, images, and other material into
+          visible or audible web pages. Default characteristics for every item
+          of HTML markup are defined in the browser, and these characteristics
+          can be altered or enhanced by the web page designer's additional use
+          of CSS. Many of the text elements are mentioned in the 1988 ISO
+          technical report TR 9537 Techniques for using SGML, which describes
+          the features of early text formatting languages such as that used by
+          the RUNOFF command developed in the early 1960s for the CTSS
+          (Compatible Time-Sharing System) operating system. These formatting
+          commands were derived from the commands used by typesetters to
+          manually format documents. However, the SGML concept of generalized
+          markup is based on elements (nested annotated ranges with attributes)
+          rather than merely print effects, with separate structure and markup.
+          HTML has been progressively moved in this direction with CSS.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

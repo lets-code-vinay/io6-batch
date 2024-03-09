@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-properties</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+      integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!--
+    1. text-align
+        text-align: start
+            it is default property. Text is starting from the left
+        text-align: center
+            It aligns text to the center of parent
+        text-align: end
+            It aligns text to end of parent.
+        text-align: justify
+            In justify all the texts manage the gap and fill accordingly
+    2. text-decoration:
+        text-decoration-line: provide line type like
+            text-decoration-line: underline
+            text-decoration-line: overline
+            text-decoration-line: overline underline
+            text-decoration-line: line-through
+        text-decoration-style: provide some line styling like
+            text-decoration-style: solid
+            text-decoration-style: wavy
+            text-decoration-style: double
+            text-decoration-style: dashed
+            text-decoration-style: dotted
+        text-decoration-color: provide colors to line
+            text-decoration-color: red, #3122abc, rgb(45,78,210)
+        text-decoration-thickness: provide thickness to line
+            text-decoration-thickness: auto
+            text-decoration-thickness: 2px
+            text-decoration-thickness: 2%
+        text-decoration shorthand: is combination of all text-decoration properties
+                text-decoration-line
+                text-decoration-style
+                text-decoration-color
+                text-decoration-thickness
+
+                text-decoration: line style color thickness
+                text-decoration: overline dotted blue 2px;   
+    3. text-transform
+        Change entire text to lowercase, capitalize, uppercase
+                text-transform: uppercase;
+                text-transform: lowercase;
+                text-transform: capitalize;  
+    4. text-indent
+        Provide some space from left in para
+        text-indent work only when applied to parent
+          text-index: 10px
+          text-index: 10%
+    5. writing-mode
+        We can rotate texts
+          writing-mode: vertical-lr :-- vertical text at left side
+          writing-mode: vertical-rl :-- vertical text at right side
+
+      -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-button {
+      background: blue;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-track-piece {
+      background: red;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 5px;
+    }
+
+    ​ .main-container {
+      width: 100%;
+      height: 100vh;
+    }
+    .header {
+      width: 100%;
+      height: 50px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background-color: aqua;
+
+      padding: 0 10px;
+    }
+    .icon-container {
+      width: 100px;
+      background-color: red;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 50px;
+    }
+    .count {
+      background-color: white;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      padding: 2px;
+      font-size: 10px;
+    }
+    .notification {
+      position: relative;
+    }
+    .msg-count,
+    .noti-count {
+      position: absolute;
+      top: -10px;
+      left: 8px;
+    }
+
+    .blog-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px 0;
+      text-indent: 50%;
+    }
+    .blog-1,
+    .blog-2,
+    .blog-3 {
+      width: 30%;
+      height: 500px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .blog-1 {
+      text-overflow: hidden;
+      overflow: auto;
+      text-transform: uppercase;
+    }
+    .blog-2 {
+      overflow: scroll;
+      overflow-x: hidden;
+      text-align: justify;
+    }
+    .blog-3 {
+      /* overflow: scroll; */
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    hr {
+      margin: 2% 0;
+    }
+    .passion {
+      border: 1px solid black;
+      padding: 5px;
+      width: 70%;
+      margin: auto;
+      font-size: 20px;
+      font-weight: 800;
+      text-align: center;
+      /* text-align: end; */
+      /* text-align: start; */
+      /* text-align: justify; */
+
+      /* text-decoration-line: underline; */
+      text-decoration-line: overline;
+      /* text-decoration-line: overline underline; */
+      /* text-decoration-line: line-through; */
+
+      text-decoration-style: solid;
+    }
+
+    .passion-1 {
+      text-decoration-style: dotted;
+      text-decoration-thickness: 10%;
+    }
+    .passion-2 {
+      text-decoration-style: dashed;
+    }
+    .passion-3 {
+      text-decoration-style: double;
+      text-decoration-line: underline;
+      padding-top: 20px;
+    }
+    .passion-4 {
+      text-decoration-style: wavy;
+      text-decoration-line: underline;
+      padding-top: 20px;
+      text-decoration-color: yellowgreen;
+      /* text-decoration-thickness: auto; */
+
+      writing-mode: horizontal-tb;
+    }
+    /*
+ ---- text-decoration shorthand
+ text-decoration-line
+ text-decoration-style
+ text-decoration-color
+ text-decoration-thickness
+
+ text-decoration: line style color thickness
+*/
+
+    .passion-5 {
+      text-decoration: overline double blue 2px;
+      writing-mode: vertical-lr;
+    }
+
+    .transform {
+      padding: 5px;
+      border: 1px solid blue;
+      margin: 5px auto;
+      width: 70%;
+      font-size: 20px;
+      font-weight: 800;
+      text-align: center;
+      text-transform: capitalize;
+      writing-mode: vertical-rl;
+    }
+
+    .big-b {
+      color: red;
+      font-size: 30px;
+      font-weight: 800;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <h1>Facebook</h1>
+
+        <div class="icon-container">
+          <div class="notification">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="count msg-count">10</span>
+          </div>
+
+          <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+            <span class="count noti-count">10</span>
+          </div>
+        </div>
+      </header>
+      <p class="passion">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time: Vinay
+      </p>
+      <p class="passion passion-1">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <p class="passion passion-2">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <p class="passion passion-3">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <p class="passion passion-4">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <p class="passion passion-5">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <p class="transform">
+        Writing blogs is my passion, I usually do it in my free time. Just
+        spending time
+      </p>
+      <div class="blog-container">
+        <div class="blog-1">
+          <p>
+            I tow my dead father with me to the scorched heart of a desert. His
+            body guilts down my shoulders, heavier each time he doesn't tell me
+            that I took the wrong turn, that I need to straighten my elbows,
+            that I never do anything the right way so why does he even bother.
+            My jeep sputters and chokes under our weight as it brings us to the
+            parking lot in front of the hotel. Vipassana, reads the sign above
+            the glass door, melted open at the hinges. The Silent Retreat. Heat
+            slaps me across the face. I backpack my father around my waist and
+            march to the door before time turns the road into quicksand. There's
+            nothing here. Just miles and miles of red sand yellowing into glazed
+            waves, and the mirage of an industrial glass giant towering in the
+            middle – sand and post-sand, glass made of sand, sand made of glass.
+            All the hotel’s walls are transparent; on all floors people go
+            through the motions of the day and if they can see me, they give no
+            sign of it. Inside, the light warps, skitters off the grains of
+            chimes suspended on the ceiling and sinks into the terracotta floor.
+            I can’t quite help waiting for the building to flip. They take my
+            name — my father’s name — and check me in. They roll the suitcases
+            away for me and try to take my father too, but I don’t let them
+            unwrap him from my neck. My father doesn’t speak a word as I make my
+            way up the staircase, but neither does anyone else, which is exactly
+            why I came here. We cross the corridor. A man waves at me through
+            the doors to the left, as he hovers a few inches off the floor. I
+            don’t wave back and I don’t stop. In my father’s voice, I think
+            that’s a cool party trick, but it’s a lot of effort for very little
+            gain. The door reveals a tiny bedroom – just a bed, not a corner
+            free to leave your slippers on the side. I lower my father to the
+            floor and crouch to get in — the door snaps shut behind me before I
+            can drag him inside. It’s hot, sauna-steamy; my back drools sweat,
+            my fingers slide off the handle. It’s locked. What kind of hotel
+            does that? I bang my fist on the glass. How could they lock me
+            inside? Looking around the room, I find no emergency button, no
+            keycard slot, no lock. There’s barely space to breathe. I bang on
+            the door with both hands now until my knuckles hurt and the door
+            foams up from my breath so much I can barely see my father scowl. We
+            wouldn’t be here if not for you. I don’t know which one of us thinks
+            that. I slide down to the overheated floor, back turned on my
+            father, and claw into my thighs. Maybe he’d speak if I didn’t stop
+            calling him dad in high-school, just because my friend said calling
+            him father will make his shouts hurt less. It’s too hot. I can’t get
+            out. I don’t want to be here alone. I fall right through the door
+            and land on my back. Before I can so much as gasp, the ochre tiles
+            cave and swamp me in. I grasp my father’s wrist and in a stream of
+            light, we plummet down. Wet. Lukewarm water whips my back, only to
+            tear easily as a screen door. We sink right through it. I open my
+            eyes to deep blue. The water’s salty on my lips, burns my eyes. My
+            father weighs me down. I try to shake him off — if only he lets me
+            go, I can swim up. I’ll come back for him later. He clings on —
+            maybe he’d trust me to come back if I ever returned his calls like I
+            promised. If I ever got that second opinion. Don’t panic. If there’s
+            a pool, there’s a ladder. We can get out. I see it. To the left, not
+            far at all. Weighted down, I swim towards it frog-style. I never did
+            learn the crawl like my father wanted me to, even though it was
+            better for my crooked spine and would be much faster now. The ladder
+            dissolves in my fist, as if it was never there at all. Why did I
+            trust it even for a second? I can’t swim up — above us, the water’s
+            molasses-thick. Inch by inch, I let my father go. He’s light, full
+            of air, his face so puffed out he looks like no one at all. He could
+            float up. If only he floats up, maybe I won’t drown. But no matter
+            how hard I push him up, he won’t go. He’s waiting for me to
+            apologise, I can see it in his frown — doesn’t he know I’ll get
+            water in my lungs as soon as I open my mouth? Glancing down, I can
+            just about make out a shape, an edge of a silhouette. Swimming there
+            is easier, especially when I hook my arm around my father’s ankle to
+            take him with me and, for once, he doesn’t fight back. The lower we
+            get, the more the dark disperses into light, the more it yellows out
+            like an old bruise. There are sand dunes here, a lake’s bottom —
+            bare and gray. But not empty. Right in the middle, there’s a bed and
+            on the bed, shrouded in white, a man. He’s not lying down, just
+            drifting above it, arms crossed on his chest. His hair floats up,
+            tangles around my leg, slimy like seaweed. He reaches out, waves at
+            me. I’ve got no choice — I clasp his wrist. He pulls me down and
+            throws the sheet over my head. It’s night. Cool, dry. I shed the
+            cover and look up to a starless sky. Cold air is a relief before it
+            starts to frost my breath. There’s sand here, too, sand everywhere,
+            washed out to a midnight blue. Beside me, my father lays akimbo, the
+            sand snowflaked in his hair, glimmering white. His merino wool
+            jacket is unzipped. We watched a Bear Grylls episode once, where he
+            carves out a hole in a dead camel and spends the night inside. My
+            father’s chest’s too small for that. I huddle beside him for the
+            little warmth that it gives. The wind picks up. I rake my fingers
+            through the sand, scoop it out and raise my hand above my head to
+            watch the breeze blow it out of my fist, grain by grain. We must be
+            outside, or maybe underground. The longer I lie there, the more the
+            wind sounds like footsteps. I’m tired, but I force myself to lift up
+            on my elbows and look around. There’s people everywhere, walking
+            with their gazes trained on the road ahead, wrapped up to the chin
+            in robes and blankets — have they been here from the start? My
+            father never liked other people. He never liked me very much, but I
+            think that’s only because I reminded him of himself. I never much
+            liked him for the same reason. And the drinking. And that one time
+            he hit mum. Even if he were to hit her again, I’d like to have him
+            back. He’s silent. People swarm around us. As they pass by, they all
+            kick sand over our bodies and soon we’re half buried in it. I like
+            how heavy it makes me — so heavy I almost feel safe here. I’d like
+            to sleep. My father smells of rot. His skin peels from his cheeks,
+            from his jaw, flakes like old paint. I can’t keep him. He’s silent —
+            the more people crowd around us, the more of them step right over
+            our bodies, the more silent he is, the more he falls apart. He’s
+            never going to complain about anything again. It’s peaceful, almost,
+            the falling apart. Someone stops next to us. I see the tips of their
+            shoes, dipped into the ground, silver. I raise my head from my
+            father’s disintegrating lap. Her face is moon-pale. She smiles, and
+            when I try to smile back, she waves at me. I almost wish she’d
+            speak. Instead, she fishes out a small sachet from a pocket in her
+            robe. It plops down on my chest. When I untie the silver string, all
+            I find inside is more sand. She crouches next to me, digs through
+            her pockets again, and hands me my room card. I don’t know when I
+            lost it. With a long, white finger, she points at me, then at my
+            father, then at the sky. I can see now that it’s all glass, has
+            always been glass. There’s no stars but there is a single crack,
+            where the light gets in, from which more sand rains on us. I spill
+            the contents of the sachet into my open palm. Wind lifts most of it,
+            but I manage to catch some in a quick fist. The pale woman holds my
+            eyes in hers, but can't offer any words, so I don’t know what it is
+            she wants me to do. I don’t know what my father would want me to do.
+            I only know what I can. I turn to him — his eyes are no longer my
+            eyes, bleached out. I lean over him, hand to my chin, and blow the
+            sand into them. The sun hangs high up as I check out of the hotel,
+            and the receptionist hands me a manilla card. Thank you for
+            completing all the five stages. I bury my dad in the middle of a
+            desert along with a chunk of my scorched heart. Sand crunches on my
+            way back to the jeep — I think there’s more of it now. Through the
+            glass hotel walls, I can see people moving inside. They still don’t
+            pay me any mind. The inside of my car overheated and now smells like
+            fried plastic. I don’t pull the seat back the way my dad taught me
+            to, all I do is adjust the rear-view mirror. In it, I catch a sliver
+            of his face, rough with age and an unkempt beard. He’s only there
+            for a glimpse, one grain, and when I glance over my shoulder, the
+            seat is empty. I roll my neck and turn back towards the road;
+            there’s no pain in my back. I start the engine. My dad smiles at me
+            from the mirror, from my eyes. “Way to go, kid,” he says. Or maybe:
+            “Time to go.”
+          </p>
+        </div>
+        <div class="blog-2">
+          <p>
+            <span class="big-b">D</span>ear Professor Rhodes, I hope this email
+            finds you well. I must confess that, although we have never met, I
+            am a longtime admirer of your work—I was actually at your talk on
+            Charlotte Brontë and Elizabeth Gaskell last year, which I greatly
+            enjoyed. I write to you today to express my sincerest compliments on
+            your paper The Beast Within: Mirrors and the Internalized Male Gaze
+            in Jane Eyre.
+            <br />
+            I know better than anyone how difficult it is to find something new
+            to say about such a beloved piece of literature, but you managed it
+            exquisitely here. You have me rethinking a book I thought I knew
+            better than anyone else living. I’m currently teaching an upper
+            level seminar on feminism in gothic literature, and I had my
+            students read your paper in conjunction with good old Jane, so I
+            thought it was only right that I reach out and let you know how much
+            fruitful discussion it has engendered. And—seeing as you’re clearly
+            an expert on the subject—would you happen to have any suggestions
+            for my little seminar? It’s my first time teaching the course, so
+            any guidance would be much appreciated. Warmest Regards, Frederick
+            Laird Associate Professor of English Language Arts, Greer State
+            University *** Thursday, Jan 18, 2:47 PM To:
+            fredericklaird@greerstate.edu From: eliserhodes@elliott.edu RE: Your
+            (Brilliant) Paper on Mirrors/Jane Eyre Dear Professor Laird, First,
+            my heartfelt thanks for your kind email. I’m sure you know as well
+            as I that toiling away in the humanities often feels like shouting
+            into a void. These papers that fill our waking hours are no small
+            things, and yet we send them out into the ether, to be read by ten
+            people if we’re lucky. So your generous compliments have made my
+            week, and I would be delighted to help a fellow Jane enthusiast in
+            any way I can. Would you believe me if I said I’ve long been a fan
+            of yours, too? I actually just referred a particularly enterprising
+            student to your (thrilling and evocative!) paper I Eat Men like Air:
+            Du Maurier’s Rebecca as a Plathian Heroine earlier this week. One of
+            life’s funny coincidences. If you choose to believe in those, that
+            is—a la Mary Shelley, I do not. Anyways, on to your seminar. It
+            sounds fascinating! I wish my college would release me from English
+            101 and Writing for Accountants purgatory and let me teach courses
+            like that. If you’re teaching Jane, then I assume you’re also doing
+            Rebecca, especially considering your own research. Might I recommend
+            a recent Bluebeard retelling, one that’s more on the nose—Anna
+            Biller’s divisive but worthy Bluebeard’s Castle? It might be a
+            welcome reprieve from all those buttoned-up Brits if you’re up for
+            it! Finally, a question (or two!) for you, which you need not answer
+            if they offend you. Do you find it strange to teach a feminist
+            literature seminar as a man? Do you think your gender gives you a
+            unique perspective, or do you find it a hindrance? Please let me
+            know if I can provide any further assistance; I so rarely get to
+            discuss such interesting fare! Yours in Scholarship, Elise Rhodes
+            Assistant Professor of English Literature, Elliott College ***
+            Thursday, Jan 18, 6:58 PM To: eliserhodes@elliott.edu From:
+            fredericklaird@greerstate.edu RE: RE: Your Brilliant Paper on
+            Mirrors/Jane Eyre Professor Rhodes, Many thanks for your quick,
+            thoughtful response. And I’m so flattered that you enjoyed my
+            paper—I agree that validation is sadly rare in our chosen
+            profession, and your kind words mean the world to me. I was
+            unfamiliar with the book you suggested, but I’ve just acquired a
+            copy/done a cursory read and it looks to be a perfect fit for the
+            class. Certainly controversial, but I think my students will enjoy a
+            spirited debate. There is a dearth of modern gothic literature, and
+            I’m so grateful to you for your excellent recommendation. To answer
+            your questions, which did not offend me in the least: yes, I do find
+            it to be a little strange. I’m the only professor in my department
+            with this particular expertise, but I still wonder if I’m right for
+            the class. However, while I would never go so far as to say that a
+            man could have a better perspective on feminism than a woman, I am
+            not much hindered. The books do the work themselves, really. Thank
+            you again, and I will keep you apprised of how the seminar goes, if
+            that’s agreeable to you. Regards, Frederick Laird P.S.: You truly
+            don’t believe in coincidence? Mary Shelley notwithstanding, I
+            believe you’re in the literary minority on that. I leave you with
+            Tolstoy: “All this is only the coincidence of conditions under which
+            every organic, elemental event of life is accomplished.” *** Friday,
+            Jan 19, 7:16 AM To: fredericklaird@greerstate.edu From:
+            eliserhodes@elliott.edu RE: RE: RE: Your Brilliant Paper on
+            Mirrors/Jane Eyre Professor Laird, To be honest, I’m relieved you
+            didn’t try to claim some unique male perspective on feminist
+            literature—it would have disappointed me to end such an interesting
+            conversation. I don’t know if I should be flattered or concerned
+            that you took my recommendation so quickly. Looks like I’m not alone
+            in having no personal life to speak of! And, as I’ve said, you need
+            not thank me. Please, keep me posted! Best, Elise (if we are to
+            continue these emails, I must insist on first names!) P.S.: It
+            almost seems like cheating to punctuate your point with Tolstoy—the
+            man was so wordy that he has a pull-quote for just about anything! I
+            leave you with Albert Einstein, who I would argue knew more about
+            so-called coincidence than any author: “Coincidence is God’s way of
+            remaining anonymous.” *** Friday, Jan 19, 7:19 AM To:
+            fredericklaird@greerstate.edu From: eliserhodes@elliott.edu RE: RE:
+            RE: RE: Your Brilliant Paper on Mirrors/Jane Eyre Professor Laird,
+            I'm sorry if I offended you with my joke about your personal life.
+            It was unprofessional, and I can only blame the early hour.
+            Apologies again! Elise *** Friday, Jan 19, 11:00 AM To:
+            eliserhodes@elliott.edu From: fredericklaird@greerstate.edu SUBJECT:
+            Fred’s Lack of a Personal Life Elise, No apologies needed. Your joke
+            was both appropriate and spot-on. I—like you?—am “married to the
+            job,” which is especially pathetic considering how low my salary is
+            even after twelve years. And here I’d been told academia was where
+            the money was. Anyways, I had a thought about my seminar. What about
+            Northanger Abbey? A gothic satire could be a fun addition, and I’d
+            love to include Jane Austen. Even if this was admittedly far from
+            her best. Let me know what you think. Fred P.S.: I hope you don’t
+            mind that I started a new chain. Scrolling through the old one was
+            exacerbating my eyestrain. P.P.S.: I’m out of quotes, so agree to
+            disagree on coincidence. P.P.P.S: Do you have anything interesting
+            going on? This conversation is feeling far too me-centric. ***
+            Friday, Jan 19, 3:02 PM To: fredericklaird@greerstate.edu From:
+            eliserhodes@elliott.edu RE: Fred’s Lack of a Personal Life Fred,
+            That’s a relief! And, yes, I suppose I’m in the same sort of
+            marriage (though mine is only eleven-years strong)—if only it
+            weren’t so one-sided. I think my department forgets I exist half the
+            time. I think Northanger is a wonderful idea! You said you needed
+            guidance, but your instincts are faultless as far as I can tell. I
+            love the Brontës, but I agree that a light satire to break through
+            all that gloom would be welcome. Though you’re right that it’s far
+            from Jane’s best—that would have to be Persuasion for me, Pride and
+            Prejudice be damned. Enjoy the weekend! Elise P.S.: “Interesting”
+            and “me” don’t often overlap. Unless you consider grading a mountain
+            of Freshman essays (most of which will inevitably be written by
+            ChatGPT) to be interesting? I am driving up to my sister’s this
+            weekend, though. And I promised I’d leave my laptop at home for
+            once, so I’ll probably be out of reach until Monday. *** Friday, Jan
+            19, 4:58 PM To: eliserhodes@elliott.edu From:
+            fredericklaird@greerstate.edu RE: RE: Fred’s Lack of a Personal Life
+            Elise, I’m sorry, and very surprised, to hear about your
+            professional dissatisfaction. If someone of your caliber feels
+            forgotten, I can only assume that your department is woefully
+            mismanaged. And I should have guessed you would be the one to agree
+            with me on Persuasion. My colleagues have accused me of being
+            contrarian just for the sake of it, but I’ve always found it to be
+            Jane’s most romantic work. There’s a pervasive melancholy to it that
+            reflects a total departure from something like Emma, and I (perhaps
+            selfishly) love the idea that more realistic characters who are past
+            their youthful prime can still find perfect happiness. That it was
+            Jane’s final novel makes me mourn her early demise all the more—who
+            knows where she would have gone next? I hope you have a safe trip
+            and a relaxing weekend. Fred P.S.: It seems coincidence is not the
+            only thing we disagree on. From our limited correspondence, I can
+            already tell that a Venn Diagram of “Elise” and “interesting” would
+            be a circle. *** Saturday, Jan 20, 11:19 PM To:
+            fredericklaird@greerstate.edu From: eliserhodes@elliott.edu SUBJECT:
+            Elise after a bottle of wine Fred, Ok i couldn’t figure out how to
+            reply on the old thread. I guess I lied about being out of touch all
+            weekend. My sister basically forced a bottle of wine down my throat
+            then wetn to sleep. Is 2 days of emails enough for me to be telling
+            you this?? Going with yes You’re so nice to say all that. I think I
+            kind of needed to hear it actually. Its been a while since i’ve felt
+            seen by anyone and somehow you;ve done it over email. And yes yes
+            yes about persuasion!!!! Wentworth’s letter at the end is the most
+            romantic thing i’ve ever read. Half agony, half hope!! And i think
+            about what jane would have done next every day. You get it Do you
+            agree that emails are kind of like letters?? Elies PS: My sister
+            looked you up on facebook and we know everything you;ve done since
+            2008. I can’t believe you were in marching band?? You should
+            probably private that before your students find it. PPS: i think
+            you’re interesting too (Sent from my Phone) *** Sunday, Jan 21, 8:01
+            AM To: eliserhodes@elliott.edu From: fredericklaird@greerstate.edu
+            RE: Elise after a bottle of wine Elies, I’m glad you’re having fun
+            with your sister, even if she did liquor you up then leave you to
+            fend for yourself. And I’d say 2 days of emails is plenty. It’s not
+            like I have anything better to do on a Sunday morning, considering
+            my well-established lack of a personal life. Which you apparently
+            know far too much about now—I think I’ll skip private-ing and just
+            delete my Facebook entirely. I shudder to think of someone (else)
+            important finding evidence of my frosted tips phase. It hardly seems
+            fair that I don’t know anything embarrassing about you, although I’m
+            sure you’d argue that your last email suffices. We’ll call it even
+            for now; I suspect your embarrassment when you wake up will be even
+            worse than the hangover (not that I think it should be, to be
+            clear.) Yes, of course Wentworth’s letter is the best part. I agree
+            that emails are a sort of modern equivalent to letters, and I think
+            that the well-known ease of texting makes choosing to send emails
+            all the more romantic. I hope you don’t feel too bad when you wake
+            up. Fred P.S.: I won’t lie and say it’s pleasant, but I recommend a
+            shot of pickle juice for the hangover. Believe it or not, the
+            marching band drank as much as any fraternity. *** Sunday, Jan 21,
+            8:16 AM To: eliserhodes@elliott.edu From:
+            fredericklaird@greerstate.edu RE: RE: Elise after a bottle of wine
+            Elise, I just realized that I used the word “romantic” without
+            clarifying which of its multiple definitions I intended. I meant
+            “romantic” in the sense of an idealized, aestheticized view of the
+            past, nothing more. I hope you didn’t think I misunderstood the tone
+            of your last email, and I apologize for any offense. *** Sunday, Jan
+            21, 8:21 AM To: eliserhodes@elliott.edu From:
+            fredericklaird@greerstate.edu SUBJECT: Fred and Elise’s Fresh Start
+            Elise, I fear that my correction has created a much bigger problem,
+            and I ask that we strike it from the proverbial record. I leave my
+            original response up to your interpretation, and you may read into
+            every word whichever definition is most amenable to you. It also
+            felt appropriate to start a new thread, for both of our sakes.
+            Though I reiterate that you have no reason to feel embarrassed—that
+            (dis)honor is all mine, I’m afraid. Have a safe trip home. Fred ***
+            Tuesday, Jan 23, 6:46 PM To: fredericklaird@greerstate.edu From:
+            eliserhodes@elliott.edu RE: Fred and Elise’s Fresh Start Fred, I’m
+            sorry for being MIA. I hope you didn’t think I was offended by
+            anything you said! It was just my own embarrassment, and I didn’t
+            see any of your responses until now (and now that I have, you have
+            nothing at all to be embarrassed about?). Honestly, I’ve been
+            avoiding my email since I woke up on Sunday. Which has been
+            especially difficult because this is my work email! I needn’t have
+            worried, though. Of course you would be so nice about it. Still, I
+            promise that’s the last drunk email you’ll be receiving from me—I’m
+            swearing off alcohol for the foreseeable future! Anyways, yes, I
+            like the idea that there’s something romantic about emailing over
+            texting. Actually, emails are almost a perfect marriage of the past
+            with the present—we acknowledge that technology has facilitated ease
+            of communication without completely doing away with the formalities
+            and idiosyncrasies that gave letters character. While it might be
+            easier for us to exchange numbers if we plan to keep this
+            conversation up, I suggest we don’t, at least for now. How’s your
+            week going? Any updates on the seminar? Elise P.S.: Thank you for
+            giving me interpretation rights on “romantic;” that was very
+            generous of you. I’ve always been of the camp that you should assume
+            the most popular definition unless the author indicates otherwise.
+            And if the author indicates otherwise, but immediately "strikes that
+            from the record", then I guess that puts us back at the most popular
+            definition of "romantic." Which is perfectly fine by me. Unless
+            you’d like to issue another correction? P.P.S: Call me crazy, but I
+            didn’t think the frosted tips looked that bad.
+          </p>
+        </div>
+
+        <div class="blog-3">
+          <p>
+            <img
+              src="https://blog-cdn.reedsy.com/packs/static/prompted-full-e2b923fa2f7a8398974f.jpg"
+              alt="random"
+              width="600px"
+              height="900px"
+            />
+          </p>
+        </div>
+      </div>
+      <hr />
+    </main>
+  </body>
+</html>

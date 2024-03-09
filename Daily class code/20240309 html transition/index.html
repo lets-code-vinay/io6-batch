@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+  </head>
+  <style>
+    .main-class {
+      border: 1px solid black;
+      width: 80%;
+      height: 200px;
+      background-color: red;
+      margin: 5% auto;
+      cursor: pointer;
+      border-radius: 1px;
+      /* transition-property: background-color width border border-radius;
+      transition-duration: 2s; */
+      /* transition-delay: 1s; */
+      /* transition-timing-function: linear; */
+      /* transition-timing-function: ease-in; */
+      /* transition-timing-function: ease-in; */
+      /* transition-timing-function: ease-in-out; */
+
+      /* --- shorthand ---*/
+      /* --- shorthand works with single property ---*/
+      /* transition: property time timing-function  delay; */
+
+      transition: width 2s ease;
+    }
+
+    .main-class:hover {
+      background-color: blue;
+      width: 30%;
+      border: 5px solid red;
+      border-radius: 50%;
+    }
+
+    .main-class-1 {
+      border: 1px solid black;
+      width: 80%;
+      height: 200px;
+      background-color: red;
+      margin: 5% auto;
+      cursor: pointer;
+      border-radius: 1px;
+      transition-property: background-color width border border-radius;
+      transition-duration: 2s;
+      /* transition-delay: 1s; */
+      /* transition-timing-function: linear; */
+      /* transition-timing-function: ease-in; */
+      transition-timing-function: ease-out;
+    }
+
+    .main-class-1:hover {
+      background-color: blue;
+      width: 30%;
+      border: 5px solid red;
+      border-radius: 50%;
+    }
+
+    .my-hover {
+      color: green;
+      border: 1px solid black;
+      width: fit-content;
+      margin: auto;
+      cursor: pointer;
+    }
+    .my-hover:hover {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div class="main-class"></div>
+    <div class="main-class-1"></div>
+
+    <h1 class="my-hover">Hello Hover!! how are you?</h1>
+  </body>
+</html>

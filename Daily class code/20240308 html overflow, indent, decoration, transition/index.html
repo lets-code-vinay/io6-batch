@@ -69,7 +69,43 @@
         We can rotate texts
           writing-mode: vertical-lr :-- vertical text at left side
           writing-mode: vertical-rl :-- vertical text at right side
-
+    6. Cursor
+          /* cursor: default; */
+          /* cursor: alias;  */ /* not much use*/
+          /* cursor: all-scroll; */ /* used when there is horizontal and vertical scroll available*/
+          /* cursor: auto; */ /* behaves like default-cursor*/
+          /* cursor: cell; */ /* used in cells*/
+          cursor: col-resize; /* used in cell col-resize*/
+          cursor: row-resize; /* used in cell row-resize*/
+          cursor: context-menu; /* behaves like default-cursor*/
+          cursor: copy; /* indication to copy*/
+          cursor: crosshair; /* used in entity relationship diagram*/
+          cursor: e-resize; /* horizontal resize (e- east)*/
+          cursor: n-resize; /* vertical resize (n-north*/
+          cursor: s-resize; /* vertical resize (s-south*/
+          cursor: w-resize; /* horizontal resize (w-west)*/
+          cursor: ns-resize; /* vertical resize (ns-north south)*/
+          cursor: ew-resize; /* horizontal resize (ew-east west)*/
+          cursor: ne-resize; /* horizontal resize (ne-north east)*/
+          cursor: nw-resize; /* incline resize (nw-north west)*/
+          cursor: se-resize; /* incline resize (se-south west)*/
+          cursor: sw-resize; /* incline resize (sw-south west)*/
+          cursor: grab; /* Grabbing icon- start*/
+          cursor: grabbing; /* Grabbing icon- end*/
+          cursor: help; /* used where help or support thing is indicating*/
+          cursor: move; /* similar to all-scroll*/
+          cursor: no-drop; /* used when you are dealing with drab-n-drop feature*/
+          cursor: none; /* disabled the cursor*/
+          cursor: not-allowed; /* cursor prohibited*/
+          cursor: pointer; /* to show any clickable*/
+          cursor: progress; /* to show progress or loading*/
+          cursor: text; /* to indicate texts*/
+          cursor: wait; /* change cursor to loader to show loading process*/
+          cursor: zoom-in; /* to zoom-in +*/
+          cursor: zoom-out; /* to zoom-out - */
+          cursor: url("../00-icons/Handwriting.cur"), auto; /* to add custom cursor. 
+                    You must add image with .cur extension 
+                    http://www.rw-designer.com/cursor-library 
       -->
 
   <style>
@@ -117,6 +153,7 @@
       justify-content: space-around;
       align-items: center;
       height: 50px;
+      cursor: pointer;
     }
     .count {
       background-color: white;
@@ -170,6 +207,7 @@
       /* overflow: scroll; */
       overflow-y: auto;
       overflow-x: auto;
+      cursor: all-scroll;
     }
 
     hr {
@@ -657,14 +695,12 @@
         </div>
 
         <div class="blog-3">
-          <p>
-            <img
-              src="https://blog-cdn.reedsy.com/packs/static/prompted-full-e2b923fa2f7a8398974f.jpg"
-              alt="random"
-              width="600px"
-              height="900px"
-            />
-          </p>
+          <img
+            src="https://blog-cdn.reedsy.com/packs/static/prompted-full-e2b923fa2f7a8398974f.jpg"
+            alt="random"
+            width="600px"
+            height="900px"
+          />
         </div>
       </div>
       <hr />

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .avengers {
+      width: 80%;
+      margin: 2% auto;
+      padding: 5px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .avenger {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .avenger img {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+    }
+
+    .c-america {
+      transition: transform 2s;
+    }
+    .c-america:hover {
+      transform: rotate(360deg);
+    }
+
+    .b-widow {
+      transition: transform 2s;
+    }
+    .b-widow:hover {
+      transform: rotate(45deg);
+    }
+
+    .spidy {
+      /*100 -- 200*/
+      transition: transform 2s;
+    }
+    .spidy:hover {
+      transform: scale(2);
+    }
+
+    .thor,
+    .x-man,
+    .iron-man,
+    .venom,
+    .hulk,
+    .hawkeye,
+    .deadpool,
+    .ant-man {
+      transition: transform 2s;
+    }
+    .thor:hover {
+      transform: translateX(-50px);
+    }
+
+    .x-man:hover {
+      transform: translateY(150px);
+    }
+
+    .iron-man:hover {
+      transform: translate(-50px, 50px);
+    }
+    .venom:hover {
+      transform: skewX(-45deg);
+    }
+    .hulk:hover {
+      transform: skewY(-45deg);
+    }
+    .hawkeye:hover {
+      transform: skew(15deg, 45deg);
+    }
+    .deadpool:hover {
+      transform: scaleX(1.2);
+    }
+    .ant-man:hover {
+      transform: scaleY(1.5);
+    }
+
+    .ants {
+      text-align: center;
+      width: 40%;
+      margin: auto;
+    }
+    .ants :first-child {
+      color: red;
+    }
+    .ants :last-child {
+      color: blue;
+    }
+    .ants :nth-child(4) {
+      color: yellow;
+      background-color: navy;
+    }
+
+    .list-avengers {
+      margin: auto;
+      width: 40%;
+    }
+
+    .list-avengers :nth-child(even) {
+      color: yellowgreen;
+    }
+    .list-avengers :nth-child(odd) {
+      color: navy;
+    }
+  </style>
+  <body>
+    <div class="avengers">
+      <div class="avenger c-america">
+        <img
+          src="https://www.telltalesonline.com/wp-content/uploads/2023/05/captain-america-marvel-characters.jpg"
+          alt="cap-america"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          class="b-widow"
+          src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/hzxamftwphocnjxtoato.jpg"
+          alt="b-widow"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          class="spidy"
+          src="https://i.ebayimg.com/images/g/OQMAAOSwbdpWUNl7/s-l1200.webp"
+          alt="spidy"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          class="thor"
+          src="https://petapixel.com/assets/uploads/2014/09/tumblr_n6ve8eeArA1sw0d7ao5_1280.jpg"
+          alt="thor"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC12gezwDSXMsNsib5keFyvFT7VohtLYt3hQ"
+          alt="x-man"
+          class="x-man"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTteTSbnzGoIX8xpq43syH1N1NjexZEfOVNLg"
+          alt="iron"
+          class="iron-man"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://w0.peakpx.com/wallpaper/867/940/HD-wallpaper-venom-anti-hero-marvel-marvel-comics-marvel-superheroes-super-villains-superheroes.jpg"
+          alt="venom"
+          class="venom"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://www.femalefirst.co.uk/image-library/partners/bang/land/1000/t/the-hulk-aW1hZ2VzMS8yMDEyLzA1LzMxLzAyNzc3ODQwMDEzMzg0Nzg2ODQ.jpg"
+          alt="hulk"
+          class="hulk"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/9/99/Hawkeye_%28Clinton_Barton%29.png"
+          alt="hawkeye"
+          class="hawkeye"
+        />
+      </div>
+
+      <div class="avenger">
+        <img
+          src="https://thumbs.dreamstime.com/z/deadpool-marvel-superhero-high-definition-k-rendering-canvas-art-stunning-collection-wall-features-iconic-characters-268153425.jpg"
+          alt="deadpool"
+          class="deadpool"
+        />
+      </div>
+      <div class="avenger">
+        <img
+          src="https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-ant-man.jpg"
+          alt="ant-man"
+          class="ant-man"
+        />
+      </div>
+    </div>
+    <div class="ants">
+      <p class="ant-mans">
+        1. Ant-Man is a 2015 American superhero film based on the Marvel Comics
+        characters of the same name: Scott Lang and Hank Pym.
+      </p>
+      <p class="ant-mans-2">
+        2. Ant-Man is a 2015 American superhero film based on the Marvel Comics
+        characters of the same name: Scott Lang and Hank Pym.
+      </p>
+      <p class="ant-mans-2">
+        3. Ant-Man is a 2015 American superhero film based on the Marvel Comics
+        characters of the same name: Scott Lang and Hank Pym.
+      </p>
+      <p class="ant-mans-2">
+        4. Ant-Man is a 2015 American superhero film based on the Marvel Comics
+        characters of the same name: Scott Lang and Hank Pym.
+      </p>
+      <p class="ant-mans-2">
+        5. Ant-Man is a 2015 American superhero film based on the Marvel Comics
+        characters of the same name: Scott Lang and Hank Pym.
+      </p>
+    </div>
+    <ul class="list-avengers">
+      <li>Ant-man</li>
+      <li>Thor</li>
+      <li>Loki</li>
+      <li>Hulk</li>
+      <li>Black Widow</li>
+      <li>Hawkeye</li>
+      <li>Iron-Man</li>
+      <li>Cap America</li>
+      <li>Spider man</li>
+      <li>Black Panther</li>
+    </ul>
+  </body>
+</html>

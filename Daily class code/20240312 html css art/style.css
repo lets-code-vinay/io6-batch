@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0b479;
+}
+
+.main-container {
+  border: 1px solid black;
+  width: 40%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teddy-bear {
+  width: 70%;
+  height: 80%;
+  position: relative;
+}
+
+.teddy-bear .head {
+  background-color: #9e614e;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.teddy-bear .body {
+  background-color: #9e614e;
+  border-radius: 50%;
+  width: 120px;
+  height: 160px;
+  margin: auto;
+  margin-top: -10%;
+}
+
+.teddy-bear .hands .hand-left {
+  background-color: #bf795e;
+  width: 100px;
+  height: 48px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 34%;
+  z-index: -1;
+}
+
+.teddy-bear .hands .hand-left .palm-left {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fecb8e;
+  position: absolute;
+  top: 17%;
+  left: 8%;
+}
+
+.teddy-bear .hands .hand-right {
+  background-color: #bf795e;
+  width: 100px;
+  height: 48px;
+  border-radius: 50%;
+  transform: rotate(225deg);
+  position: absolute;
+  top: 34%;
+  z-index: -1;
+  right: 0;
+}
+
+.teddy-bear .hands .hand-right .palm-right {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fecb8e;
+  position: absolute;
+  top: 17%;
+  left: 8%;
+}
+
+.teddy-bear .head .ears .ear-left {
+  border: 5px solid #9e614e;
+  background-color: #f4b677;
+  border-radius: 50%;
+  height: 35px;
+  width: 37px;
+  position: absolute;
+  top: -3%;
+  left: 24%;
+  z-index: -1;
+}
+
+.teddy-bear .head .ears .ear-left .dark-left {
+  background-color: #fdcb8d;
+  border-radius: 5013px;
+  height: 26px;
+  width: 23px;
+  position: absolute;
+  top: 8%;
+  left: 14%;
+  transform: rotate(308deg);
+}
+
+.teddy-bear .head .ears .ear-right {
+  border: 5px solid #9e614e;
+  background-color: #f4b677;
+  border-radius: 50%;
+  height: 35px;
+  width: 37px;
+  position: absolute;
+  top: -3%;
+  right: 24%;
+  z-index: -1;
+}
+
+.teddy-bear .head .ears .ear-right .dark-right {
+  background-color: #fdcb8d;
+  border-radius: 5013px;
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  top: 8%;
+  right: 11%;
+  transform: rotate(308deg);
+}
+
+.teddy-bear .head .face {
+  height: 37px;
+  width: 50px;
+  position: absolute;
+  left: 38%;
+  top: 15%;
+}
+
+.teddy-bear .head .face .eyes {
+  display: flex;
+  justify-content: space-between;
+}
+.teddy-bear .head .face .eyes .eye-left,
+.teddy-bear .head .face .eyes .eye-right {
+  background-color: black;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.teddy-bear .head .face .eyes .eye-left .white-spot-left {
+  background-color: white;
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  border-radius: 50%;
+  left: 5%;
+  top: 5%;
+}
+.teddy-bear .head .face .eyes .eye-right .white-spot-right {
+  background-color: white;
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  border-radius: 50%;
+  right: 5%;
+  top: 5%;
+}
+
+.teddy-bear .head .face .mouth {
+  width: 80%;
+  height: 75%;
+  border-radius: 50%;
+  margin: auto;
+  background: #fcca90;
+  position: absolute;
+  left: 9%;
+  top: 25%;
+}
+
+.teddy-bear .head .face .mouth .nose {
+  background-color: #a0604b;
+  border-radius: 50%;
+  width: 15px;
+  height: 9px;
+  position: absolute;
+  top: 15%;
+  left: 29%;
+  z-index: 5;
+}
+
+.teddy-bear .head .face .mouth .lips {
+  width: 60%;
+  height: 40%;
+  border-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom: 2px solid #89541e;
+  position: absolute;
+  bottom: 14%;
+  left: 20%;
+}
+
+.teddy-bear .head .face .mouth .nose-line {
+  width: 1px;
+  height: 15px;
+  background-color: #89541e;
+  position: absolute;
+  left: 47%;
+  top: 32%;
+  border-radius: 50%;
+}

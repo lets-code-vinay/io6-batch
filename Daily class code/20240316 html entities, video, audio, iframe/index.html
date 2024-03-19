@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entities</title>
+  </head>
+  <style>
+    /*
+    1. :hover
+    2. :active
+    3. :link
+    4. :visited
+    5. :first-child
+    6. :last-child
+    7. :nth-child()
+            :nth-child(1)
+            :nth-child(3)
+            :nth-child(even)
+            :nth-child(odd)
+
+    Pseudo Elements
+        1. :: (double colons are used)
+        a. :: first-letter
+        b. ::first-line
+        c. ::selection
+        d. ::marker
+        e. ::before
+        d. ::after
+
+    Adding external website to html
+        1. iframe
+            src
+            width
+            height
+            fullscreen
+        
+        2. audio
+            <audio
+                controls
+                autoplay
+                loop
+                muted
+                preload
+            <source
+                src
+                type
+        
+        3. Video
+            <video
+                controls
+                width
+                height : don't use
+                autoplay
+                loop
+                muted
+
+            <source
+                src
+                poster
+                type
+    */
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: black;
+      border: 1px solid yellow;
+      color: yellow;
+    }
+    a:active {
+      background-color: red;
+      border: 1px solid black;
+      color: black;
+    }
+
+    /* a:link {
+      background-color: yellow;
+      border: 1px solid black;
+      color: black;
+    } */
+
+    a:visited {
+      background-color: blue !important;
+      border: 1px solid yellow;
+      color: yellow;
+    }
+
+    /* .yt1:link {
+      background-color: yellow;
+      border: 1px solid black;
+      color: black;
+    } */
+
+    input:focus {
+      background-color: red;
+      border: 3px solid blue;
+    }
+    .travel {
+      border: 1px solid black;
+      background-color: lightgoldenrodyellow;
+    }
+    .travel::first-letter {
+      font-size: 30px;
+      font-weight: 800;
+      color: red;
+    }
+
+    .travel-1 {
+      border: 1px solid black;
+      background-color: lightgray;
+    }
+
+    .travel-1::first-line {
+      color: red;
+      font-weight: 600;
+    }
+
+    .travel-1::selection {
+      background-color: yellow;
+    }
+
+    li::marker {
+      background-color: red;
+      color: blue;
+    }
+
+    .moment::before {
+      content: "&copy; ";
+    }
+  </style>
+  <body>
+    <section>
+      <h1>Pseudo Classes</h1>
+      :hover
+      <ul>
+        Starts with single :
+      </ul>
+      <a
+        class="yt"
+        href="https://www.youtube.com/@scarystoryseries/playlists"
+        target="_blank"
+        >Scary stories1</a
+      >
+      <a
+        class="yt1"
+        href="https://www.youtube.com/@scarystoryseries/playlists"
+        target="_blank"
+        >Scary stories2</a
+      >
+      <a
+        class="yt2"
+        href="https://www.youtube.com/@scarystoryseries/playlists"
+        target="_blank"
+        >Scary stories3</a
+      >
+      <a
+        class="yt3"
+        href="https://www.youtube.com/@scarystoryseries/playlists"
+        target="_blank"
+        >Scary stories4</a
+      >
+
+      <input type="text" placeholder="enter your name" />
+
+      <p class="travel">
+        It was the best moment of my life that I got the opportunity to go to
+        Rangotsav by being connected with some friends at the right time. I
+        loved spending such a moment with you. Thanks
+      </p>
+      <p class="travel-1">
+        It was the best moment of my life that I got the opportunity to go to
+        Rangotsav by being connected with some friends at the right time. I
+        loved spending such a moment with you. Thanks
+      </p>
+
+      <ul>
+        <li>Chahat</li>
+        <li>Ankit</li>
+        <li>Taran</li>
+
+        <li>Vinay</li>
+        <li>Pooja</li>
+      </ul>
+
+      <p class="moment">best moment of my life</p>
+      <div style="display: flex; justify-content: center; align-items: center">
+        <audio controls muted preload="none" loop autoplay>
+          <source src="./ringing-151670.mp3" type="audio/mp3" />
+        </audio>
+
+        <video
+          controls
+          width="500px"
+          muted
+          loop
+          poster="../fox.jpg"
+          preload="none"
+        >
+          <source src="./vdo.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div style="display: flex; justify-self: space-between">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/vkWq2l2gW84?si=vfy7VFYRxtfZ_keR"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe src="https://travander.in/" width="50%" height="600px">
+        </iframe>
+        <iframe
+          src="https://www.bing.com/?toWww=1&redig=3B8647CD3DC843A3B35E6D84603E65E1"
+          width="50%"
+          height="600px"
+        />
+      </div>
+    </section>
+    <footer>
+      &copy; with Infoxygens &reg; &trade;
+      <br />
+      This website &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;made
+      with < 3 smile
+      <br />
+    </footer>
+    <p>Copy: <strong> & copy;</strong> -- &copy;</p>
+    <p>Register: <strong>& reg;</strong> -- &reg;</p>
+    <p>Trademark: <strong>& trade;</strong> -- &trade;</p>
+    <p>Space: <strong>& nbsp;</strong> -- &nbsp;</p>
+    <p>Emoji: <strong>Window + .</strong> -- 😈☠️💀👹🫖👍🚗⌚😆🍺🍸🍹</p>
+
+    <p>Greater than: <strong>& gt;</strong> &gt;</p>
+    <p>less than: <strong>& lt;</strong> &lt;</p>
+    <p>Ampersand: <strong>& amp;</strong> &amp;</p>
+    <p>Cent: <strong>& cent;</strong> &cent;</p>
+    <p>Pound: <strong>& pound;</strong> &pound;</p>
+    <p>Euro: <strong>& euro;</strong> &euro;</p>
+    <p>Yen: <strong>& yen;</strong> &yen;</p>
+    <p>INR: <strong>& inr;</strong> &#x20B9;</p>
+    <p>Arrow Left: <strong>& #8592;</strong> &#8592;</p>
+    <p>Not equal to: <strong>& #8800;</strong> &#8800;</p>
+
+    &Colon; &spades; &clubs; &hearts; &diams;
+  </body>
+</html>

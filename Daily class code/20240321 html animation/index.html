@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+  </head>
+  <style>
+    .progress-container {
+      width: 50%;
+      height: 50px;
+      margin: 5% auto;
+      background-color: red;
+      border: 1px solid black;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress {
+      width: 5%;
+      height: 90%;
+      background-color: yellow;
+      border: 1px solid black;
+      border-radius: 25px;
+
+      animation-name: progress-bar;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      animation-direction: alternate;
+      /* animation-direction: alternate-reverse; */
+
+      animation-timing-function: ease-in;
+      /* Slow starts */
+      /* animation-timing-function: ease-out; */
+      /* Fast starts */
+    }
+
+    @keyframes progress-bar {
+      from {
+        width: 5%;
+        background-color: yellow;
+      }
+      to {
+        width: 100%;
+        background-color: blue;
+      }
+    }
+
+    .progress-container-1 {
+      width: 50%;
+      height: 50px;
+      margin: 5% auto;
+      background-color: red;
+      border: 1px solid black;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-1 {
+      width: 5%;
+      height: 90%;
+      background-color: yellow;
+      border: 1px solid black;
+      border-radius: 25px;
+
+      animation-name: progress-bar-1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      animation-direction: alternate;
+      /* animation-direction: alternate-reverse; */
+
+      /* animation-timing-function: ease-in;   */
+      /* Slow starts */
+      animation-timing-function: ease-out;
+      /* Fast starts */
+    }
+
+    @keyframes progress-bar-1 {
+      from {
+        width: 5%;
+        background-color: yellow;
+      }
+      to {
+        width: 100%;
+        background-color: blue;
+      }
+    }
+
+    .progress-container-2 {
+      width: 50%;
+      height: 50px;
+      margin: 5% auto;
+      background-color: red;
+      border: 1px solid black;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-2 {
+      width: 5%;
+      height: 90%;
+      background-color: yellow;
+      border: 1px solid black;
+      border-radius: 25px;
+
+      animation-name: progress-bar-2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      animation-direction: alternate;
+      /* animation-direction: alternate-reverse; */
+
+      /* animation-timing-function: ease-in;   */
+      /* Slow starts */
+      /* animation-timing-function: ease-out; */
+      /* Fast starts */
+
+      animation-timing-function: ease-in-out;
+      /* Slow starts, slow ends */
+    }
+
+    @keyframes progress-bar-2 {
+      from {
+        width: 5%;
+        background-color: yellow;
+      }
+      to {
+        width: 100%;
+        background-color: blue;
+      }
+    }
+
+    .parent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+    }
+
+    .rotation {
+      width: 100px;
+      height: 100px;
+      border: 2px dashed black;
+      margin: auto;
+      background-color: brown;
+
+      animation-name: rotate-it;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes rotate-it {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .revolve-it {
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      margin: auto;
+      border-radius: 50%;
+      position: relative;
+
+      animation: sun 10s infinite;
+    }
+
+    @keyframes sun {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    .planet {
+      width: 70px;
+      height: 70px;
+      border: 2px solid black;
+      margin: auto;
+      background-color: brown;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+
+      animation: planet-earth 5s linear 0s infinite;
+    }
+
+    @keyframes planet-earth {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    .box {
+      width: 90%;
+      height: 500px;
+      margin: auto;
+      border: 1px solid black;
+      position: relative;
+    }
+
+    .spidy {
+      width: 100px;
+      position: absolute;
+
+      animation: spider-man 10s infinite alternate;
+    }
+
+    @keyframes spider-man {
+      0% {
+        left: 0%;
+        top: 0%;
+        transform: rotate(0deg);
+      }
+      25% {
+        left: 95.5%;
+        top: 0%;
+        transform: rotate(180deg);
+      }
+      50% {
+        top: 80%;
+        left: 95.5%;
+        transform: rotate(360deg);
+      }
+      75% {
+        top: 80%;
+        left: 0%;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 0%;
+        left: 0%;
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+  <body>
+    <!--
+
+        What is Animation?
+            Any thing changing its state from 1 state to another state continuously is called animation
+            Animations are of two types
+            a. 2D animation
+            b. 3D animation
+
+        
+        animation
+            1. animation-name
+            2. animation-duration
+            3. animation-delay
+            4. animation-iteration-count
+            5. animation-direction
+            6. animation-timing-function
+            
+        @keyframe
+            from
+            to
+
+            0%
+            5%
+            50%
+            100%
+
+            animation-name: progress-bar
+                It is directing html that we are going to make it animate
+            animation-duration: 5s
+                It provides the length of animation, like how much time that animation consumes to work
+            animation-iteration-count: 
+                It is counting of animation
+                    animation-iteration-count: 2 // it will run two times
+                    animation-iteration-count:  10 // it will run 10 times
+                    animation-iteration-count:  infinite // it will run infinite
+            animation-delay
+                it defines that how much delay in time needs to start animation
+            animation-direction
+                It provides the direction of animation
+                By default animation starts from its starting point A and ends at Point B\
+
+                animation-direction: alternate
+                    It starts animation from Point A and ends at Point B, and again starts animation from point B (ending point)
+                        to Point A(starting Point)
+                animation-direction: alternate-reverse
+                    It is reverse order of alternate.
+                    It starts animation from Point B and ends at Point A, and again starts animation from point A (Starting point)
+                        to Point B(Ending Point)
+                animation-timing-function
+                     animation-timing-function: ease-in;   
+                         Slow starts 
+                     animation-timing-function: ease-out; 
+                         Fast starts 
+                    animation-timing-function: ease-in-out;
+                         Slow starts, slow ends 
+
+
+
+            @keyframe
+                it is the actual hero to make animation possible
+                    @keyframes work the animation name
+                    @keyframes progress-bar {}
+            from-to
+                from is the initial state of animation
+                to is end state of animation
+
+                
+    -->
+
+    <div class="progress-container">
+      <div class="progress"></div>
+    </div>
+
+    <div class="progress-container-1">
+      <div class="progress-1"></div>
+    </div>
+
+    <div class="progress-container-2">
+      <div class="progress-2"></div>
+    </div>
+
+    <div class="parent">
+      <div class="rotation"></div>
+
+      <div class="revolve-it">
+        <img class="planet" src="../00-icons/earth.png" alt="earth" />
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="../00-icons/spidy.png" class="spidy" alt="spider-man" />
+    </div>
+  </body>
+</html>

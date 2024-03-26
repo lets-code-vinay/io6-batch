@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements</title>
+  </head>
+  <style>
+    .hello {
+      width: fit-content;
+      background-color: greenyellow;
+    }
+    .hello::before {
+      content: "Hi ";
+    }
+    .hello::after {
+      content: " I'm fine ";
+    }
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spidey {
+      font-size: 30px;
+      font-weight: 500;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+    .spidey::after {
+      content: "♠";
+      color: red;
+      font-size: 20px;
+    }
+
+    .dora {
+      list-style: none;
+    }
+    .dora li::before {
+      content: "→ ♥ ";
+      color: red;
+    }
+
+    .dora li::after {
+      content: " ← ♥ ";
+      color: red;
+    }
+
+    .nobi {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nobita {
+      color: blue;
+      width: fit-content;
+      font-size: 50px;
+      position: relative;
+    }
+
+    .nobita::before {
+      content: "";
+      width: 100%;
+      height: 10px;
+      color: green;
+      position: absolute;
+      left: 0;
+      background-image: linear-gradient(to left, red 50%, black 50%);
+      top: -10%;
+    }
+    .nobita::after {
+      content: "";
+      background-image: linear-gradient(to right, red 50%, black 50%);
+      width: 100%;
+      height: 10px;
+      color: green;
+      position: absolute;
+      left: 0;
+      bottom: -10%;
+    }
+
+    .nobi-child {
+      color: red;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <p class="hello">Hello How are you?</p>
+    </div>
+
+    <span class="spidey">spider-man</span>
+
+    <ul class="dora">
+      <li>Nobita</li>
+      <li>Sizuka</li>
+      <li>Gian</li>
+      <li>Digisuki</li>
+      <li>Doreamon</li>
+      <li>Sunio</li>
+    </ul>
+
+    <div class="nobi">
+      <h1 class="nobita">Nobita <span class="nobi-child">Nobi</span></h1>
+    </div>
+  </body>
+</html>

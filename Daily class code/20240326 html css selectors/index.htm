@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+  </head>
+  <style>
+    /**
+    1. universal selector
+            used as *{
+            } 
+            It provides global level styling
+            widely it is used at margin, padding, box-sizing and font-family
+    2. Tag Selector
+            It applies common properties on all tags
+    3. Class Selector 
+            We provide class name to any div and in css we apply properties
+            .class-name{}
+            Class will override universal selector, tag selector
+    4. Id Selector
+            It provide styling with help of id name
+            ID must be unique
+            Id is greater than class
+        
+            ID > class > Tag > universal Selector
+    5. Group selector
+            We apply common properties to multiple elements
+    */
+    * {
+      color: red;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: cursive;
+    }
+    body {
+      background-color: blue;
+    }
+    .testing {
+      border: 1px solid black;
+      background-color: aqua;
+      width: 100%;
+      height: 100px;
+    }
+    p {
+      /* background-color: rgb(133, 148, 82); */
+      height: 40px;
+    }
+    h1 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: purple;
+    }
+    .dev {
+      color: aliceblue;
+    }
+    div {
+      /* background-color: brown; */
+      width: 100px;
+      height: 100px;
+    }
+    .bord {
+      width: 500px;
+      height: 500px;
+      background-color: lavender;
+    }
+    .taran {
+      background-color: yellow;
+    }
+
+    #chahat-id {
+      background-color: indigo;
+    }
+
+    .chahat {
+      background-color: bisque;
+    }
+
+    .d-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .avenger,
+    .pokemon {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border: 1px solid black;
+    }
+
+    .pokemon {
+      background-color: wheat;
+    }
+    .pikachu {
+      background-color: indigo;
+    }
+
+    .pokemon:nth-child(4) {
+      background-color: ghostwhite;
+    }
+    .dc {
+      width: 100%;
+      height: 100%;
+      background-color: aqua;
+    }
+
+    .dc .wonder p#Raman {
+      border: 1px solid black;
+    }
+
+    ol li.copper {
+      width: fit-content;
+      color: black;
+    }
+    ol li .gold {
+      width: fit-content;
+      color: rgb(21, 185, 210);
+    }
+  </style>
+  <body>
+    <div class="testing"></div>
+    <p>Hi! i'm HTML</p>
+    <h1>Hello HTML How are you?</h1>
+    <h2>I'm good . how are you?</h2>
+    <p>Where do you live?</p>
+    <h1 class="dev">I'm developer</h1>
+    <div class="bord chahat"></div>
+    <div class="avengers d-flex">
+      <div class="avenger"></div>
+      <div class="avenger"></div>
+      <div class="avenger"></div>
+      <div class="avenger"></div>
+      <div class="avenger"></div>
+    </div>
+
+    <div class="pokemons d-flex">
+      <div class="pokemon"></div>
+      <div class="pokemon"></div>
+      <div class="pokemon pikachu"></div>
+      <div class="pokemon"></div>
+      <div class="pokemon"></div>
+    </div>
+
+    <div class="dc d-flex">
+      <div>Aqua man</div>
+      <div>Flash</div>
+      <div>Superman</div>
+      <div class="wonder">
+        <p id="Raman">Wonder woman</p>
+        <p id="ankit">Wonder Girl</p>
+      </div>
+      <div>Batman</div>
+      <h3>Suicide Squad</h3>
+      <h3>Blue Beetle</h3>
+    </div>
+
+    <ul>
+      <li>Pikachu</li>
+      <li>Jiglypuff</li>
+      <li>Totodyle</li>
+      <li>Torcoal</li>
+    </ul>
+
+    <ol>
+      <li>Iron</li>
+      <li class="copper">Copper</li>
+      <li class="gold">Brass</li>
+      <li>Bronze</li>
+      <li>
+        <p class="gold">Gold</p>
+      </li>
+    </ol>
+  </body>
+</html>

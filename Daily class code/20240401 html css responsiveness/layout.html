@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 20px;
+    }
+    main {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50px repeat(2, 2fr) 50px repeat(3, 1fr) 50px;
+
+      grid-template-areas:
+        "header header"
+        "banner banner"
+        "product-1 product-2"
+        "product-3 product-4"
+        "Title Title"
+        "pro-images pro-images"
+        "sitemap contact"
+        "footer footer";
+    }
+    .item {
+      width: 100%;
+      height: 100%;
+      border: 1px solid black;
+      color: yellow;
+      text-align: center;
+    }
+
+    .item:nth-child(even) {
+      background-color: red;
+    }
+    .item:nth-child(odd) {
+      background-color: blue;
+    }
+
+    .Header {
+      grid-area: header;
+    }
+    .Banner {
+      grid-area: banner;
+    }
+    .Product-1 {
+      grid-area: product-1;
+    }
+    .Product-2 {
+      grid-area: product-2;
+    }
+    .Product-3 {
+      grid-area: product-3;
+    }
+    .Product-4 {
+      grid-area: product-4;
+    }
+    .Title {
+      grid-area: Title;
+    }
+
+    .Product-images {
+      grid-area: pro-images;
+    }
+    .sitemap {
+      grid-area: sitemap;
+    }
+    .contact {
+      grid-area: contact;
+    }
+    .Footer {
+      grid-area: footer;
+    }
+
+    @media only screen and (max-width: 480px) {
+      main {
+        width: 100%;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px repeat(2, 2fr) 50px repeat(3, 1fr) 50px;
+
+        grid-template-areas:
+          "header"
+          "banner"
+          "product-1"
+          "product-2"
+          "product-3"
+          "product-4"
+          "Title"
+          "pro-images"
+          "sitemap"
+          "contact"
+          "footer";
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <header class="item Header">Header</header>
+      <section class="item Banner">Banner</section>
+      <section class="item Product Product-1">Product-1</section>
+      <section class="item Product Product-2">Product-2</section>
+      <section class="item Product Product-3">Product-3</section>
+      <section class="item Product Product-4">Product-4</section>
+      <h1 class="item Title">Title</h1>
+      <section class="item Product-images">Product-Section</section>
+      <section class="item sitemap">sitemap</section>
+      <section class="item contact">contact</section>
+      <section class="item Footer">Footer</section>
+    </main>
+  </body>
+</html>

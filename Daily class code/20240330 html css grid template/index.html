@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Template</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .layout {
+      width: 100%;
+      height: 100vh;
+      background-color: aliceblue;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 50px repeat(2, 2fr) 50px repeat(3, 1fr) 50px;
+
+      grid-template-areas:
+        "head head head"
+        "banner banner banner"
+        "detail detail detail"
+        "title title title"
+        "product product1 product2"
+        "services services services"
+        "site-map site-map contact"
+        "footer footer footer";
+
+      /* column-gap: 10px;
+      row-gap: 10px; */
+    }
+    .grid-box {
+      /* border: 1px solid black; */
+    }
+    /* .grid-box:nth-child(even) {
+      background-color: yellowgreen;
+    }
+    .grid-box:nth-child(odd) {
+      background-color: lightcoral;
+    } */
+
+    .header {
+      /* grid-column-start: 1; */
+      /* grid-column-end: -1; */
+      /* grid-column-end: 4; */
+      /* grid-column-end: span 3; */
+      /* grid-column: 1 / -1;
+      grid-row: 1 / 2; */
+
+      grid-area: head;
+      height: 50px;
+
+      display: flex;
+      justify-content: space-between;
+      background-color: white !important;
+    }
+
+    .banner {
+      grid-area: banner;
+      height: 500px;
+
+      background-image: url(../fox.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .detail {
+      grid-area: detail;
+      height: 400px;
+      background-color: beige;
+    }
+    .title {
+      grid-area: title;
+      height: 50px;
+      text-align: center;
+    }
+    .products {
+      grid-area: product;
+      height: 300px;
+      display: flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .products-1 {
+      grid-area: product1;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .products-2 {
+      grid-area: product2;
+      height: 300px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .services {
+      grid-area: services;
+      height: 400px;
+      background-color: lightgreen;
+    }
+    .site-map {
+      grid-area: site-map;
+      height: 400px;
+      background-color: indianred;
+    }
+    .contact {
+      grid-area: contact;
+      height: 400px;
+      background-color: olive;
+    }
+    .footer {
+      grid-area: footer;
+      height: 50px;
+      background-color: palegreen;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 8%;
+    }
+    .earth {
+      height: 30px;
+      width: 30px;
+    }
+
+    .menus {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 20%;
+      list-style: none;
+    }
+    .menus a {
+      text-decoration: none;
+    }
+
+    .banner h1 {
+      color: aqua;
+      text-shadow: 1px 1px 1px black;
+      font-size: 60px;
+      font-weight: 800;
+    }
+
+    .banner p {
+      color: rgb(5, 120, 120);
+      text-shadow: 1px 1px 1px black;
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .banner .discovery {
+      margin: 10% 0% 10% 63%;
+    }
+
+    .products img,
+    .products-1 img,
+    .products-2 img {
+      width: 80%;
+      height: 80%;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <main class="layout">
+      <header class="grid-box header">
+        <div class="logo-container">
+          <img src="../00-icons/earth.png" alt="earth" class="earth" />
+          <p>Infoxygen</p>
+        </div>
+
+        <ul class="menus">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <section class="grid-box banner">
+        <div class="discovery">
+          <h1>Discovery of Fox</h1>
+          <p>Fox is a crazy animal.</p>
+        </div>
+      </section>
+      <section class="grid-box detail">detail</section>
+      <section class="grid-box title">Products</section>
+      <section class="grid-box products">
+        <img src="../sinchan.png" alt="sinchan" />
+      </section>
+
+      <section class="grid-box products-1">
+        <img src="../fox.jpg" alt="fox" />
+      </section>
+      <section class="grid-box products-2">
+        <img src="../sinchan.png" alt="sinchan" />
+      </section>
+
+      <section class="grid-box services">services</section>
+      <section class="grid-box site-map">site</section>
+      <section class="grid-box contact">contact</section>
+
+      <footer class="grid-box footer">footer</footer>
+    </main>
+  </body>
+</html>

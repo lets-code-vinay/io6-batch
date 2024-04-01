@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsiveness</title>
+  </head>
+
+  <!--
+    media media queries
+    1. Screen
+    2. print
+    3. Speech
+  -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 62.5%;
+    }
+    h1 {
+      background-color: red;
+      color: black;
+      font-size: 2rem;
+    }
+
+    .avengers {
+      width: 80%;
+      margin: auto;
+      border: 1px solid black;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .avenger {
+      border: 1px solid black;
+      height: 100px;
+      width: 100px;
+    }
+
+    .avenger:nth-child(even) {
+      background-color: red;
+    }
+
+    .avenger:nth-child(odd) {
+      background-color: yellow;
+    }
+
+    @media only screen and (max-width: 480px) {
+      h1 {
+        background-color: blue;
+        color: white;
+        font-size: 3rem;
+      }
+      .avengers {
+        flex-direction: column;
+      }
+      .avenger {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      h1 {
+        background-color: greenyellow;
+        color: brown;
+        font-size: 4rem;
+      }
+      .avengers {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .avenger {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      h1 {
+        background-color: brown;
+        color: yellow;
+        font-size: 3rem;
+      }
+      .avengers {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .avenger {
+        width: 20%;
+      }
+    }
+
+    @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+      h1 {
+        background-color: indigo;
+        color: yellow;
+        font-size: 3rem;
+      }
+      .avengers {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .avenger {
+        width: 20%;
+      }
+    }
+
+    @media only screen and (min-width: 1201px) {
+      h1 {
+        background-color: black;
+        color: yellow;
+        font-size: 4rem;
+      }
+      .avengers {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .avenger {
+        width: 20%;
+      }
+    }
+  </style>
+  <body>
+    <h1 class="">Responsive ness</h1>
+
+    <div class="avengers">
+      <div class="avenger iron-man">iron-man</div>
+      <div class="avenger spider-man">spider-man</div>
+      <div class="avenger Hulk">Hulk</div>
+      <div class="avenger Thor">Thor</div>
+      <div class="avenger Black-Panther">Black Panther</div>
+    </div>
+  </body>
+</html>

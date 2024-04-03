@@ -1,0 +1,600 @@
+/* 
+ --- fonts --
+ font-family: "Merriweather", serif;
+ font-family: "Caveat", cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  color: #222d50;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Common classes */
+.cart-icon {
+  font-size: 2.5rem;
+}
+.buy-now {
+  width: 150px;
+  height: 40px;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #fe8366;
+  border: 2px solid #222d50;
+  cursor: pointer;
+  transition: transform 400ms ease-in-out;
+}
+
+.buy-now:hover {
+  transform: scale(1.1);
+}
+
+.rotate-30deg {
+  transform: rotate(-30deg);
+}
+
+.rotate-30deg:hover {
+  transform: rotate(0deg);
+}
+
+.rotate:hover {
+  transform: rotate(30deg);
+}
+
+.scale:hover {
+  transform: scale(1.125);
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+.main-container .header {
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px #e3dcd9;
+}
+.main-container .header .header-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.main-container .header .header-inside .logo-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 20%;
+}
+.main-container .header .header-inside .logo-container .nike-logo {
+  height: 30px;
+  width: 70px;
+}
+
+.main-container .header .header-inside .logo-container .company-name {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+}
+
+.main-container .header .header-inside .logo-container .company-name span {
+  font-family: "Caveat", cursive;
+  color: #fe8366;
+}
+.main-container .header .header-inside .menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  font-size: 2rem;
+  list-style: none;
+}
+
+.main-container .header .header-inside .menu-container li:hover {
+  transform: scale(1.1);
+}
+.main-container .header .header-inside .menu-container li a {
+  color: #918e8b;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.main-container .header .header-inside .menu-container li a:hover {
+  background-color: #fe8366;
+  padding: 5px;
+  color: #222d50;
+  border-radius: 5px;
+}
+
+.main-container .banner {
+  background-color: #fef8f4;
+}
+
+.main-container .banner .banner-sec {
+  width: 80%;
+  margin: 5px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container .banner .banner-sec .img-sec {
+  width: 40%;
+  position: relative;
+}
+
+.main-container .banner .banner-sec .img-sec .grey-spot {
+  width: 400px;
+  height: 400px;
+  background-color: #5d6166;
+  border-radius: 50%;
+  margin: 10% auto;
+}
+.main-container .banner .banner-sec .img-sec .banner-shoe {
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  transform: rotate(-20deg);
+}
+
+.main-container .banner .banner-sec .detail {
+  width: 60%;
+}
+
+.main-container .banner .banner-sec .detail .title {
+  color: #fe8366;
+  font-size: 7rem;
+  font-family: "Caveat", cursive;
+  font-weight: 900;
+}
+
+.main-container .banner .banner-sec .detail .subtitle {
+  font-size: 7rem;
+  font-family: "Caveat", cursive;
+  font-weight: 900;
+}
+
+.main-container .banner .banner-sec .detail .desc {
+  font-size: 2.5rem;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.main-container .banner .banner-sec .detail .buy-now {
+  width: 150px;
+  height: 40px;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #fe8366;
+  margin: 5% auto;
+}
+
+.main-container .casual-shoes {
+  background-color: #e5e5e5;
+}
+.main-container .casual-shoes .container {
+  background-color: #e5e5e5;
+}
+
+.main-container .casual-shoes .container .title {
+  width: 80%;
+  margin: auto;
+  padding: 2% 0;
+}
+
+.main-container .casual-shoes .container .title h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.main-container .casual-shoes .container .shoes-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container .casual-shoes .container .shoes-container .product {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .img-container {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .img-container
+  .shoe-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail {
+  padding: 10px;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .pro-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .pro-desc {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .price {
+  font-size: 2.5rem;
+  color: #fe8366;
+}
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .buy-now {
+  width: 150px;
+  height: 40px;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  background-color: #fe8366;
+  border: 2px solid #222d50;
+  cursor: pointer;
+  transition: transform 400ms ease-in-out;
+  margin: 0;
+}
+
+.main-container
+  .casual-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .buy-now:hover {
+  transform: scale(1.05);
+}
+
+#shoe-1 {
+  margin-top: 10%;
+}
+
+#shoe-2 {
+  margin-right: 12%;
+}
+
+#shoe-3 {
+  margin-right: 16%;
+  margin-top: -7%;
+}
+
+.main-container .sport-shoes {
+  background-color: #e5e5e5;
+}
+.main-container .sport-shoes .container {
+  background-color: #e5e5e5;
+}
+
+.main-container .sport-shoes .container .title {
+  width: 80%;
+  margin: auto;
+  padding: 2% 0;
+}
+
+.main-container .sport-shoes .container .title h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.main-container .sport-shoes .container .shoes-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container .sport-shoes .container .shoes-container .product {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .img-container {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .img-container
+  .shoe-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail {
+  padding: 10px;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .pro-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .pro-desc {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .price {
+  font-size: 2.5rem;
+  color: #fe8366;
+}
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .buy-now {
+  width: 150px;
+  height: 40px;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  background-color: #fe8366;
+  border: 2px solid #222d50;
+  cursor: pointer;
+  transition: transform 400ms ease-in-out;
+  margin: 0;
+}
+
+.main-container
+  .sport-shoes
+  .container
+  .shoes-container
+  .product
+  .product-detail
+  .price-container
+  .buy-now:hover {
+  transform: scale(1.05);
+}
+
+.main-container .store-sec {
+  background-color: #e4e4e5;
+}
+
+.main-container .store-sec .store {
+  width: 80%;
+  margin: auto;
+  padding: 4% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+}
+
+.main-container .store-sec .store .feature {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-container .store-sec .store .feature .store-fit {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2%;
+}
+
+.main-container .store-sec .store .feature .store-fit .detail {
+  margin-left: 5%;
+}
+.main-container .store-sec .store .feature .store-fit .detail .title {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+.main-container .store-sec .store .feature .store-fit .detail .subtitle {
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.main-container .store-sec .store .feature .store-fit .icon {
+  width: 100px;
+}
+
+/* deliver-- section start */
+.main-container .store-sec .store .feature .delivery {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2%;
+}
+
+.main-container .store-sec .store .feature .delivery .detail {
+  margin-left: 5%;
+}
+.main-container .store-sec .store .feature .delivery .detail .title {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+.main-container .store-sec .store .feature .delivery .detail .subtitle {
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.main-container .store-sec .store .feature .delivery .icon {
+  width: 100px;
+}
+/* delivery section end */
+
+/* support-- section start */
+.main-container .store-sec .store .feature .support {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2%;
+}
+
+.main-container .store-sec .store .feature .support .detail {
+  margin-left: 5%;
+}
+.main-container .store-sec .store .feature .support .detail .title {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+.main-container .store-sec .store .feature .support .detail .subtitle {
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.main-container .store-sec .store .feature .support .icon {
+  width: 100px;
+}
+/* support section end */
+
+.main-container .store-sec .store .store-girl {
+  height: 100%;
+  width: 60%;
+}
+
+.main-container .store-sec .store .store-girl img {
+  height: 100%;
+  width: 100%;
+}

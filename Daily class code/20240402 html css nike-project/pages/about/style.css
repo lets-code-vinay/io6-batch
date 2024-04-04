@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  color: #222d50;
+}
+
+html {
+  font-size: 62.5%;
+}
+.main-container {
+  width: 100%;
+  background-color: #f8f9fa;
+}
+.main-container .header {
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px #e3dcd9;
+}
+.main-container .header .header-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.main-container .header .header-inside .logo-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 20%;
+}
+.main-container .header .header-inside .logo-container .nike-logo {
+  height: 30px;
+  width: 70px;
+}
+
+.main-container .header .header-inside .logo-container .company-name {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+}
+
+.main-container .header .header-inside .logo-container .company-name span {
+  font-family: "Caveat", cursive;
+  color: #fe8366;
+}
+.main-container .header .header-inside .menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  font-size: 2rem;
+  list-style: none;
+}
+
+.main-container .header .header-inside .menu-container li:hover {
+  transform: scale(1.1);
+}
+.main-container .header .header-inside .menu-container li a {
+  color: #918e8b;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.main-container .header .header-inside .menu-container li a:hover {
+  background-color: #fe8366;
+  padding: 5px;
+  color: #222d50;
+  border-radius: 5px;
+}
+
+/* site-map section style-start */
+.main-container .site-map-cont {
+  background-color: #f8f9fa;
+  padding: 4% 0;
+}
+
+.main-container .site-map-cont .site-map {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.main-container .site-map-cont .site-map .site .title {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+}
+
+.main-container .site-map-cont .site-map .site ul {
+  list-style: none;
+  margin-left: 10px;
+}
+.main-container .site-map-cont .site-map .site ul li {
+  line-height: 30px;
+}
+.main-container .site-map-cont .site-map .site ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+.main-container .site-map-cont .site-map .site ul li:hover {
+  transform: scale(1.05);
+  color: #0b1529;
+  font-weight: 600;
+}
+/* site-map section style-end */
+
+/* footer section style-end */
+
+.main-container footer {
+  text-align: center;
+  font-size: 2rem;
+  height: 40px;
+}
+.main-container footer span {
+  color: #fe8366;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  font-weight: 800;
+}
+/* footer section style-end */

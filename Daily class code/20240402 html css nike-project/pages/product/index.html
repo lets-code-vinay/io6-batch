@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <link
       rel="icon"
       type="image/x-icon"
-      href="./assets/logos/nike-favicon.png"
+      href="../../assets/logos/nike-logo.png"
     />
     <!-- --- Google Fonts - start --- -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +27,8 @@
     />
     <!-- --- Font awesome icon CDN - Start --- -->
 
-    <title>Nike Showroom</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Products</title>
   </head>
   <body>
     <main class="main-container">
@@ -37,7 +37,7 @@
         <div class="header-inside">
           <div class="logo-container">
             <img
-              src="./assets/logos/nike-logo.png"
+              src="../../assets/logos/nike-logo.png"
               alt="nike-logo"
               class="nike-logo"
             />
@@ -45,46 +45,14 @@
           </div>
 
           <ul class="menu-container">
-            <li><a href="#">Home</a></li>
-            <li><a href="./pages/product/index.html">Product</a></li>
-            <li><a href="./pages/about/index.html">About us</a></li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="../about/index.html">About us</a></li>
             <li><a href="#">Contact us</a></li>
           </ul>
-
-          <div class="mobile-icon">
-            <i class="fa-solid fa-bars"></i>
-          </div>
         </div>
       </header>
       <!--header section -end -->
-
-      <!--banner section -start -->
-      <section class="banner">
-        <div class="banner-sec">
-          <div class="img-sec">
-            <img
-              src="./assets/images/shoes/shoe10.png"
-              alt="banner-shoes"
-              class="banner-shoe"
-            />
-            <div class="grey-spot"></div>
-          </div>
-          <div class="detail">
-            <p class="title">Nike React</p>
-            <p class="subtitle">Infinity Run 2</p>
-            <p class="desc">
-              Nike shoes offer great comfort and maintain your feet posture
-              every time you walk. Nike is one of the most popular brands of
-              footwear
-            </p>
-            <button class="buy-now">
-              <i class="fa-solid fa-cart-shopping cart-icon"></i>
-              Buy Now
-            </button>
-          </div>
-        </div>
-      </section>
-      <!--banner section -end -->
 
       <!--Casual-shoes section -start -->
       <section class="casual-shoes">
@@ -98,7 +66,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes-1.png"
+                  src="../../assets/images/shoes/shoes-1.png"
                   class="shoe-img rotate"
                   id="shoe-1"
                 />
@@ -124,7 +92,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes9.png"
+                  src="../../assets/images/shoes/shoes9.png"
                   class="shoe-img rotate-30deg"
                   id="shoe-2"
                 />
@@ -148,7 +116,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes3.png"
+                  src="../../assets/images/shoes/shoes3.png"
                   class="shoe-img rotate-30deg"
                   id="shoe-3"
                 />
@@ -186,7 +154,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes2.png"
+                  src="../../assets/images/shoes/shoes2.png"
                   class="shoe-img scale"
                 />
               </div>
@@ -211,7 +179,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes6.png"
+                  src="../../assets/images/shoes/shoes6.png"
                   class="shoe-img scale"
                 />
               </div>
@@ -234,7 +202,7 @@
             <div class="product">
               <div class="img-container">
                 <img
-                  src="./assets/images/shoes/shoes8.png"
+                  src="../../assets/images/shoes/shoes8.png"
                   class="shoe-img scale"
                 />
               </div>
@@ -258,70 +226,6 @@
         </div>
       </section>
       <!--sport-shoes section -end -->
-
-      <!--store section -start -->
-      <section class="store-sec">
-        <div class="store">
-          <div class="feature">
-            <div class="store-fit">
-              <img src="./assets/logos/store.svg" alt="store" class="icon" />
-              <div class="detail">
-                <p class="title">Find the perfect Fit</p>
-                <p class="subtitle">
-                  Everybody is different, Which is why we offer styles for
-                  everybody.
-                </p>
-              </div>
-            </div>
-
-            <div class="delivery">
-              <img
-                src="./assets/logos/truck-delivery.svg"
-                alt="store"
-                class="icon"
-              />
-              <div class="detail">
-                <p class="title">Free Exchanges</p>
-                <p class="subtitle">
-                  One of the many reasons you can shop with peace of mind
-                </p>
-              </div>
-            </div>
-
-            <div class="support">
-              <img src="./assets/logos/c-care.svg" alt="store" class="icon" />
-              <div class="detail">
-                <p class="title">Find the perfect Fit</p>
-                <p class="subtitle">
-                  Everybody is different, Which is why we offer styles for
-                  everybody.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="store-girl">
-            <img
-              src="./assets/images/others/shoes-shopping.png"
-              alt="store-girl-ad"
-            />
-          </div>
-        </div>
-      </section>
-      <!--store section -end -->
-
-      <!--subscribe section -start -->
-      <section class="sub-container">
-        <div class="subscribe">
-          <p>Subscribe to our New Letter</p>
-
-          <div class="input-box">
-            <input type="text" class="email" placeholder="Enter your email" />
-            <button class="sub-btn">Subscribe</button>
-          </div>
-        </div>
-      </section>
-      <!--subscribe section -end -->
 
       <!--site-map section -start -->
       <section class="site-map-cont">

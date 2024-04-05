@@ -147,6 +147,7 @@ html {
   z-index: 1;
   top: 18%;
   transform: rotate(-20deg);
+  left: 10%;
 }
 
 .main-container .banner .banner-sec .detail {
@@ -517,6 +518,7 @@ html {
   justify-content: start;
   align-items: center;
   padding: 2%;
+  width: 100%;
 }
 
 .main-container .store-sec .store .feature .store-fit .detail {
@@ -543,6 +545,7 @@ html {
   justify-content: start;
   align-items: center;
   padding: 2%;
+  width: 100%;
 }
 
 .main-container .store-sec .store .feature .delivery .detail {
@@ -570,6 +573,7 @@ html {
   justify-content: start;
   align-items: center;
   padding: 2%;
+  width: 100%;
 }
 
 .main-container .store-sec .store .feature .support .detail {
@@ -712,14 +716,297 @@ html {
 
 @media only screen and (max-width: 480px) {
   .main-container {
-    background-color: red;
+  }
+  .main-container .header .header-inside {
+    width: 90%;
+    margin: auto;
   }
   .main-container .header .header-inside .mobile-icon {
     display: block;
   }
 
+  .main-container .header .header-inside .logo-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+  }
+
+  .main-container .header .header-inside .logo-container .nike-logo {
+    height: 20px;
+    width: 50px;
+  }
+  .main-container .header .header-inside .logo-container .company-name {
+    font-size: 2em;
+    font-weight: 800;
+    font-family: "Caveat", cursive;
+  }
+
   .main-container .header .header-inside .menu-container {
     display: none;
+  }
+
+  .main-container .banner .banner-sec {
+    width: 100% !important;
+    margin: 5px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-container .banner .banner-sec .img-sec .grey-spot {
+    width: 250px;
+    height: 250px;
+    background-color: #5d6166;
+    border-radius: 50%;
+    margin: 10% auto;
+  }
+
+  .main-container .banner .banner-sec .detail {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .main-container .banner .banner-sec .detail .title {
+    color: #fe8366;
+    font-size: 5rem;
+    font-family: "Caveat", cursive;
+    font-weight: 900;
+  }
+  .main-container .banner .banner-sec .detail .subtitle {
+    font-size: 5rem;
+    font-family: "Caveat", cursive;
+    font-weight: 900;
+  }
+  .main-container .banner .banner-sec .detail .desc {
+    font-size: 1.8rem;
+    width: 90%;
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  .main-container .banner .banner-sec .img-sec .banner-shoe {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    transform: rotate(-20deg);
+    width: 300px;
+    left: 13%;
+  }
+
+  .main-container .banner .banner-sec .img-sec {
+    width: 100% !important;
+    position: relative;
+  }
+
+  .main-container .casual-shoes .container .title {
+    width: 80%;
+    margin: auto;
+    padding: 7% 0;
+  }
+
+  .main-container .casual-shoes .container .shoes-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-container .casual-shoes .container .shoes-container .product {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .main-container
+    .casual-shoes
+    .container
+    .shoes-container
+    .product
+    .img-container {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-container .sport-shoes .container .title {
+    width: 80%;
+    margin: auto;
+    padding: 6% 0;
+  }
+  .main-container .sport-shoes .container .shoes-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-container .sport-shoes .container .shoes-container .product {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .main-container
+    .sport-shoes
+    .container
+    .shoes-container
+    .product
+    .img-container {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container .store-sec .store {
+    width: 80%;
+    margin: auto;
+    padding: 4% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 700px; */
+    flex-direction: column;
+  }
+
+  .main-container .store-sec .store .feature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main-container .store-sec .store .feature .store-fit .icon {
+    width: 70px;
+  }
+  .main-container .store-sec .store .feature .store-fit .detail .title {
+    font-size: 2rem;
+    margin: 8px 0;
+  }
+  .main-container .store-sec .store .feature .store-fit .detail .subtitle {
+    font-size: 1.3rem;
+    margin: 8px 0;
+  }
+
+  .main-container .store-sec .store .feature .delivery .icon {
+    width: 70px;
+  }
+  .main-container .store-sec .store .feature .delivery .icon {
+    width: 70px;
+  }
+  .main-container .store-sec .store .feature .delivery .detail .title {
+    font-size: 2rem;
+    margin: 8px 0;
+  }
+  .main-container .store-sec .store .feature .delivery .detail .subtitle {
+    font-size: 1.3rem;
+    margin: 8px 0;
+  }
+  .main-container .store-sec .store .feature .support .detail .title {
+    font-size: 2rem;
+    margin: 8px 0;
+  }
+  .main-container .store-sec .store .feature .support .detail .subtitle {
+    font-size: 1.3rem;
+    margin: 8px 0;
+  }
+  .main-container .store-sec .store .store-girl {
+    height: 100%;
+    width: 110%;
+  }
+
+  .main-container .sub-container {
+    background-color: #e4e4e5;
+    height: 200px;
+  }
+
+  .main-container .sub-container .subscribe {
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    height: 150px;
+  }
+
+  .main-container .sub-container .subscribe p {
+    font-size: 2rem;
+    line-height: 70px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .main-container .sub-container .subscribe .input-box {
+    width: 90%;
+    margin: 1% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container .sub-container .subscribe .input-box .email {
+    width: 80%;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid grey;
+    padding: 0 2%;
+    font-size: 1.5rem;
+  }
+
+  .main-container .sub-container .subscribe .input-box .sub-btn {
+    width: 30%;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1.5rem;
+    background-color: #fe8366;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    padding: 0 4px;
+  }
+
+  .main-container .site-map-cont .site-map {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  .main-container .site-map-cont .site-map .site {
+    width: 48% !important;
+    margin: 2% 0;
+  }
+  .main-container .site-map-cont .site-map .site .title {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Caveat", cursive;
+  }
+  .main-container .site-map-cont .site-map .site ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .main-container footer {
+    text-align: center;
+    font-size: 1.5rem;
+    height: 40px;
   }
 }
 

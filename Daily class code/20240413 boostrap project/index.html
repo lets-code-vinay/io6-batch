@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Car-A-Van</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!--Font awesome start-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Font awesome end-->
+
+    <!-- Google fonts- start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google fonts- ends -->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0 overflow-x-hidden">
+      <!--    -- Header start----                    -->
+      <header class="row header">
+        <nav class="navbar navbar-expand-lg bg-primary">
+          <div class="container-fluid">
+            <a
+              class="navbar-brand text-light text-style fs-3rem ff-secondary"
+              href="#"
+            >
+              <i class="fa-solid fa-van-shuttle"></i>
+              Car-A-van</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
+                <li class="nav-item fs-1-5rem">
+                  <a
+                    class="nav-link active text-light"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item fs-1-5rem">
+                  <a class="nav-link text-light" href="./pages/trips/index.html"
+                    >Trip</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-1-5rem">
+                  <a
+                    class="nav-link text-light dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Destination
+                  </a>
+                  <ul class="dropdown-menu fs-1-5rem">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-1-5rem">
+                  <a class="nav-link disabled text-light" aria-disabled="true"
+                    >Hotels</a
+                  >
+                </li>
+                <li class="nav-item fs-1-5rem">
+                  <button
+                    type="button"
+                    class="btn bg-primary position-relative text-light fs-1-5rem"
+                  >
+                    Inbox
+                    <span
+                      class="mt-2 position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2 fs-1-5rem"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary fs-1-5rem" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!--    -- Header ends----                    -->
+      <!--    -- Carousel start----                    -->
+      <section class="row">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide p-0"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./assets/images/gulmarg.jpg"
+                class="d-block w-100 h-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block" style="bottom: 5%">
+                <h5 class="ff-secondary fs-4rem text-shadow text-dark">
+                  Gorgeous Gulmarg
+                </h5>
+                <p class="text-shadow ff-secondary fs-3rem">
+                  Gulmarg, known as Gulmarag in Kashmiri,
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/jaisalmaer.avif"
+                class="d-block w-100 h-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block" style="bottom: 5%">
+                <h5 class="ff-secondary fs-4rem text-shadow text-dark">
+                  Jaisalmaer
+                </h5>
+                <p class="text-shadow ff-secondary fs-3rem">
+                  western Indian state of Rajasthan
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/images/Lakshadweep.jpg"
+                class="d-block w-100 h-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block" style="bottom: 5%">
+                <h5 class="ff-secondary fs-4rem text-shadow text-dark">
+                  Saline Lakshadeep
+                </h5>
+                <p class="text-shadow ff-secondary fs-3rem">
+                  Lakshadweep is a tropical archipelago of 36 atolls
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!--    -- Carousel end----                    -->
+
+      <!--    -- details start----                    -->
+      <section class="row bg-primary">
+        <div class="container w-75 mx-auto">
+          <div class="row mt-4">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+              <p class="fs-3rem ff-secondary text-light text-center">
+                Total Hotel Bookings
+              </p>
+              <p class="fs-2rem ff-primary text-light text-center">432</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+              <p class="fs-3rem ff-secondary text-light text-center">
+                Total Visited Guests
+              </p>
+              <p class="fs-2rem ff-primary text-light text-center">1245</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+              <p class="fs-3rem ff-secondary text-light text-center">
+                Destination Weddings
+              </p>
+              <p class="fs-2rem ff-primary text-light text-center">750</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+              <p class="fs-3rem ff-secondary text-light text-center">
+                Total Travels
+              </p>
+              <p class="fs-2rem ff-primary text-light text-center">15671</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--    -- details end----                    -->
+
+      <!--    -- travel cards start----                    -->
+      <section class="row w-75 mx-auto my-5">
+        <p class="ff-secondary fs-3rem text-dark">Where you can travel?</p>
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <img
+              src="./assets/images/Lakshadweep2.jpg"
+              class="card-img-top"
+              alt="Lakshadeep"
+              style="height: 200px !important"
+            />
+            <div class="card-body">
+              <h5 class="card-title ff-secondary fs-3rem">Lakshadeep</h5>
+              <p class="card-text">
+                Live the beach-life in Maldives with packages starting @₹12,377
+                Upto 25% Off, No Cost EMI. Get extra benefits up to ₹10,000 &
+                enjoy flexible cancellations & date-change too! An Exclusive
+                Photo-shoot! Free Snorkeling Trip.
+              </p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Go</a>
+                <a href="#" class="btn btn-secondary">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <img
+              src="./assets/images/siligudi.jpg"
+              class="card-img-top"
+              alt="siligudi"
+              style="height: 200px !important"
+            />
+            <div class="card-body">
+              <h5 class="card-title ff-secondary fs-3rem">Siligudi</h5>
+              <p class="card-text">
+                Live the beach-life in Maldives with packages starting @₹15,377
+                Upto 15% Off, No Cost EMI. Get extra benefits up to ₹8,000 &
+                enjoy flexible cancellations & date-change too! An Exclusive
+                Photo-shoot! Free Snorkeling Trip.
+              </p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Go</a>
+                <a href="#" class="btn btn-secondary">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <img
+              src="./assets/images/goa.webp"
+              class="card-img-top"
+              alt="Goa"
+              style="height: 200px !important"
+            />
+            <div class="card-body">
+              <h5 class="card-title ff-secondary fs-3rem">Goa</h5>
+              <p class="card-text">
+                Live the beach-life in Maldives with packages starting @₹22,377
+                Upto 35% Off, No Cost EMI. Get extra benefits up to ₹9,000 &
+                enjoy flexible cancellations & date-change too! An Exclusive
+                Photo-shoot! Free Snorkeling Trip.
+              </p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Go</a>
+                <a href="#" class="btn btn-secondary">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <img
+              src="./assets/images/meghalya.webp"
+              class="card-img-top"
+              alt="Meghalya"
+              style="height: 200px !important"
+            />
+            <div class="card-body">
+              <h5 class="card-title ff-secondary fs-3rem">Meghalya</h5>
+              <p class="card-text">
+                Live the beach-life in Maldives with packages starting @₹22,477
+                Upto 20% Off, No Cost EMI. Get extra benefits up to ₹10,000 &
+                enjoy flexible cancellations & date-change too! An Exclusive
+                Photo-shoot! Free Snorkeling Trip.
+              </p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-primary">Go</a>
+                <a href="#" class="btn btn-secondary">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--    -- travel cards end----                    -->
+
+      <!--    -- Parallax Effect start----                    -->
+      <section class="row parallax-effect">
+        <div class="parallax-container">
+          <div class="col parallax-effect-row">
+            <p
+              class="fs-5rem parallax-effect-title text-light text-shadow ff-secondary"
+            >
+              Let's explore the world with us.
+            </p>
+            <button class="btn btn-primary">Explore</button>
+          </div>
+        </div>
+      </section>
+      <!--    -- Parallax Effect end----                    -->
+
+      <!--    -- Pricing start----                    -->
+      <section class="row w-75 mx-auto my-5">
+        <p class="fs-3rem ff-secondary text-dark text-center">Pricing</p>
+        <p class="fs-1-5rem px-5">
+          Quickly build an effective pricing table for your potential customers
+          with this Bootstrap example. It's built with default Bootstrap
+          components and utilities with little customization.
+        </p>
+
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <div class="card-body pricing-card">
+              <h5
+                class="card-title bg-dark p-2 text-center fs-2rem ff-secondary text-light pricing-card-title"
+              >
+                Solo
+              </h5>
+              <h6 class="card-subtitle m-2 fs-1-5rem text-body-secondary">
+                Solo Travelers
+              </h6>
+              <ul class="list-group list-group-flush fs-1-5rem">
+                <li class="list-group-item">Parking Facilities</li>
+                <li class="list-group-item">Pick n drop facility</li>
+                <li class="list-group-item">Rental Bikes are available</li>
+                <li class="list-group-item">Pool and Spa</li>
+              </ul>
+              <div class="d-flex justify-content-between px-3 py-2">
+                <button class="btn btn-primary">Explore</button>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <div class="card-body pricing-card">
+              <h5
+                class="card-title bg-dark p-2 text-center fs-2rem ff-secondary text-light pricing-card-title"
+              >
+                Couples
+              </h5>
+              <h6 class="card-subtitle m-2 fs-1-5rem text-body-secondary">
+                Couples are welcome
+              </h6>
+              <ul class="list-group list-group-flush fs-1-5rem">
+                <li class="list-group-item">Unmarried Couples allowed</li>
+                <li class="list-group-item">Local IDs are acceptable</li>
+                <li class="list-group-item">Hassle free check in</li>
+                <li class="list-group-item">Fully sanitized</li>
+              </ul>
+              <div class="d-flex justify-content-between px-3 py-2">
+                <button class="btn btn-primary">Explore</button>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <div class="card-body pricing-card">
+              <h5
+                class="card-title bg-dark p-2 text-center fs-2rem ff-secondary text-light pricing-card-title"
+              >
+                Friends
+              </h5>
+              <h6 class="card-subtitle m-2 fs-1-5rem text-body-secondary">
+                Groups are welcome
+              </h6>
+              <ul class="list-group list-group-flush fs-1-5rem">
+                <li class="list-group-item">King size rooms</li>
+                <li class="list-group-item">5person/room occupancy</li>
+                <li class="list-group-item">Double Beds</li>
+                <li class="list-group-item">Bone-fire</li>
+              </ul>
+              <div class="d-flex justify-content-between px-3 py-2">
+                <button class="btn btn-primary">Explore</button>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-sm-6 col-md-3 col-lg-3">
+          <div class="card" style="width: 25rem">
+            <div class="card-body pricing-card">
+              <h5
+                class="card-title bg-dark p-2 text-center fs-2rem ff-secondary text-light pricing-card-title"
+              >
+                Family
+              </h5>
+              <h6 class="card-subtitle m-2 fs-1-5rem text-body-secondary">
+                Family friendly hotels
+              </h6>
+              <ul class="list-group list-group-flush fs-1-5rem">
+                <li class="list-group-item">King size Bedrooms</li>
+                <li class="list-group-item">Double bed in room</li>
+                <li class="list-group-item">Kids play area</li>
+                <li class="list-group-item">Free room-service</li>
+              </ul>
+
+              <div class="d-flex justify-content-between px-3 py-2">
+                <button class="btn btn-primary">Explore</button>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--    -- Pricing end----                    -->
+
+      <!--    -- Sitemap start----                    -->
+      <section class="container-fluid mx-auto mt-5 bg-primary p-0 w-100">
+        <div class="row w-75 p-0 mx-auto">
+          <div class="col col-sm-6 col-md-2 col-lg-2">
+            <a
+              class="navbar-brand text-light text-style fs-3rem ff-secondary"
+              href="#"
+            >
+              <i class="fa-solid fa-van-shuttle"></i>
+              Car-A-van</a
+            >
+          </div>
+          <div class="col col-sm-6 col-md-4 col-lg-4">
+            <p class="ff-secondary fs-3rem text-light text-center">
+              Who we are?
+            </p>
+            <p class="fs-1-5rem text-light px-5">
+              We are here to serve you for dream visits and destinations. We
+              also help you to decide to roam in incredible world.
+            </p>
+          </div>
+          <div class="col col-sm-6 col-md-3 col-lg-3">
+            <p class="ff-secondary fs-3rem text-light ms-5">Our Services</p>
+            <ul class="list-group list-group-flush fs-1-5rem bg-primary">
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"
+                  >Hotel booking
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"
+                  >Destination Wedding
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"
+                  >Travel Package
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light">
+                  Travel Insurance</a
+                >
+              </li>
+
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"> Visa</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col col-sm-6 col-md-3 col-lg-3">
+            <p class="ff-secondary fs-3rem text-light ms-5">About</p>
+            <ul class="list-group list-group-flush fs-1-5rem bg-primary">
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"
+                  >Hotel booking
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light">
+                  Destination Wedding
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"
+                  >Travel Package
+                </a>
+              </li>
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light">
+                  Travel Insurance</a
+                >
+              </li>
+
+              <li class="list-group-item bg-primary global-hover">
+                <a href="#" class="text-decoration-none text-light"> Visa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="row w-75 p-0 mx-auto bg-dark d-flex justify-content-center align-items-center icon-container"
+        >
+          <a target="_blank" href="https://www.facebook.com/vinay.shermauryan"
+            ><i
+              class="fa-brands fa-square-facebook fs-3rem my-3 text-light pointer"
+            ></i
+          ></a>
+          <a target="_blank" href="#"
+            ><i
+              class="fa-brands fa-square-x-twitter fs-3rem my-3 text-light pointer"
+            ></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/vinay_shermauryan"
+            ><i
+              class="fa-brands fa-square-instagram fs-3rem my-3 text-light pointer"
+            ></i
+          ></a>
+          <a target="_blank" href="https://www.youtube.com/@letscodevinay"
+            ><i
+              class="fa-brands fa-square-youtube fs-3rem my-3 text-light pointer"
+            ></i
+          ></a>
+          <a target="_blank" href="mailto:vinay.shermauryan@gmail.com"
+            ><i class="fa-solid fa-envelope fs-3rem my-3 text-light pointer"></i
+          ></a>
+        </div>
+      </section>
+      <!--    -- Sitemap end----                    -->
+
+      <!--    -- Footer Start----                    -->
+      <section class="row bg-primary pt-2">
+        <div class="footer-container bg-dark mt-3">
+          <div class="d-flex justify-content-between w-75 mx-auto my-2 footer">
+            <p class="fs-2rem text-light">All rights are reserved</p>
+            <p class="fs-2rem text-light">
+              This website is designed by IO-team with &hearts;
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--    -- Footer end----                    -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

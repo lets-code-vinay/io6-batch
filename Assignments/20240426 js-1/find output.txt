@@ -1,0 +1,23 @@
+1. What is the data-type of 
+	'Italy', 
+	501, 
+	false, 
+	[23, 546, 67,8,90], 
+	undefined, 
+	null, 
+	{}, 
+	Number(India),
+	Date(),
+	?
+
+2. Find output
+	console.log("output-1", "500" + 100); 
+	console.log("output-2", 56 + 100); 
+	console.log("output-3", 56 + "100"); 
+	console.log("output-4", "500" / "100"); 
+	console.log("output-5", 56 + 100 + true); 
+	console.log("output-6", 56 + 100 + Number(true)); 
+	console.log("output-7", 56 + 100 + "true"); 
+	console.log("output-8", 56 + 100 + Number("true")); 
+	console.log("output-9", 56 + 100 + Number("Vinay")); 
+	console.log("output-9", 50 - "100" + "Vinay"); 

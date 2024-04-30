@@ -218,3 +218,107 @@ console.log("OR--false || false--", false || false); // false
 console.log("OR--false || true--", false || true); // true
 console.log("OR--true || false--", true || false); // true
 console.log("OR--true || true--", true || true); // true
+
+console.log("logical---1", 2 == 2 && 5 === 5); // true && true == true
+console.log("logical---2", 2 == "2" && "5" === 5); // true && false == false
+console.log("logical---3", 2 == "2" || "5" === 5); // true || false == true
+console.log("logical---4", (true == "2" || "5" === "5") && 89 > true); // C:T, A:T,  T:T
+// (false || true) && true --> true && true -- true
+
+/**
+ * Conditions
+ */
+
+/**
+ * Agar aaj barish hui to main school nhi jaunga
+ * if(ajj barish hui to?){
+ *   main school nhi jaunga
+ * } else{
+ *  mujhe school jana pdega
+ * }
+ *
+ * agar phone me net hoga tabhi youtube chalega nhi to nhi chalega
+ *
+ * if(phone me net hoga){
+ * Youtube Chalega
+ * } else{
+ * nhi chalega
+ * }
+ *
+ *
+ * agar 2 + 2 == 4 honge tb print krdo hello, nhi to print krdo bye
+ */
+
+if (2 + 2 !== 4) {
+  // !true
+  console.log("hello");
+} else {
+  console.log("bye");
+}
+
+if (!true) {
+  console.log("i'm true");
+} else {
+  console.log("i'm false");
+}
+// true && true &&  true --> true && true == true
+if (78 > 56 && true && 89 <= 90) {
+  console.log("hanji kaise ho?");
+} else {
+  console.log("theek hai?");
+}
+
+// C: ,A: ,T:
+// null == falsy value
+// false && true && true --> false && true --> false
+if (null && true && 89 <= 90) {
+  console.log("hanji kaise ho?");
+} else {
+  console.log("theek hai?");
+}
+// C: ,A: ,T:
+
+/**
+ * Three sides of any triangle entered through the keyboard
+ * Find if the triangle is
+ * isosceles, == 2 sides are equal
+ * equilateral, == 3 side are equal
+ * scalene == no side is equal
+ * right angle  == one side must be 90
+ */
+
+const s1 = prompt("Enter first side of Triangle");
+const s2 = prompt("Enter second side of Triangle");
+const s3 = prompt("Enter third side of Triangle");
+
+function findTheTriangle(s1, s2, s3) {
+  console.log(Number(s1), Number(s2), Number(s3));
+  if (
+    Number(s1) == Number(s2) ||
+    Number(s2) == Number(s3) ||
+    Number(s3) == Number(s1)
+  ) {
+    console.log("Triangle is Isosceles");
+  } else if (
+    Number(s1) == Number(s2) &&
+    Number(s2) == Number(s3) &&
+    Number(s3) == Number(s1)
+  ) {
+    console.log("Triangle is Equilateral");
+  } else if (
+    (Number(s1) != Number(s2) ||
+      Number(s2) != Number(s3) ||
+      Number(s3) != Number(s1)) &&
+    Number(s1) != 90 &&
+    Number(s2) != 90 &&
+    Number(s3) != 90
+  ) {
+    console.log("Triangle is Scalene");
+  } else if (Number(s1) == 90 || Number(s2) == 90 || Number(s3) == 90) {
+    console.log("Triangle is Right Angle");
+  } else {
+    console.log("Invalid input");
+  }
+}
+
+findTheTriangle(s1, s2, s3);

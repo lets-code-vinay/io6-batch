@@ -69,7 +69,7 @@ const atmMachine = () => {
   const acc = Number(prompt(`Please enter account number`));
 
   let balance = "12000";
-  const aPin = "4561";
+  let pin = 4561;
   const accNo = "123456";
 
   document.write(`<h1>Welcome to Info Bank</h1>`);
@@ -79,12 +79,7 @@ const atmMachine = () => {
   // 3. balance enquiry
   // 4. money transfer
   // 5. deposit
-  console.log(
-    "acc.length !== 6",
-    String(acc).length !== 6,
-    String(acc),
-    String(acc).length
-  );
+
   if (isNaN(acc)) {
     return document.write(
       `<h1 style="color:red">Please enter valid account number.</h1></br>`
@@ -95,36 +90,101 @@ const atmMachine = () => {
     );
   }
 
-  if (acc == accNo) {
+  const enteredPin = Number(prompt(`Please enter 4 digit pin`));
+
+  if (isNaN(enteredPin)) {
+    return document.write(
+      `<h1 style="color:red">Please enter valid PIN Code.</h1></br>`
+    );
+  } else if (String(enteredPin).length != 4) {
+    return document.write(
+      `<h1 style="color:red">Please enter valid Pin code of 4 digits.</h1></br>`
+    );
+  }
+
+  if (acc == accNo && pin == enteredPin) {
     document.write(`<h1>Hello Ankit ! Good morning</h1>`);
     document.write(`  <ol>
                         <li>Balance Enquiry</li>
                         <li>Withdraw</li>
-                        <li>Deposit</li>
                         <li>Pin Change</li>
+                        <li>Deposit</li>
                         <li>Transfer</li>
                     </ol>`);
     document.write(`<h3>Please select an option</h3>`);
 
-    let option;
-    option = prompt("Select any option");
-    console.log("option", option);
+    setTimeout(() => {
+      let option;
+      option = prompt("Select any option");
+      console.log("option", option);
 
-    if (option == 1) {
-      document.write(`<h1 style="color:blue">You have ${balance}:</h1>`);
-    } else if (option == 2) {
-      const amtToWD = prompt("Enter amount to withdraw");
-      if (balance > amtToWD) {
-        const finalAmt = balance - amtToWD;
-        document.write(`<h1 style="color:blue">Please collect the amount</h1>`);
-        document.write(`<h1 style="color:green">Balance : ${finalAmt}</h1>`);
-        balance = finalAmt;
-      } else {
-        document.write(
-          `<h1 style="color:blue">Sorry!! you have not sufficient balance</h1>`
+      if (option == 1) {
+        document.write(`<h1 style="color:blue">You have ${balance}:</h1>`);
+      } else if (option == 2) {
+        const amtToWD = prompt("Enter amount to withdraw");
+        console.log("amt to wd", amtToWD, balance, balance > amtToWD);
+        if (Number(balance) > Number(amtToWD)) {
+          const finalAmt = balance - amtToWD;
+
+          document.write(
+            `<h1 style="color:blue">Please collect the amount</h1>`
+          );
+          document.write(`<h1 style="color:green">Balance : ${finalAmt}</h1>`);
+          balance = finalAmt;
+        } else {
+          return document.write(
+            `<h1 style="color:blue">Sorry!! you have don't sufficient balance</h1>`
+          );
+        }
+      } else if (option == 3) {
+        const oldPin = Number(prompt("Please enter your old PIN"));
+        if (isNaN(oldPin)) {
+          return document.write(
+            `<h1 style="color:red">Please enter valid PIN Code.</h1></br>`
+          );
+        } else if (String(oldPin).length != 4) {
+          return document.write(
+            `<h1 style="color:red">Please enter valid Pin code of 4 digits.</h1></br>`
+          );
+        }
+
+        if (oldPin == pin) {
+          const newPin = Number(prompt("Please enter new Pin"));
+          if (isNaN(newPin)) {
+            return document.write(
+              `<h1 style="color:red">Please enter valid PIN Code.</h1></br>`
+            );
+          } else if (String(newPin).length != 4) {
+            return document.write(
+              `<h1 style="color:red">Please enter valid Pin code of 4 digits.</h1></br>`
+            );
+          }
+          pin = newPin;
+          document.write(
+            `<h1 style="color:blue">PIN Code has been changed successfully. </h1></br>`
+          );
+          console.log("new pin --", pin);
+          return;
+        } else {
+          return document.write(
+            `<h1 style="color:red">Sorry!! you have entered wrong PIN</h1>`
+          );
+        }
+      } else if (option == 4) {
+        const amtToDep = Number(prompt("Enter Amount to deposit"));
+
+        if (isNaN(amtToDep)) {
+          return document.write`<h1 style="color:red">Please enter a valid amount</h1>`;
+        } else if (amtToDep <= 0) {
+          return document.write`<h1 style="color:red">Amount must be greater than 0</h1>`;
+        }
+
+        balance = Number(balance) + Number(amtToDep);
+        return document.write(
+          `<h1 style="color:blue">Amount of ${amtToDep}/- has been deposited to your account now current balance is ${balance}/-</h1>`
         );
       }
-    }
+    }, 2000);
   } else {
     document.write(`<h1 style="color:blue">oops!! Account doesn't match</h1>`);
   }

@@ -112,7 +112,17 @@ for (let i = 1; i <= 50; i++) {
 // Exercise
 // print table from 20 to 30 using nested for loop
 // Done by Taran, Chahat & Ankit
-
+// for (let i = 1; i <= 20; i++) {
+//   if (i % 2 == 0) {
+//     for (let j = 1; j <= 10; j++) {
+//       console.log(`even number ${i} X ${j}`, i * j);
+//     }
+//   } else {
+//     for (let j = 1; j <= 10; j++) {
+//       console.log(`odd number ${i} X ${j}`, i * j);
+//     }
+//   }
+// }
 // Test Exercise
 let ab = 50;
 let cb = 50;

@@ -1,0 +1,24 @@
+1. Write an ATM machine program which gives the list in console
+    Change Pin          : 1
+    Cash Withdrawal     : 2
+    Cash Deposit        : 3
+    Check Balance       : 4
+    Mini statement      : 5
+    Invalid option      : < 0 || > 5
+
+
+    You have changed Pin
+    Please enter a valid Pin
+
+    You have successfully Withdrawal 55000Rs
+
+    You have successfully deposited 5000Rs, current balance is 60000Rs
+
+    The available balance is 60000Rs
+
+    Mini statement is not working. Sorry for inconvenient cost
+
+    Please enter a valid option
+
+
+

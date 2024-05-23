@@ -55,6 +55,73 @@
  *      use to delete/pop the value in the first index of array
  *      const arr1 = [500, -200, 10, 100, 50, -45, 89, 78, -4];
  *      arr1.shift() // [ -200, 10, 100, 50, -45, 89, 78,-4]
+ * 14 . TRICK to add values in array
+ *      use spread operator to shallow copy
+ *      const arr = [1,5,4,78,2]
+ *      const newArr = [...arr, 56] // adding value at last
+ *      const newArr2 = [99,...arr] // adding value at starting
+ *      const newArr3 = [99,...arr, 45,78,'red'] // adding multiple values
+ * 15. .from()
+ *      convert any string to array
+ *      const name = 'Pooja';
+ *      Array.from(name) // ["P","o","o","j","a"]
+ * 16. Array.isArray()
+ *      To check if the given data is in array form or not
+ *      Array.isArray(["P", "o", "o", "j", "a"])
+ *      It will return Boolean values
+ * 17. Array.of()
+ *      It will return an array of given data
+ *      Example: Array.of("Red", 45, "Girl", names, true)
+ * 18. .flat()
+ *      To remove internal and merge into main array
+ *      ex: const newData = [45, [78, 41], [2354, [1567]], 48546];
+ *          newData.flat() // it will merge 1st level array
+ *          newData.flat().flat() // it will merge till 2nd level array
+ * 19. .includes()
+ *      It is used to check if given value is existed in array or not
+ *        Ex:  console.log("includes", names.includes("Ravina")); // it will check Ravina in names array if found return true else false
+ * 20.  indexOf()
+ *        It will return the index of given element
+ *        If element existed in array it will return the index number
+ *        If element is not found then it will return -1
+ *          Ex: names.indexOf("Chaht")  // -1 or 2
+ * 21.  lastIndexOf()
+ *        It will return the last index of given element
+ *        If element existed in array it will return the index number
+ *        If element is not found then it will return -1
+ *          Ex: names.indexOf("Chaht")  // -1 or 2
+ * 22. .join()
+ *      It will make string of all elements of array
+ *      EX: let names = ["Ravi", "Chander", "Chahat"];
+ *          names.join("_") // Ravi_Chander_Chahat
+ * 23. reverse()
+ *      To reverse elements in array
+ *      EX: let names = ["Ravi", "Chander", "Chahat"];
+ *          names.reverse() // ["Chahat", "Chander","Ravi" ]
+ * 24. .slice()
+ *      Cut array from given index
+ *        EX: let names = ["Ravi", "Chander", "Chahat", 'Taran', 'Ankit'];
+ *          names.slice(1) // ["Chander", "Chahat" , 'Taran', 'Ankit'];
+ *          names.slice(2) // ["Chahat", 'Taran', 'Ankit'];
+ *          names.slice(1,3) // [ "Chander","Chahat"];
+ *          names.slice(-3) // [ "Chahat", 'Taran', 'Ankit'];
+ * 26. .sort()
+ *        It will sort array in alphabetical order
+ *          example: [1, 45, 78, 455, 121, 454, 561, 4].sort(); //  [1,121,4,45,454,455,561,78]
+ *                   ["Ravi", "Chander", "Chahat", 'Taran', 'Ankit'].sort(); //['Ankit',"Chahat","Chander","Ravi",'Taran',]
+ * 27. .splice()
+ *        It adds or remove any elements from array
+ *         const month = ["Jan", "March", "April", 'Dog', "June", "july", "aug"];
+ *           if You want a new array starts from April
+ *              months.splice(2)
+ *           if in this array you want to remove all elements after March
+ *              months.splice(1, 0)
+ *           if you want to add any value in array as per required location. For example add MAY after apr
+ *              months.splice(3, 0, 'May)
+ *              It will add May but will not remove any value
+ *           if you want to add and remove any value on location. For example add MAY after apr and remove Dog
+ *              months.splice(3, 1, 'May)
+ *
  */
 
 // array.length
@@ -261,10 +328,109 @@ console.log("shift", numberArr2);
 // insert the entered value in the array
 // show the value in the browser
 
-let newName = prompt("Enter new name");
-const pushValueInToArray = (newName) => {
-  nameArray.push(newName);
-};
-pushValueInToArray(newName);
-console.log("nameArrray", nameArray);
-document.write(nameArray);
+// let newName = prompt("Enter new name");
+// const pushValueInToArray = (newName) => {
+//   nameArray.push(newName);
+// };
+// pushValueInToArray(newName);
+// console.log("nameArrray", nameArray);
+// document.write(nameArray);
+
+// ----------------------------- May 21 --------------------
+let names = ["Ravi", "Chahat", "Chander", "Chahat"];
+
+// let firstName = prompt("Enter first name");
+// names.push(newName);
+// names.unshift(firstName);
+names.unshift("Vinay");
+names.push("Ankit");
+
+// names.pop();
+// names.shift();
+// names.shift();
+const newNames = ["Info", ...names, "Pooja"];
+console.log("names--", newNames, names);
+
+const stdName = "Pooja Mehra";
+console.log("split", stdName.split(" "));
+console.log("from", Array.from(stdName));
+
+console.log("isArray--1--", Array.isArray(names));
+console.log("isArray--2--", Array.isArray(["P", "o", "o", "j", "a"]));
+console.log("isArray--3--", Array.isArray(["a"]));
+console.log("isArray--4--", Array.isArray([]));
+console.log("isArray--5--", Array.isArray("[]"));
+console.log("isArray--6--", Array.isArray(Array.from("Pooja")));
+console.log("isArray--7--", Array.isArray("Pooja".split(" ")));
+// console.log("isArray--8--", Array.isArray((names.length = 0)));
+
+console.log("Array.of----", Array.of("Red", 45, "Girl", names, true));
+
+const data = [
+  45,
+  78,
+  45,
+  [45, 78, 41, [2354, 1567], 48546],
+  45,
+  [
+    45421,
+    45,
+    [1354, [234, 5, 5632, 232, [454, 2634, 64]], 2567],
+    14,
+    5457,
+    152,
+    452,
+    154,
+  ],
+];
+// console.log("Ankit", data[4][3][2][2]);
+// console.log("Chahat", data[5][2][2][1]);
+// console.log("Pooja", data[4[2][2][3][1]]);
+// console.log("Taran", data[4][2][0][3][1]);
+console.log("vinay--", data[5][2][1][4][1]);
+
+const newData = [45, [78, 41], [2354, [1567]], 48546];
+console.log("flat--", data.flat().flat().flat().flat());
+
+console.log("includes", names.includes("Ravina"));
+
+console.log("indexOf", names.indexOf("Chahat"));
+console.log("lastIndexOf", names.lastIndexOf("Chahat"));
+
+let joinedArray = names.join("_");
+console.log("join--", joinedArray);
+
+// -------------------------may 23 2024 ----------------------
+console.log("names", names);
+console.log("names reversed", [...names].reverse());
+
+const animals = ["elephant", "camel", "ant", "duck", "bison"];
+const slicedAnimals = animals.slice(-2);
+console.log("slicedAnimals--", slicedAnimals);
+
+console.log("sortedAnimals", animals.sort());
+console.log("sortedNumbers", [1, 45, 78, 455, 121, 454, 561, 4].sort());
+
+// [1,4,45,78,121,454,455,561]
+// [1,121,4,45,454,455,561,78]
+
+const months = [
+  "Jan",
+  "March",
+  "April",
+  "Dog",
+  "CAt",
+  "June",
+  "july",
+  "aug",
+  "sep",
+];
+// console.log("spliced months", months.splice(1));
+// console.log("spliced months", months.splice(2, 4));
+months.splice(1, 0, "Feb");
+months.splice(4, 2, "May");
+console.log("spliced months", months);
+
+// C:
+// A:
+// T:

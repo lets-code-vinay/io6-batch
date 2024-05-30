@@ -639,7 +639,7 @@ const swiggyResponse = {
                                 },
                               ],
                               itemBadge: {},
-                              badgesV2: {},
+                              badgesV2: "Vinay",
                               itemNudgeType: "B1G1",
                               itemLevelDiscount: "ITEM_LEVEL_DISCOUNT_B1G1",
                               isBestseller: true,
@@ -3572,4 +3572,37 @@ const swiggyResponse = {
  * 89
  * 786
  * 1854
+ */
+
+// short cut to go on line: ctrl+ g
+
+// swiggyResponse.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[4].card.card.itemCards[0]
+console.log(
+  "testing--",
+  swiggyResponse.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[4].card
+    .card.itemCards[0]
+);
+
+console.log(
+  "testing 1--",
+  swiggyResponse.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card
+    .card.itemCards[2].card.info.badgesV2
+);
+
+console.log(
+  "rumali roti--",
+  swiggyResponse.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[8].card
+    .card.itemCards[0].card.info.name
+);
+
+/**
+ * Hi My name is Ankit.
+ * I went to a {famous} Restro and i ordered {name}.
+ * Which is  a type of {category}
+ * it was {variations.name = half} plate.
+ * It costed me around {price}
+ * It was a {VEG-Non}. Public gave it {rating} ratings.
+ * I am suggesting you to go and try {name} and give rating more than {rating}
+ *
+ *
  */

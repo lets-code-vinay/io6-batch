@@ -156,3 +156,58 @@ Which is pretty good. You must try this <strong>.${name}</strong>.
 // document.write(
 //   `I think this ${rating} is good rating. You should give rating to this ${name} more than ${rating}`
 // );
+
+const car = {
+  model: "Tata",
+  name1: {
+    model: "Maruti",
+    name1: {
+      model: "Mahindra",
+      name1: "vinay",
+    },
+  },
+};
+const name1 = "hi";
+const {
+  model: modelTata = "",
+  name1: {
+    model: modelMaruti = "",
+    name1: { model: modelMahindra = "", name1: name2 = "" } = {},
+  } = {},
+} = { ...car };
+console.log("printing name2 ==", name1, name2);
+
+// ------------------------------ optional chaining ---------------------
+const swiggyCopy = { ...swiggy };
+// console.log("print--.", swiggyCopy.itemCards[0].card.info.backgroundColor);
+console.log(
+  "print--.",
+  swiggyCopy?.itemCards[0]?.card?.info?.backgroundColor || "color"
+);
+
+const { itemCards: itemCardsCopy = [] } = swiggyCopy || {};
+const [firstElement = {}] = itemCardsCopy || [];
+const {
+  card: { info: { backgroundColor: backgroundColor2 = "#000" } = {} } = {},
+} = firstElement || {};
+
+console.log("backgroundColor2", backgroundColor2);
+
+// When to use optional chaining and destructuring
+/**
+ * Optional Chaining
+ * this is used to extract values from object. It ensures not to
+ * break code and throws error message.
+ * We can pass a default value to handle undefined.
+ * for optional chaining  we use like this(obj1?.obj2?.obj?.value)
+ * It is preferrable when we are using any value at single time
+ */
+
+/**
+ * Destruring is a process to extract values from object
+ * It is little bit lengthy process
+ * but it is prefferable when we are going to use same
+ * veriable/keys name multiple times in the project. it
+ * will save time to write lengthy names of object with optional
+ * chaining or extractions
+ */

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <span class="bank-name">Bank of Pooja</span>
+        <img src="../../sinchan.png" width="50" />
+        <span>time</span>
+      </header>
+
+      <div class="error-message display-none"></div>
+      <div class="success-message display-none">this is success mesg</div>
+
+      <!-- ---- Main screen section--- -->
+      <div class="main-screen">
+        <span class="bank-name">Welcome to Bank of Pooja </span>
+        <div class="check-pin">
+          <input
+            type="number"
+            maxlength="6"
+            minlength="6"
+            value=""
+            class="pin main-screen-acc-no"
+            id="main-screen-acc-no"
+            placeholder="Enter Account number"
+          />
+          <input
+            type="number"
+            maxlength="4"
+            minlength="4"
+            value=""
+            class="pin"
+            id="main-screen-pin"
+            placeholder="Enter pin"
+          />
+        </div>
+
+        <div class="pin-btn-container">
+          <input
+            type="submit"
+            value="Enter"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToMainScreen()"
+          />
+        </div>
+      </div>
+
+      <!--  ___Services _______----->
+      <div class="btn-container main-section display-none">
+        <p class="user-name"></p>
+        <h1 class="title">Please select a service</h1>
+        <button class="btn" id="withdraw">Withdraw</button>
+        <button class="btn" id="deposit">Deposit</button>
+        <button class="btn" id="transfer">Transfer</button>
+        <button class="btn" id="enquiry">Balance Enquiry</button>
+        <button class="btn" id="change-pin">Change Pin</button>
+        <button class="btn exit" id="exit" disabled>Exit</button>
+      </div>
+
+      <!-- ---- change pin section--- -->
+      <div class="pin-section display-none">
+        <span class="bank-name">Change Pin</span>
+        <div class="check-pin">
+          <input
+            type="number"
+            maxlength="4"
+            minlength="4"
+            value=""
+            class="pin old-pin"
+            id="old-pin"
+            placeholder="Enter old pin"
+          />
+          <button id="match-old-pin" onclick="matchPins()">Match Pin</button>
+        </div>
+        <input
+          type="number"
+          maxlength="4"
+          minlength="4"
+          value=""
+          class="pin new-pin"
+          id="new-pin"
+          placeholder="Enter new pin"
+        />
+        <div class="pin-btn-container">
+          <input
+            type="submit"
+            value="Change Pin"
+            class="pin-btn"
+            id="change-pin-btn"
+            onclick="changePins()"
+          />
+
+          <input
+            type="submit"
+            value="Back"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToMainMenu()"
+          />
+        </div>
+      </div>
+
+      <!-- ---- Withdraw section--- -->
+      <div class="withdraw-section display-none">
+        <span class="bank-name">Withdraw</span>
+        <div class="check-pin">
+          <input
+            type="number"
+            maxlength="4"
+            minlength="4"
+            value=""
+            class="pin old-pin"
+            id="old-pin"
+            placeholder="Enter your pin"
+          />
+          <button id="match-old-pin" onclick="matchPinsWithdraw()">
+            Validate Pin
+          </button>
+        </div>
+
+        <input
+          type="number"
+          value=""
+          class="pin wd-amount"
+          id="wd-amount"
+          placeholder="Enter your amount"
+        />
+
+        <div class="withdraw-btn-section">
+          <input
+            type="submit"
+            value="Withdraw"
+            class="withdraw-btn"
+            id="withdraw-btn"
+            onclick="withdraw()"
+          />
+
+          <input
+            type="submit"
+            value="Back"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToMainMenu()"
+          />
+        </div>
+      </div>
+
+      <!-- ---- deposit section--- -->
+      <div class="deposit-section display-none">
+        <span class="bank-name">Deposit</span>
+
+        <div class="check-pin">
+          <input
+            type="number"
+            value=""
+            class="pin old-pin"
+            id="old-pin"
+            placeholder="Enter your pin"
+          />
+          <button id="match-old-pin" onclick="matchPinsDeposit()">
+            Validate Pin
+          </button>
+        </div>
+
+        <input
+          type="number"
+          value=""
+          class="pin deposit-amount"
+          id="deposit-amount"
+          placeholder="Enter your amount"
+        />
+
+        <div class="deposit-btn-section">
+          <input
+            type="submit"
+            value="deposit"
+            class="deposit-btn"
+            id="deposit-btn"
+            onclick="deposit()"
+          />
+
+          <input
+            type="submit"
+            value="Back"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToMainMenu()"
+          />
+        </div>
+      </div>
+
+      <!-- ---- balance section--- -->
+      <div class="balance-section display-none">
+        <span class="bank-name">Balance Enquiry</span>
+
+        <div class="check-pin">
+          <input
+            type="number"
+            value=""
+            class="pin old-pin"
+            id="old-pin"
+            placeholder="Enter your pin"
+          />
+          <button id="match-old-pin" onclick="matchPinsBalance()">
+            Validate Pin
+          </button>
+        </div>
+
+        <input
+          type="submit"
+          value="Back"
+          class="pin-btn"
+          id="got-main-menu-btn"
+          onclick="goToMainMenu()"
+        />
+      </div>
+    </div>
+    <script src="./atm.js"></script>
+  </body>
+</html>

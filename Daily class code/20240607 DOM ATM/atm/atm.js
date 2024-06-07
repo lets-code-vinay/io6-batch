@@ -1,4 +1,4 @@
-const userData = [
+let userData = [
   { accNum: "787878", name: "Ankit", balance: "12000", pin: "7878" },
   { accNum: "121212", name: "Pooja", balance: "20000", pin: "1212" },
   { accNum: "123456", name: "Taran", balance: "21200", pin: "1234" },
@@ -10,7 +10,7 @@ const userData = [
  * @description on main screen
  */
 
-const userMainScreenData = { accNo: "", pin: "" };
+let selectedUserData = {};
 
 const goToMainScreen = () => {
   // @desciption getting elements
@@ -59,6 +59,133 @@ const goToMainScreen = () => {
       mainScreen.classList.add("display-none");
       serviceSec.classList.remove("display-none");
       userName.innerText = user.name;
+      selectedUserData = user;
     }
   });
+  console.log("selectedUserData  -1-", selectedUserData);
+};
+
+const handleExitBtn = () => {
+  const mainScreen = document.querySelector(".main-screen");
+  const servicesScreen = document.querySelector(".main-section");
+  const balScreen = document.querySelector(".balance-section");
+  const wDScreen = document.querySelector(".withdraw-section");
+  const depScreen = document.querySelector(".deposit-section");
+
+  servicesScreen.classList.add("display-none");
+  balScreen.classList.add("display-none");
+  wDScreen.classList.add("display-none");
+  depScreen.classList.add("display-none");
+
+  mainScreen.classList.remove("display-none");
+
+  selectedUserData = {};
+};
+
+const goToServicesScreen = () => {
+  const balScreen = document.querySelector(".balance-section");
+  const servicesScreen = document.querySelector(".main-section");
+  const wDScreen = document.querySelector(".withdraw-section");
+  const depScreen = document.querySelector(".deposit-section");
+
+  balScreen.classList.add("display-none");
+  servicesScreen.classList.remove("display-none");
+  wDScreen.classList.add("display-none");
+  depScreen.classList.add("display-none");
+};
+
+const handleBalEnq = () => {
+  const balScreen = document.querySelector(".balance-section");
+  const servicesScreen = document.querySelector(".main-section");
+  const balance = document.querySelector(".balance");
+
+  servicesScreen.classList.add("display-none");
+  balScreen.classList.remove("display-none");
+
+  balance.innerText = selectedUserData?.balance;
+  balance.style.color = "blue";
+  balance.style.fontWeight = "800";
+};
+
+/**
+ * @description Withdraw amount
+ */
+const handleWithdraw = () => {
+  const servicesScreen = document.querySelector(".main-section");
+  const wDScreen = document.querySelector(".withdraw-section");
+
+  wDScreen.classList.remove("display-none");
+  servicesScreen.classList.add("display-none");
+};
+
+/**
+ * @description Withdrawing amount in btn click
+ */
+const withdraw = () => {
+  const wdAmt = document.querySelector("#wd-amount");
+  const errMsg = document.querySelector(".error-message");
+
+  if (!wdAmt.value) {
+    errMsg.classList.remove("display-none");
+    errMsg.innerText = `Please enter valid amount!!`;
+  } else if (wdAmt.value < 100) {
+    errMsg.classList.remove("display-none");
+    errMsg.innerText = `Please enter amount more than 100 !!`;
+  } else if (wdAmt.value > selectedUserData.balance) {
+    errMsg.classList.remove("display-none");
+    errMsg.innerText = `Sorry!! you have insufficient balance in your account !!`;
+  } else {
+    const updatedAmtOfSelUser = userData.map((user) => {
+      if (user.accNum == selectedUserData.accNum) {
+        const remainingAmt = user.balance - wdAmt.value;
+
+        selectedUserData = { ...user, balance: String(remainingAmt) };
+        return selectedUserData;
+      }
+      return user;
+    });
+
+    userData = updatedAmtOfSelUser;
+
+    goToServicesScreen();
+  }
+};
+
+const deposit = () => {
+  const depAmt = document.querySelector(".deposit-amount");
+  const errMsg = document.querySelector(".error-message");
+
+  const depositAmt = depAmt.value;
+
+  if (!depositAmt) {
+    errMsg.classList.remove("display-none");
+    errMsg.innerText = `Please enter a valid amount`;
+  } else if (depositAmt < 100) {
+    errMsg.classList.remove("display-none");
+    errMsg.innerText = `Please enter amount more than 100Rs.`;
+  } else {
+    const updatedUserData = userData.map((user) => {
+      if (user.accNum == selectedUserData.accNum) {
+        const finalAmt = Number(user.balance) + Number(depositAmt);
+
+        selectedUserData = { ...user, balance: finalAmt };
+        return selectedUserData;
+      }
+      return user;
+    });
+    console.log("updatedUserData", updatedUserData);
+    userData = updatedUserData;
+    goToServicesScreen();
+  }
+};
+
+/**
+ * @description opening deposit screen on button click
+ */
+const handleDeposit = () => {
+  const depScreen = document.querySelector(".deposit-section");
+  const servicesScreen = document.querySelector(".main-section");
+
+  servicesScreen.classList.add("display-none");
+  depScreen.classList.remove("display-none");
 };

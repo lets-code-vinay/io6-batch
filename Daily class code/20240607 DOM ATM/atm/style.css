@@ -17,6 +17,12 @@
   height: 20%;
 }
 
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .error-message {
   text-align: center;
   font-size: 3rem;

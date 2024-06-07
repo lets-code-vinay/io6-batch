@@ -57,12 +57,20 @@
       <div class="btn-container main-section display-none">
         <p class="user-name"></p>
         <h1 class="title">Please select a service</h1>
-        <button class="btn" id="withdraw">Withdraw</button>
-        <button class="btn" id="deposit">Deposit</button>
+        <button class="btn" id="withdraw" onclick="handleWithdraw()">
+          Withdraw
+        </button>
+        <button class="btn" id="deposit" onclick="handleDeposit()">
+          Deposit
+        </button>
         <button class="btn" id="transfer">Transfer</button>
-        <button class="btn" id="enquiry">Balance Enquiry</button>
+        <button class="btn" id="enquiry" onclick="handleBalEnq()">
+          Balance Enquiry
+        </button>
         <button class="btn" id="change-pin">Change Pin</button>
-        <button class="btn exit" id="exit" disabled>Exit</button>
+        <button class="btn exit" id="exit" onclick="handleExitBtn()">
+          Exit
+        </button>
       </div>
 
       <!-- ---- change pin section--- -->
@@ -111,20 +119,6 @@
       <!-- ---- Withdraw section--- -->
       <div class="withdraw-section display-none">
         <span class="bank-name">Withdraw</span>
-        <div class="check-pin">
-          <input
-            type="number"
-            maxlength="4"
-            minlength="4"
-            value=""
-            class="pin old-pin"
-            id="old-pin"
-            placeholder="Enter your pin"
-          />
-          <button id="match-old-pin" onclick="matchPinsWithdraw()">
-            Validate Pin
-          </button>
-        </div>
 
         <input
           type="number"
@@ -148,27 +142,17 @@
             value="Back"
             class="pin-btn"
             id="got-main-menu-btn"
-            onclick="goToMainMenu()"
+            onclick="goToServicesScreen()"
           />
+          <button class="withdraw-btn exit" id="exit" onclick="handleExitBtn()">
+            Exit
+          </button>
         </div>
       </div>
 
       <!-- ---- deposit section--- -->
       <div class="deposit-section display-none">
         <span class="bank-name">Deposit</span>
-
-        <div class="check-pin">
-          <input
-            type="number"
-            value=""
-            class="pin old-pin"
-            id="old-pin"
-            placeholder="Enter your pin"
-          />
-          <button id="match-old-pin" onclick="matchPinsDeposit()">
-            Validate Pin
-          </button>
-        </div>
 
         <input
           type="number"
@@ -192,8 +176,11 @@
             value="Back"
             class="pin-btn"
             id="got-main-menu-btn"
-            onclick="goToMainMenu()"
+            onclick="goToServicesScreen()"
           />
+          <button class="withdraw-btn exit" id="exit" onclick="handleExitBtn()">
+            Exit
+          </button>
         </div>
       </div>
 
@@ -201,26 +188,19 @@
       <div class="balance-section display-none">
         <span class="bank-name">Balance Enquiry</span>
 
-        <div class="check-pin">
+        <h1>Your current balance is : <span class="balance"></span></h1>
+        <div class="d-flex">
           <input
-            type="number"
-            value=""
-            class="pin old-pin"
-            id="old-pin"
-            placeholder="Enter your pin"
+            type="submit"
+            value="Back"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToServicesScreen()"
           />
-          <button id="match-old-pin" onclick="matchPinsBalance()">
-            Validate Pin
+          <button class="pin-btn exit" id="exit" onclick="handleExitBtn()">
+            Exit
           </button>
         </div>
-
-        <input
-          type="submit"
-          value="Back"
-          class="pin-btn"
-          id="got-main-menu-btn"
-          onclick="goToMainMenu()"
-        />
       </div>
     </div>
     <script src="./atm.js"></script>

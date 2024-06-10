@@ -63,11 +63,15 @@
         <button class="btn" id="deposit" onclick="handleDeposit()">
           Deposit
         </button>
-        <button class="btn" id="transfer">Transfer</button>
+        <button class="btn" id="transfer" onclick="handleTransfer()">
+          Transfer
+        </button>
         <button class="btn" id="enquiry" onclick="handleBalEnq()">
           Balance Enquiry
         </button>
-        <button class="btn" id="change-pin">Change Pin</button>
+        <button class="btn" id="change-pin" onclick="handleChangePin()">
+          Change Pin
+        </button>
         <button class="btn exit" id="exit" onclick="handleExitBtn()">
           Exit
         </button>
@@ -93,9 +97,10 @@
           maxlength="4"
           minlength="4"
           value=""
-          class="pin new-pin"
+          class="pin new-pin display-none"
           id="new-pin"
           placeholder="Enter new pin"
+          onkeydown="handleEnterNewPin()"
         />
         <div class="pin-btn-container">
           <input
@@ -105,14 +110,16 @@
             id="change-pin-btn"
             onclick="changePins()"
           />
-
           <input
             type="submit"
             value="Back"
             class="pin-btn"
             id="got-main-menu-btn"
-            onclick="goToMainMenu()"
+            onclick="goToServicesScreen()"
           />
+          <button class="btn exit pin-btn" id="exit" onclick="handleExitBtn()">
+            Exit
+          </button>
         </div>
       </div>
 
@@ -190,6 +197,48 @@
 
         <h1>Your current balance is : <span class="balance"></span></h1>
         <div class="d-flex">
+          <input
+            type="submit"
+            value="Back"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="goToServicesScreen()"
+          />
+          <button class="pin-btn exit" id="exit" onclick="handleExitBtn()">
+            Exit
+          </button>
+        </div>
+      </div>
+
+      <!-- ---- transfer section--- -->
+      <div class="transfer-section display-none">
+        <span class="bank-name">Transfer</span>
+
+        <div>
+          <input
+            type="number"
+            value=""
+            class="pin payee-account"
+            id="payee-account"
+            placeholder="Enter Payee Account number"
+          />
+
+          <input
+            type="number"
+            value=""
+            class="pin transfer-amount"
+            id="transfer-amount"
+            placeholder="Enter Amount to transfer"
+          />
+        </div>
+        <div class="d-flex">
+          <input
+            type="submit"
+            value="Transfer"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="transfer()"
+          />
           <input
             type="submit"
             value="Back"

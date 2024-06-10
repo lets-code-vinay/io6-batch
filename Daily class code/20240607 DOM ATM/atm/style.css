@@ -184,8 +184,9 @@ input[type="number"] {
 .withdraw-section,
 .deposit-section,
 .balance-section,
-.main-screen {
-  height: 200px;
+.main-screen,
+.transfer-section {
+  height: 250px;
   border: 1px solid white;
   border-radius: 10px;
 

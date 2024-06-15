@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <span class="bank-name">Bank of Pooja</span>
+        <img src="../../sinchan.png" width="50" />
+        <span>time</span>
+      </header>
+
+      <div class="error-message"></div>
+      <div class="success-message">this is success mesg</div>
+
+      <!-- ---- Main screen section--- -->
+      <div class="main-screen">
+        <span class="bank-name">Welcome to Bank of Pooja </span>
+
+        <div class="pin-btn-container">
+          <input
+            type="submit"
+            value="Bombbbbbb"
+            class="pin-btn"
+            id="got-main-menu-btn"
+            onclick="handleBtnClick()"
+          />
+          <input
+            type="submit"
+            value="Defuse"
+            class="defuse-btn"
+            id="got-main-menu-btn"
+            onclick="handleBtnDefuse()"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

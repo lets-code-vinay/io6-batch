@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Paleorange: hsl(25, 100%, 94%);
+  --verydark: hsl(220, 13%, 13%);
+  --Darkgrayish: hsl(219, 9%, 45%);
+  --Grayish: hsl(220, 14%, 75%);
+  --Lightgrayish: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+/* ============================Utality Classes=========================== */
+body {
+  font-family: "Kumbh Sans";
+}
+p {
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+}

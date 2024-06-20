@@ -17,6 +17,24 @@
       <header class="header">
         <img src="../00-icons/earth.png" alt="logo" />
         <h2>Welcome to the New World</h2>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search By name"
+            aria-label="Search By name"
+            aria-describedby="button-addon2"
+            id="search-country"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id=""
+            onclick="getSearchedCountry()"
+          >
+            Search
+          </button>
+        </div>
         <button
           type="button"
           class="btn btn-secondary"
@@ -27,6 +45,8 @@
       </header>
       <hr />
       <div class="country-container"></div>
+
+      <div class="single-country-container d-none"></div>
     </main>
 
     <script

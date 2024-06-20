@@ -40,3 +40,40 @@ body {
   height: 170px;
   border: 1px solid black;
 }
+
+/* -------------------- */
+
+.selected-country-area {
+  display: flex;
+}
+
+.left-section,
+.right-section,
+.middle-section {
+  height: 80vh;
+}
+
+.left-section {
+  width: 30%;
+}
+
+.middle-section {
+  width: 60%;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.county-flag {
+  width: 100%;
+}
+
+.single-country-container .card-img-top {
+  height: 400px;
+}
+
+.input-group {
+  width: 500px;
+  margin-bottom: 0 !important;
+}

@@ -4,8 +4,6 @@ import App from "./App";
 
 const root = ReactDom.createRoot(document.querySelector("#root"));
 
-console.log("root00--", root);
-
 root.render(
   <>
     <App />

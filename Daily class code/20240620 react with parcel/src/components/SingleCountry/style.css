@@ -1,0 +1,42 @@
+.single-country-area .card-img-top {
+  height: 500px;
+}
+
+.single-country-area {
+  display: flex;
+}
+
+.middle-section {
+  height: 80vh;
+}
+
+.middle-section {
+  width: 100%;
+}
+
+.d-none {
+  display: none !important;
+}
+.single-country-area .card {
+  width: 50%;
+  height: 500px;
+  margin: auto;
+  font-size: 5rem;
+}
+.card-body {
+  width: 100%;
+}
+
+.county-flag {
+  width: 100%;
+}
+
+.single-country-area .card-img-top {
+  height: 500px;
+  width: 100%;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 0 !important;
+}

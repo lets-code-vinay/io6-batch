@@ -1,9 +1,12 @@
 import React from "react";
+import "./style.css";
 
 const Footer = () => {
   return (
     <>
-      <p>&copy; All rights reserve to Taran</p>
+      <div className="footer-container">
+        <p>&copy; All rights reserve to Taran</p>
+      </div>
     </>
   );
 };

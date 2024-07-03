@@ -1,0 +1,33 @@
+{
+  "name": "lets-connect",
+  "version": "1.0.0",
+  "description": "Practicing making social media",
+  "main": "index.js",
+  "scripts": {
+    "start": "rimraf dist && rimraf .parcel-cache && parcel index.html"
+  },
+  "keywords": [
+    "react",
+    "social",
+    "media",
+    "ecommerce"
+  ],
+  "author": "Vinay Maurya",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/material": "^5.15.21",
+    "axios": "^1.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.7"
+  }
+}

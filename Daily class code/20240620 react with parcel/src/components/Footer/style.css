@@ -1,0 +1,11 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 225, 225);
+}
+
+.footer-container p {
+  width: 40%;
+  margin: 1% auto;
+}

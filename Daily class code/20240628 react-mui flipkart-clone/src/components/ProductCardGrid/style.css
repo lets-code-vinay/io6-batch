@@ -1,0 +1,37 @@
+.product-card {
+  margin: 1% !important;
+  padding: 1% !important;
+  position: relative;
+}
+
+.product-card:hover {
+  box-shadow: 0px 0px 10px grey;
+}
+
+.product-card .heart-icon {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.product-card .price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card .product-name {
+  font-weight: 500;
+}
+
+.product-card .description {
+  font-weight: 400;
+  color: #a2a2a2;
+}
+
+.product-card .btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90% !important;
+}

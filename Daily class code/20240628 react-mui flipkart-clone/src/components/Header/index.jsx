@@ -79,6 +79,15 @@ const Header = () => {
     navigate("/login");
   };
 
+  /**
+   * @description Redirecting to pages
+   * @param {String} menuType
+   * @returns
+   */
+  const handleMenu = (menuType) => () => {
+    navigate(`/${menuType}`);
+  };
+
   console.log("theme", theme);
 
   const isUserLoggedIn = Boolean(userData?.token);
@@ -93,16 +102,32 @@ const Header = () => {
           <img src={LOGO} alt="logo" className="logo" />
 
           <Box className="menu-container">
-            <Button variant="text" className="global-btn">
+            <Button
+              variant="text"
+              className="global-btn"
+              onClick={handleMenu("homepage")}
+            >
               Home
             </Button>
-            <Button variant="text" className="global-btn">
+            <Button
+              variant="text"
+              className="global-btn"
+              onClick={handleMenu("products")}
+            >
               Product
             </Button>
-            <Button variant="text" className="global-btn">
+            <Button
+              variant="text"
+              className="global-btn"
+              onClick={handleMenu("about")}
+            >
               About
             </Button>
-            <Button variant="text" className="global-btn">
+            <Button
+              variant="text"
+              className="global-btn"
+              onClick={handleMenu("contact")}
+            >
               Contact
             </Button>
 

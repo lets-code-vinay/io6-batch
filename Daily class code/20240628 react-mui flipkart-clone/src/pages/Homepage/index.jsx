@@ -19,10 +19,7 @@ const Homepage = () => {
 
   const fetchProducts = async () => {
     try {
-      const api = API.PRODUCTS_API.replace("#LIMIT#", 3000).replace(
-        "#OFFSET#",
-        10
-      );
+      const api = API.PRODUCTS_API;
       const res = await axios(api);
       console.log("res", res);
     } catch (err) {

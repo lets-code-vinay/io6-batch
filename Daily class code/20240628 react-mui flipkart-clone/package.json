@@ -4,7 +4,8 @@
   "description": "Practicing making social media",
   "main": "index.js",
   "scripts": {
-    "start": "rimraf dist && rimraf .parcel-cache && parcel index.html"
+    "start2": "rimraf dist && rimraf .parcel-cache && parcel index.html",
+    "start": "parcel index.html"
   },
   "keywords": [
     "react",
@@ -22,6 +23,7 @@
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.24.0"
   },
   "devDependencies": {

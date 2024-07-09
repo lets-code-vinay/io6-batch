@@ -1,0 +1,45 @@
+.header-container {
+  width: 100%;
+}
+.header {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.logo {
+  width: 100px;
+}
+
+.login-btn {
+  background-color: white !important;
+  color: blue !important;
+  font-weight: 600;
+}
+
+.search-input {
+  background-color: white;
+  color: blue;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-image {
+  width: 50px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container {
+  width: 40%;
+}

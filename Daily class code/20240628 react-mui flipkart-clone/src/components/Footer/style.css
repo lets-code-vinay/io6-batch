@@ -1,0 +1,17 @@
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.footer-menus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.footer-icons {
+  color: #fec200;
+  margin-right: 5px;
+}

@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body .global-btn {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 400;
+}

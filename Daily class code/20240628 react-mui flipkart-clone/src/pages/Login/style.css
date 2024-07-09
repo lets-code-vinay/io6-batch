@@ -33,3 +33,8 @@
 .chip-btn {
   width: 100px;
 }
+
+.fk-right-sec .bottom-note {
+  margin-top: 20%;
+  display: block;
+}

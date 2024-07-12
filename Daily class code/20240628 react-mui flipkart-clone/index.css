@@ -19,7 +19,7 @@ body .global-btn {
 body .add-cart-btn {
   color: white;
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
   background-color: #fe9f01;
 }
@@ -27,7 +27,7 @@ body .add-cart-btn {
 body .buy-now-btn {
   color: white;
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
   background-color: #fa641a;
 }

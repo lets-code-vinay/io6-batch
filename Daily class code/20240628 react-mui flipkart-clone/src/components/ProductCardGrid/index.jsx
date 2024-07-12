@@ -1,47 +1,73 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  IconButton,
-  Typography,
-} from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+
 import dummy from "../../assets/images/dummyProduct.png";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import "./style.css";
-import { API } from "../../configs/api";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
+import StarIcon from "@mui/icons-material/Star";
+import FK_ASSURED from "../../assets/images/fa.png";
+import "./style.css";
+
+import { getOriginalPriceFromDiscount } from "../../utils/utility";
 
 const ProductCardGrid = ({ product }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 375 }} className="product-card">
+      <Card sx={{ width: 310, height: 420 }} className="product-card">
         <IconButton className="heart-icon">
           <FavoriteIcon />
         </IconButton>
         <CardMedia
           component="img"
-          height="194"
-          image={product?.thumbnail || dummy}
+          height="200"
+          width="200"
+          image={product?.thumbnail ? product?.thumbnail : dummy}
           alt="Paella dish"
         />
         <CardContent>
-          <Typography variant="h6" className="product-name">
-            {product?.title || ""}
-          </Typography>
+          <Tooltip title={product?.title} arrow placement={"top"}>
+            <Typography variant="h6" className="product-name">
+              {product?.title || ""}
+            </Typography>
+          </Tooltip>
           <Typography variant="body1" className="description">
-            Subtitle Title
+            {product?.brand}
           </Typography>
-          fAssured
+          <Box className="rating-container">
+            <Button
+              variant="contained"
+              className="rating"
+              endIcon={<StarIcon />}
+            >
+              {(product?.rating).toFixed(1)}
+            </Button>
+            <Typography variant="body1" className="raters">
+              ({Math.round(Math.random() * 10000)})
+            </Typography>
+            <img src={FK_ASSURED} alt="FK_ASSURED" />
+          </Box>
           <Box className="price-container">
-            <Typography variant="body1">price</Typography>
-            <Typography variant="body1">original price</Typography>
-            <Typography variant="body1">Discount</Typography>
+            <Typography variant="body1" className="price">
+              &#8377;{product?.price}
+            </Typography>
+            <Typography variant="body1" className="original-price">
+              {getOriginalPriceFromDiscount(
+                product?.price,
+                product?.discountPercentage
+              )}
+            </Typography>
+            <Typography variant="body1" className="discount">
+              {product?.discountPercentage}% off
+            </Typography>
           </Box>
           <Typography variant="body2">Offer</Typography>
         </CardContent>

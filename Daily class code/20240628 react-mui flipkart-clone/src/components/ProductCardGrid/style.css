@@ -2,6 +2,7 @@
   margin: 5px !important;
   padding: 5px !important;
   position: relative;
+  cursor: pointer !important;
 }
 
 .product-card:hover {

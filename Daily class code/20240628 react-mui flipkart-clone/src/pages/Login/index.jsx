@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 
 import Box from "@mui/material/Box";
@@ -21,6 +22,7 @@ import "./style.css";
 import { Tooltip } from "@mui/material";
 import BackdropLoader from "../../components/BackdropLoader";
 import Notifications from "../../components/Notifications";
+import { setUserData } from "../../redux/appReducer/appReducer";
 
 const Login = () => {
   const login_img_style = {
@@ -33,6 +35,7 @@ const Login = () => {
   };
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = React.useState(false);
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [isSubmit, setSubmit] = useState(false);
@@ -73,6 +76,7 @@ const Login = () => {
           isOpen: true,
           type: "success",
         });
+        dispatch(setUserData(data));
         localStorage.setItem("userData", JSON.stringify(data));
 
         navigate("/homepage");

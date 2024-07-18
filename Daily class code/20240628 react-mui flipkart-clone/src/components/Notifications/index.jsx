@@ -12,7 +12,7 @@ const Notifications = ({ isOpen = false, msg = "", type = "" }) => {
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
           <Alert variant="filled" severity="success">
-            This is an outlined success Alert.
+            {msg}
           </Alert>
         </Snackbar>
       )}
@@ -24,7 +24,7 @@ const Notifications = ({ isOpen = false, msg = "", type = "" }) => {
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
           <Alert variant="filled" severity="error">
-            This is an outlined error Alert.
+            {msg}
           </Alert>
         </Snackbar>
       )}

@@ -30,12 +30,10 @@ const Suggestions = () => {
       <Box className="suggestion-container">
         {suggestionData.map((ele, index) => {
           return (
-            <>
-              <Box className="suggestion">
-                <img src={ele?.img} alt={ele?.title} />
-                <Typography variant="body1">{ele?.title}</Typography>
-              </Box>
-            </>
+            <Box key={index} className="suggestion">
+              <img src={ele?.img} alt={ele?.title} />
+              <Typography variant="body1">{ele?.title}</Typography>
+            </Box>
           );
         })}
       </Box>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -18,11 +20,29 @@ import FK_ASSURED from "../../assets/images/fa.png";
 import "./style.css";
 
 import { getOriginalPriceFromDiscount } from "../../utils/utility";
+import { setSelectedProduct } from "../../redux/appReducer/appReducer";
 
 const ProductCardGrid = ({ product }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  /**
+   * @description Getting product of selected Product
+   * @param {Object} product
+   * @returns
+   */
+  const handleProductClick = (product) => (e) => {
+    console.log("handleProductClick", product);
+    dispatch(setSelectedProduct(product));
+    navigate(`/selected-product/${product?.id}`);
+  };
   return (
     <>
-      <Card sx={{ width: 310, height: 420 }} className="product-card">
+      <Card
+        sx={{ width: 310, height: 420 }}
+        className="product-card"
+        onClick={handleProductClick(product)}
+      >
         <IconButton className="heart-icon">
           <FavoriteIcon />
         </IconButton>

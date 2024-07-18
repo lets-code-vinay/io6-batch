@@ -45,3 +45,13 @@ export const HomepageShimmer = () => {
     </>
   );
 };
+
+export const ProductsShimmer = () => {
+  return (
+    <>
+      <Box sx={{ gap: 2 }}>
+        <Skeleton variant="rectangular" width={"100%"} height={"70px"} />
+      </Box>
+    </>
+  );
+};

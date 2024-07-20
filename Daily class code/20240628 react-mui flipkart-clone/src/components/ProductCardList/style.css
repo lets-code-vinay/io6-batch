@@ -3,6 +3,10 @@
   justify-content: start;
   width: 95%;
   margin: auto;
+  cursor: pointer;
+}
+.product-list-container:hover {
+  box-shadow: 0px 0px 5px 0px rgb(149, 119, 119);
 }
 
 .product-list-container .image-section {
@@ -16,6 +20,11 @@
 
 .product-list-container .price-section {
   width: 25%;
+}
+
+.product-list-container .price-section .price-section-detail {
+  width: 100%;
+  margin: 0 0 2% 5%;
 }
 
 .product-list-container .image-section img {

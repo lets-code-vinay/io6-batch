@@ -1,0 +1,37 @@
+.user-rating {
+  margin: 2% 0;
+  padding: 2%;
+}
+.user-rating .avatar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-rating .avatar-container .name-section {
+  margin-left: 10px;
+}
+
+.user-rating .ratings-given .thumbs-given-section {
+  display: flex;
+}
+
+.user-rating .ratings-given {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-rating .ratings-given .thumbs-given {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.user-rating .ratings-given .thumbs-given p {
+  margin-right: 5px;
+}
+
+.user-rating .stars {
+  margin: 2% 0;
+}

@@ -9,6 +9,10 @@
   box-shadow: 0px 0px 10px grey;
 }
 
+.product-card .card-contents {
+  padding: 5px;
+}
+
 .product-card .heart-icon {
   position: absolute;
   top: 1%;

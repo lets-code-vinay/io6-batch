@@ -6,6 +6,7 @@ const appSlice = createSlice({
     userData: {},
     products: [],
     selectedProduct: {},
+    cartItems: [],
   },
 
   reducers: {
@@ -13,17 +14,18 @@ const appSlice = createSlice({
       state.userData = action.payload;
     },
     setProducts: (state, action) => {
-      console.log("action setProducts", action);
       state.products = action.payload;
     },
     setSelectedProduct: (state, action) => {
-      console.log("action selectedProduct", action);
       state.selectedProduct = action.payload;
+    },
+    setCartItems: (state, action) => {
+      state.cartItems.push(action.payload);
     },
   },
 });
 
-export const { setUserData, setProducts, setSelectedProduct } =
+export const { setUserData, setProducts, setSelectedProduct, setCartItems } =
   appSlice.actions;
 
 export default appSlice.reducer;

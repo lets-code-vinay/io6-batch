@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
+import Badge from "@mui/material/Badge";
+import Divider from "@mui/material/Divider";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Menu from "@mui/material/Menu";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Avatar from "@mui/material/Avatar";
 
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
@@ -18,26 +27,23 @@ import CountertopsIcon from "@mui/icons-material/Countertops";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LOGO from "../../assets/logos/flipkart-logo-black-and-white.png";
 import "./style.css";
-import {
-  Avatar,
-  Badge,
-  Divider,
-  ListItemIcon,
-  Menu,
-  MenuItem,
-} from "@mui/material";
+
 import { Logout, PersonAdd, Settings } from "@mui/icons-material";
 
 const Header = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   const userData = JSON.parse(localStorage.getItem("userData"));
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorUser, setAnchorUser] = useState(null);
   const [quickSearchAnchor, setQuickSearchAnchor] = useState(null);
 
-  const isOpen = Boolean(anchorEl);
+  const cartItems = useSelector((store) => store.app.cartItems);
+  const isOpenUserMenu = Boolean(anchorUser);
   const isQuickSearchAnchor = Boolean(quickSearchAnchor);
 
+  /**
+   * @description Redirecting to login page
+   */
   const redirectToLogin = () => {
     navigate("/login");
   };
@@ -46,14 +52,14 @@ const Header = () => {
    * @description Click on user icon
    */
   const handleUserClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorUser(event.currentTarget);
   };
 
   /**
    * @description Clearing anchor to close profile menus
    */
   const handleClose = () => {
-    setAnchorEl(null);
+    setAnchorUser(null);
   };
 
   /**
@@ -91,6 +97,7 @@ const Header = () => {
   console.log("theme", theme);
 
   const isUserLoggedIn = Boolean(userData?.token);
+
   return (
     <>
       <Box
@@ -201,9 +208,8 @@ const Header = () => {
                 title={`${userData.firstName} ${userData.lastName}`}
                 arrow
               >
-                <Box className="user">
+                <Box className="user" onClick={handleUserClick}>
                   <IconButton
-                    onClick={handleUserClick}
                     size="small"
                     sx={{ ml: 2 }}
                     // aria-controls={open ? "account-menu" : undefined}
@@ -221,9 +227,9 @@ const Header = () => {
               </Tooltip>
 
               <Menu
-                anchorEl={anchorEl}
+                anchorEl={anchorUser}
                 id="account-menu"
-                open={isOpen}
+                open={isOpenUserMenu}
                 onClose={handleClose}
                 onClick={handleClose}
                 transformOrigin={{ horizontal: "left", vertical: "top" }}
@@ -273,7 +279,7 @@ const Header = () => {
                 aria-label="show 17 new notifications"
                 color="inherit"
               >
-                <Badge badgeContent={17} color="error">
+                <Badge badgeContent={cartItems.length} color="error">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>

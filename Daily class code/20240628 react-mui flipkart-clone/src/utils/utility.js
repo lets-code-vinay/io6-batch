@@ -24,3 +24,35 @@ export const getOriginalPriceFromDiscount = (price, discount) => {
 
   return orgPrice.toFixed(2);
 };
+
+/**
+ * @description Getting Avatar names with first letter
+ * @param {String} name
+ * @returns
+ */
+export const getAvatarName = (name) => {
+  const splitNames = name.split(" ");
+  const [firstName, lastName = ""] = splitNames;
+  const firstNameLetter = firstName.charAt(0);
+  const lastNameLetter = lastName.charAt(0);
+
+  return `${firstNameLetter}${lastNameLetter}`;
+};
+
+/**
+ * @description Date formatting to readable
+ * @param {String} date
+ * @returns
+ */
+export const getFormattedDate = (date) => {
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  const eventDate = new Date(date);
+  const formattedDate = eventDate.toLocaleDateString(undefined, options);
+  return formattedDate;
+};

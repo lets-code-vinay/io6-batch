@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./style.css";
 import Box from "@mui/material/Box";
@@ -12,20 +14,51 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import StarIcon from "@mui/icons-material/Star";
 import { getOriginalPriceFromDiscount } from "../../utils/utility";
+import {
+  setCartItems,
+  setSelectedProduct,
+} from "../../redux/appReducer/appReducer";
 
 const ProductCardList = ({ product }) => {
-  console.log("product", product);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const cartItems = useSelector((store) => store.app.cartItems);
+  const alreadyInCart = cartItems.filter((cart) => cart.id == product?.id);
+
+  const [isAddedInCart, setAddedInCart] = useState(alreadyInCart.length > 0);
+
+  /**
+   * @description Getting product of selected Product
+   * @param {Object} product
+   * @returns
+   */
+  const handleProductClick = (product) => (e) => {
+    dispatch(setSelectedProduct(product));
+    navigate(`/selected-product/${product?.id}`);
+  };
+
+  /**
+   * @description Adding product to cart list
+   * @param {Object} product
+   * @returns
+   */
+  const handleAddToCart = (product) => (e) => {
+    setAddedInCart(true);
+    dispatch(setCartItems(product));
+  };
+
   return (
     <>
       <Box className="product-list-container">
-        <Box className="image-section">
+        <Box className="image-section" onClick={handleProductClick(product)}>
           <IconButton className="heart-icon">
             <FavoriteIcon />
           </IconButton>
           <img src={product?.thumbnail} alt={product?.title} />
         </Box>
 
-        <Box className="detail-section">
+        <Box className="detail-section" onClick={handleProductClick(product)}>
           <Typography variant="h3">{product?.title}</Typography>
           <Box className="rating-container">
             <Button
@@ -54,38 +87,56 @@ const ProductCardList = ({ product }) => {
         </Box>
 
         <Box className="price-section">
-          <Typography variant="h4" className="price">
-            &#8377;{product?.price}
-          </Typography>
-
-          <Box sx={{ display: "flex" }}>
-            <Typography variant="body1" className="original-price">
-              {getOriginalPriceFromDiscount(
-                product?.price,
-                product?.discountPercentage
-              )}
+          <Box
+            className="price-section-detail"
+            onClick={handleProductClick(product)}
+          >
+            <Typography variant="h4" className="price">
+              &#8377;{product?.price}
             </Typography>
-            <Typography variant="body1" className="discount">
-              {product?.discountPercentage}% off
+
+            <Box sx={{ display: "flex" }}>
+              <Typography variant="body1" className="original-price">
+                {getOriginalPriceFromDiscount(
+                  product?.price,
+                  product?.discountPercentage
+                )}
+              </Typography>
+              <Typography variant="body1" className="discount">
+                {product?.discountPercentage}% off
+              </Typography>
+            </Box>
+            <Typography variant="body1" className="shippingInformation">
+              {product?.shippingInformation}
+            </Typography>
+            <Typography variant="body1" className="stock">
+              Only {product?.stock} left
+            </Typography>
+            <Typography variant="body1" className="warrantyInformation">
+              {product?.warrantyInformation}
             </Typography>
           </Box>
-          <Typography variant="body1" className="shippingInformation">
-            {product?.shippingInformation}
-          </Typography>
-          <Typography variant="body1" className="stock">
-            Only {product?.stock} left
-          </Typography>
-          <Typography variant="body1" className="warrantyInformation">
-            {product?.warrantyInformation}
-          </Typography>
           <Box className="btn-container">
-            <Button
-              variant="contained"
-              className="add-cart-btn"
-              startIcon={<ShoppingCartIcon />}
-            >
-              Add to Card
-            </Button>
+            {isAddedInCart ? (
+              <Button
+                variant="contained"
+                className="add-cart-btn"
+                startIcon={<ShoppingCartIcon />}
+                disabled
+              >
+                Added in Cart
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                className="add-cart-btn"
+                startIcon={<ShoppingCartIcon />}
+                onClick={handleAddToCart(product)}
+              >
+                Add to Card
+              </Button>
+            )}
+
             <Button
               variant="contained"
               className="buy-now-btn"

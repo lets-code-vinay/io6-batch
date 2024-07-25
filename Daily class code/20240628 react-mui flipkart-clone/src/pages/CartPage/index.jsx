@@ -11,6 +11,7 @@ import AddAddress from "../../components/AddAddress";
 import theme from "../../../theme";
 import { getOriginalPriceFromDiscount } from "../../utils/utility";
 import "./style.css";
+import { Box } from "@mui/material";
 
 const CartPage = () => {
   const cartItems = useSelector((store) => store.app.cartItems);

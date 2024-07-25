@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomepageShimmer, ProductsShimmer } from "./src/components/Shimmer";
+import NotFoundPage from "./src/pages/NotFoundPage";
 const SelectedProduct = lazy(() => import("./src/pages/SelectedProduct"));
 const CartPage = lazy(() => import("./src/pages/CartPage"));
 const Homepage = lazy(() => import("./src/pages/Homepage"));
@@ -45,6 +46,14 @@ const App = () => {
               </Suspense>
             }
           />
+          <Route
+            path="/products/:category"
+            element={
+              <Suspense fallback={<ProductsShimmer />}>
+                <ProductsPage />
+              </Suspense>
+            }
+          />
 
           <Route
             path="/selected-product/:id"
@@ -60,6 +69,24 @@ const App = () => {
             element={
               <Suspense fallback={<ProductsShimmer />}>
                 <CartPage />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={<ProductsShimmer />}>
+                <NotFoundPage />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<ProductsShimmer />}>
+                <NotFoundPage />
               </Suspense>
             }
           />

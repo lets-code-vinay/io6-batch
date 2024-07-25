@@ -1,0 +1,6 @@
+.address-container .address-type {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}

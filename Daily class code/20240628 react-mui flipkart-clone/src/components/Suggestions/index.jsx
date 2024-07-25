@@ -11,26 +11,85 @@ import TOYS from "../../assets/images/suggestions/toys.png";
 import TRAVEL from "../../assets/images/suggestions/travel.png";
 
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const Suggestions = () => {
   const suggestionData = [
-    { id: 1, img: GROCERY, title: "Grocery", hasData: false },
-    { id: 2, img: MOBILE, title: "Mobiles", hasData: false },
-    { id: 3, img: FASHION, title: "Fashion", hasData: false },
-    { id: 6, img: ELECTRONICS, title: "Electronics", hasData: false },
-    { id: 4, img: FURNITURE, title: "Home & Furniture", hasData: false },
-    { id: 5, img: APPLIANCES, title: "Appliances", hasData: false },
-    { id: 8, img: TRAVEL, title: "Travel", hasData: false },
-    { id: 7, img: TOYS, title: "Beauty Toys & More", hasData: false },
-    { id: 9, img: TWO_WHEELER, title: "Two Wheeler", hasData: false },
+    {
+      id: 1,
+      img: GROCERY,
+      title: "Grocery",
+      hasData: false,
+      category: "groceries",
+    },
+    {
+      id: 2,
+      img: MOBILE,
+      title: "Mobiles",
+      hasData: false,
+      category: "smartphones",
+    },
+    {
+      id: 3,
+      img: FASHION,
+      title: "Fashion",
+      hasData: false,
+      category: "womens-dresses",
+    },
+    {
+      id: 6,
+      img: ELECTRONICS,
+      title: "Electronics",
+      hasData: false,
+      category: "tablets",
+    },
+    {
+      id: 4,
+      img: FURNITURE,
+      title: "Home & Furniture",
+      hasData: false,
+      category: "furniture",
+    },
+    {
+      id: 5,
+      img: APPLIANCES,
+      title: "Appliances",
+      hasData: false,
+      category: "home-decoration",
+    },
+    { id: 8, img: TRAVEL, title: "Travel", hasData: false, category: "beauty" },
+    {
+      id: 7,
+      img: TOYS,
+      title: "Beauty Toys & More",
+      hasData: false,
+      category: "kitchen-accessories",
+    },
+    {
+      id: 9,
+      img: TWO_WHEELER,
+      title: "Two Wheeler",
+      hasData: false,
+      category: "vehicle",
+    },
   ];
+
+  const navigate = useNavigate();
+
+  const redirectToCategoryPage = (category) => (event) => {
+    navigate(`/products/${category}`);
+  };
 
   return (
     <>
       <Box className="suggestion-container">
         {suggestionData.map((ele, index) => {
           return (
-            <Box key={index} className="suggestion">
+            <Box
+              key={index}
+              className="suggestion"
+              onClick={redirectToCategoryPage(ele?.category)}
+            >
               <img src={ele?.img} alt={ele?.title} />
               <Typography variant="body1">{ele?.title}</Typography>
             </Box>

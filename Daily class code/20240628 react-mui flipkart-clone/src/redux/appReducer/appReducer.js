@@ -7,6 +7,7 @@ const appSlice = createSlice({
     products: [],
     selectedProduct: {},
     cartItems: [],
+    userAddress: {},
   },
 
   reducers: {
@@ -22,10 +23,18 @@ const appSlice = createSlice({
     setCartItems: (state, action) => {
       state.cartItems.push(action.payload);
     },
+    setAddress: (state, action) => {
+      state.userAddress = action.payload;
+    },
   },
 });
 
-export const { setUserData, setProducts, setSelectedProduct, setCartItems } =
-  appSlice.actions;
+export const {
+  setUserData,
+  setProducts,
+  setSelectedProduct,
+  setCartItems,
+  setAddress,
+} = appSlice.actions;
 
 export default appSlice.reducer;

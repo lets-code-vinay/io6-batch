@@ -16,8 +16,12 @@ import { API } from "../../configs/api";
 
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewListIcon from "@mui/icons-material/ViewList";
+import { useParams } from "react-router-dom";
+import NotFound from "../../components/NotFound";
 
 const ProductsPage = () => {
+  const params = useParams();
+
   const [productData, setProductData] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [listType, setListType] = useState("grid");
@@ -26,13 +30,17 @@ const ProductsPage = () => {
    * @description fetch api when page loads
    */
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    if (params.category == "all") {
+      fetchAllProducts();
+    } else {
+      fetchCategoryProducts(params.category);
+    }
+  }, [params.category]);
 
   /**
    * @description Calling API to fetch product data
    */
-  const fetchProducts = async () => {
+  const fetchAllProducts = async () => {
     try {
       setLoading(true);
 
@@ -45,6 +53,27 @@ const ProductsPage = () => {
       }
     } catch (err) {
       console.error("--Error while fetching products--", err);
+      setLoading(false);
+    }
+  };
+
+  /**
+   * #description Fetch products as per given category
+   * @param {String} category
+   */
+  const fetchCategoryProducts = async (category) => {
+    try {
+      setLoading(true);
+
+      const api = API.GET_PRODUCT_BY_CATEGORY.replace("#CATEGORY#", category);
+      const { status, data: { products = [] } = {} } = await axios(api);
+
+      if (status == 200) {
+        setProductData(products);
+        setLoading(false);
+      }
+    } catch (err) {
+      console.error("--error while fetching category Api--", err);
       setLoading(false);
     }
   };
@@ -105,6 +134,7 @@ const ProductsPage = () => {
 
             {listType == "grid" && (
               <Box className="products">
+                {productData.length == 0 && <NotFound />}
                 {productData.map((product, index) => {
                   return <ProductCardGrid key={index} product={product} />;
                 })}
@@ -113,6 +143,7 @@ const ProductsPage = () => {
 
             {listType == "list" && (
               <Box>
+                {productData.length == 0 && <NotFound />}
                 {productData.map((product, index) => {
                   return <ProductCardList key={index} product={product} />;
                 })}

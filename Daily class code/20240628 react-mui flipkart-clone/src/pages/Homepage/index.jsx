@@ -35,8 +35,6 @@ const Homepage = () => {
         data: { products = [] },
       } = res || {};
       if (status == 200) {
-        console.log("products--", products);
-
         // products.forEach((product) => {
         //   if (
         //     product?.category == "laptops" ||

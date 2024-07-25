@@ -36,6 +36,7 @@ const Header = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
   const [anchorUser, setAnchorUser] = useState(null);
   const [quickSearchAnchor, setQuickSearchAnchor] = useState(null);
+  const [searchProduct, setSearch] = useState("");
 
   const cartItems = useSelector((store) => store.app.cartItems);
   const isOpenUserMenu = Boolean(anchorUser);
@@ -91,10 +92,31 @@ const Header = () => {
    * @returns
    */
   const handleMenu = (menuType) => () => {
-    navigate(`/${menuType}`);
+    if (menuType == "products") {
+      navigate(`/${menuType}/all`);
+    } else {
+      navigate(`/${menuType}`);
+    }
   };
 
-  console.log("theme", theme);
+  /**
+   * @description redirecting to cart page
+   */
+  const handleCartPage = () => {
+    navigate("/cart");
+  };
+
+  const handleMenuQuick = (categoryType) => (e) => {
+    navigate(`/products/${categoryType}`);
+  };
+
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSearchProducts = () => {
+    navigate(`/products/${searchProduct}`);
+  };
 
   const isUserLoggedIn = Boolean(userData?.token);
 
@@ -106,7 +128,12 @@ const Header = () => {
         className="header-container"
       >
         <Box className="header">
-          <img src={LOGO} alt="logo" className="logo" />
+          <img
+            src={LOGO}
+            alt="logo"
+            className="logo"
+            onClick={handleMenu("homepage")}
+          />
 
           <Box className="menu-container">
             <Button
@@ -159,25 +186,25 @@ const Header = () => {
               onClose={handleCloseQuickSearch}
               // TransitionComponent={Fade}
             >
-              <MenuItem onClick={handleCloseQuickSearch}>
+              <MenuItem onClick={handleMenuQuick("laptops")}>
                 <ListItemIcon>
                   <LaptopChromebookIcon fontSize="small" />
                 </ListItemIcon>
                 Laptop
               </MenuItem>
-              <MenuItem onClick={handleCloseQuickSearch}>
+              <MenuItem onClick={handleMenuQuick("smartphones")}>
                 <ListItemIcon>
                   <PhoneAndroidIcon fontSize="small" />
                 </ListItemIcon>
                 Mobile
               </MenuItem>
-              <MenuItem onClick={handleCloseQuickSearch}>
+              <MenuItem onClick={handleMenuQuick("sports-accessories")}>
                 <ListItemIcon>
                   <AutoStoriesIcon fontSize="small" />
                 </ListItemIcon>
-                Book
+                Sports
               </MenuItem>
-              <MenuItem onClick={handleCloseQuickSearch}>
+              <MenuItem onClick={handleMenuQuick("kitchen-accessories")}>
                 <ListItemIcon>
                   <CountertopsIcon fontSize="small" />
                 </ListItemIcon>
@@ -190,11 +217,13 @@ const Header = () => {
               label="Enter your search"
               className="search-input"
               size="small"
+              onChange={handleSearch}
+              value={searchProduct}
               fullWidth
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="start">
-                    <IconButton>
+                    <IconButton onClick={handleSearchProducts}>
                       <SearchIcon />
                     </IconButton>
                   </InputAdornment>
@@ -278,6 +307,7 @@ const Header = () => {
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
+                onClick={handleCartPage}
               >
                 <Badge badgeContent={cartItems.length} color="error">
                   <ShoppingCartIcon />

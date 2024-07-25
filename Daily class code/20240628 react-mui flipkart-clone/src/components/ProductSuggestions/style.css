@@ -20,6 +20,7 @@
   justify-self: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .single-product-card img {
